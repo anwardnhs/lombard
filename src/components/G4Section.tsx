@@ -2,11 +2,11 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight, FaChartLine, FaShieldHalved, FaBuildingColumns, FaVault } from "react-icons/fa6";
 
-// High-resolution curated editorial images (Unsplash)
-const bankImg = "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=85&w=1200"; // Modern Financial Glass Tower
-const capitalImg = "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=85&w=1200"; // Stock Market & Trading Desk
-const wealthImg = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=85&w=1200"; // Executive Wealth Advisory Lounge
-const insuranceImg = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=85&w=1200"; // Modern Corporate Headquarters
+// High-resolution local assets for guaranteed fast loading
+import bankImg from "@/assets/hq11.jpg";
+import capitalImg from "@/assets/markets.jpg";
+import wealthImg from "@/assets/wealth.jpg";
+import insuranceImg from "@/assets/corporate.jpg";
 
 const transitionEase = [0.76, 0, 0.24, 1];
 
