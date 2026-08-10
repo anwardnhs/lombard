@@ -17,6 +17,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { founders as g4Founders, subsidiaries as groupSubsidiaries, holdCoMetrics } from "@/data/lombard";
 
 // Placeholder assets
 import lombardt from "@/assets/hq11.jpg";
@@ -232,28 +233,22 @@ const CorporateProfileSection = () => {
                   <div className="lg:col-span-3">
                     <div className="bg-[#0F120F] text-white p-10 h-full">
                       <h3 className="font-serif text-2xl mb-10 text-[#C7D3BC] pb-4 border-b border-white/10">
-                        Key Metrics (2025)
+                        Group Key Metrics (2025)
                       </h3>
-                      <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
-                        {[
-                          { icon: FaChartPie, label: "Total Assets", value: "₦36.5", unit: "T", usd: "$25.2 Billion" },
-                          { icon: FaBuilding, label: "Market Cap", value: "₦6.5", unit: "T", usd: "$4.48 Billion" },
-                          { icon: FaUsers, label: "Employees", value: "24,800", unit: "", usd: "" },
-                          { icon: FaGlobe, label: "Markets", value: "14", unit: "", usd: "Pan-African" },
-                        ].map((metric, i) => (
+                      <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10">
+                        {holdCoMetrics.map((metric, i) => (
                           <div key={i}>
-                            <div className="flex items-center gap-2 mb-3">
-                              <metric.icon className="text-[#C7D3BC] text-sm" />
+                            <div className="flex items-center gap-2 mb-2">
+                              <FaChartPie className="text-[#C7D3BC] text-xs" />
                               <p className="text-[10px] uppercase tracking-widest text-white/50 font-bold">
                                 {metric.label}
                               </p>
                             </div>
-                            <p className="text-4xl font-semibold mb-1">
-                              {metric.value}
-                              {metric.unit && <span className="text-lg font-bold text-[#C7D3BC] ml-0.5">{metric.unit}</span>}
+                            <p className="text-3xl font-semibold mb-1">
+                              {metric.prefix}{metric.value}{metric.suffix}
                             </p>
-                            {metric.usd && (
-                              <p className="text-xs font-mono text-white/40">{metric.usd}</p>
+                            {metric.subValue && (
+                              <p className="text-xs font-mono text-white/50">{metric.subValue}</p>
                             )}
                           </div>
                         ))}

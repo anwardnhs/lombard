@@ -62,7 +62,7 @@ const ExecutiveLeadershipSection = () => {
     name: "Dr. Chide Okonkwo",
     role: "Group Chief Executive Officer",
     image: chide,
-    quote: "Our mandate is clear: to transform Lombard from a traditional lender into Africa's primary digital financial ecosystem.",
+    quote: "Our holding company mandate is built on disciplined capital allocation, risk stewardship, and empowering our operating subsidiaries to achieve market leadership across Africa.",
     bio: "Dr. Chide Okonkwo leads Lombard HoldCo's strategic expansion across Africa, bringing over 25 years of global investment banking experience. Previously a Partner at Goldman Sachs (London), he holds a Ph.D. in Financial Engineering from MIT and champions the 'Lombard 4.0' digital transformation strategy."
   };
 

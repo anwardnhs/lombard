@@ -124,9 +124,9 @@ const Careers = () => {
           
           <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
             {[
-              { title: "Global Mobility", desc: "Access cross-border assignments across 14 countries and our London HQ." },
-              { title: "Meritocracy", desc: " advancement is determined by contribution, not tenure. We fast-track top talent." },
-              { title: "Institutional Scale", desc: "Work on sovereign bonds and infrastructure deals that shape national economies." }
+              { title: "Cross-Entity Mobility", desc: "Gain experience across commercial banking, investment banking, asset management, and insurance across 14 markets and our London office." },
+              { title: "Strict Meritocracy", desc: "Career advancement is determined purely by contribution and fiduciary leadership, fast-tracking exceptional talent regardless of tenure." },
+              { title: "Institutional Impact", desc: "Structure landmark sovereign bonds, underwrite renewable infrastructure, and build financial platforms shaping African economies." }
             ].map((item, i) => (
               <div key={i} className="group cursor-default">
                 <div className="w-12 h-[2px] bg-[#C7D3BC] mb-6 group-hover:w-24 group-hover:bg-[#0F120F] transition-all duration-300" />

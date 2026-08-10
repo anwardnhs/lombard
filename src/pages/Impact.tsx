@@ -132,7 +132,7 @@ const Impact = () => {
               </h2>
 
               <p className="text-base sm:text-lg font-semibold text-[#0F120F]/90 leading-relaxed mb-8">
-                Lombard HoldCo integrates ESG principles into every business decision. Our framework ensures responsible lending, operational efficiency, and transparent governance that protect long-term stakeholder value.
+                Lombard HoldCo mandates Equator Principles compliance and climate risk stress-testing across all operating subsidiaries. As a financial holding company, we deploy capital to accelerate Africa's energy transition, fund climate-resilient infrastructure, and enforce high ESG governance standards.
               </p>
 
               {/* Metrics */}
