@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight, FaChartLine, FaShieldHalved, FaBuildingColumns, FaVault } from "react-icons/fa6";
 
 // High-resolution local assets for guaranteed fast loading
-import bankImg from "@/assets/hq11.jpg";
-import capitalImg from "@/assets/markets.jpg";
-import wealthImg from "@/assets/wealth.jpg";
-import insuranceImg from "@/assets/corporate.jpg";
+import bankImg from "../assets/hq11.jpg";
+import capitalImg from "../assets/markets.jpg";
+import wealthImg from "../assets/wealth.jpg";
+import insuranceImg from "../assets/corporate.jpg";
 
 const transitionEase = [0.76, 0, 0.24, 1];
 
