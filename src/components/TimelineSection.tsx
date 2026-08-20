@@ -1,192 +1,118 @@
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { useRef, useState, useCallback } from "react";
-import impactBg from "../assets/solar.jpg"; 
+import { motion } from "framer-motion";
 
-// Simple Icons for visual clarity (Clarity over Creativity)
-const CapitalIcon = () => (
-  <svg className="w-6 h-6 text-[#4A5D43]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
+const profileCards = [
+  {
+    title: "14 Active Markets",
+    description: "Driving economic transformation across the African continent with a deep local footprint in major financial hubs.",
+    image: "https://media.istockphoto.com/id/2238578453/photo/aerial-view-gaborone-capital-of-botswana-in-africa-new-development-in-the-city-center.jpg?s=612x612&w=0&k=20&c=KzOIM3-Ag59FQ8z5PCKljeBR1qp60Le42CV9ZCfkhNg=",
+    linkText: "View Our Footprint"
+  },
+  {
+    title: "₦36.5T Total Assets",
+    description: "Unmatched financial strength and liquidity, positioning us as the premier partner for sovereign and corporate financing.",
+    image: "https://media.istockphoto.com/id/519328889/photo/kigali-parliament-building-and-convention-centre.jpg?s=612x612&w=0&k=20&c=icFcd2CnroiM3KV8unrOK7uucr4ossN71sbw1IMwmHI=",
+    linkText: "Read Financial Reports"
+  },
+  {
+    title: "AAA Institutional Rating",
+    description: "Recognized by global rating agencies for our robust risk management, rigorous governance, and capital adequacy.",
+    image: "https://media.istockphoto.com/id/1056231124/photo/this-is-the-news-weve-been-waiting-for.jpg?s=612x612&w=0&k=20&c=W99RFxb6u_3lyDovZdaCk_Hpg1X7QdZ0Bz9NBwIbGRU=",
+    linkText: "Investor Relations"
+  },
+  {
+    title: "70 Years of Excellence",
+    description: "A legacy of trust and performance, built by generations of exceptional talent dedicated to client success.",
+    image: "https://media.istockphoto.com/id/2290422374/photo/business-team-applauding-success-after-meeting-presentation-in-office.jpg?s=612x612&w=0&k=20&c=ueM1i1XvkUxeEcTahR2OpEbIuJlCVuIbwgTZ7jPpkhw=",
+    linkText: "Our History"
+  },
+  {
+    title: "The Business of Impact",
+    description: "Deploying capital to critical infrastructure, energy transition, and community development projects that shape the future.",
+    image: "https://media.istockphoto.com/id/1297780280/photo/teamwork-is-the-key-ingredient-in-quality-construction.jpg?s=612x612&w=0&k=20&c=gyPLOWBiYUrjA--goj1K8TQ1BVbI3Fwkb834MbXf3sI=",
+    linkText: "Sustainability Initiatives"
+  },
+  {
+    title: "Strategic Partnerships",
+    description: "Collaborating with global institutions to bridge African markets with international capital and growth opportunities.",
+    image: "https://media.istockphoto.com/id/1218172568/photo/back-to-our-agreement.jpg?s=612x612&w=0&k=20&c=-oiF148vz6ewCwxjHtWWedc61HLBP6tENRdzXED1sDQ=",
+    linkText: "Global Network"
+  }
+];
 
-const CommunityIcon = () => (
-  <svg className="w-6 h-6 text-[#4A5D43]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
-
-const ImpactSection = () => {
-  const containerRef = useRef(null);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const prefersReducedMotion = useReducedMotion();
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-  
-  // Parallax: Moderate movement for realism without motion sickness
-  const y = useTransform(
-    scrollYProgress, 
-    [0, 1], 
-    prefersReducedMotion ? ["0%", "0%"] : ["-5%", "5%"]
-  );
-
-  const handleImageLoad = useCallback(() => {
-    setImageLoaded(true);
-  }, []);
-
-  const animationVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: prefersReducedMotion ? 0 : 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: prefersReducedMotion ? 0 : 0.3,
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
+const TimelineSection = () => {
   return (
-    <section 
-      ref={containerRef} 
-      className="relative min-h-screen bg-[#F9F9F7] flex items-center py-20 lg:py-32 overflow-hidden font-poppins text-slate-900"
-      aria-labelledby="impact-heading"
-    >
-      {/* Background Noise - Subtle Texture */}
-      <div className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none" 
-           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} 
-      />
-      
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 max-w-[1400px]">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
-          {/* Left Column: Content */}
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            variants={animationVariants}
-            viewport={{ once: true, margin: "-10%" }}
-          >
-            {/* Top Label - Darker Green for Contrast */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-0.5 bg-[#4A5D43]" aria-hidden="true" />
-              <span className="text-xs tracking-[0.2em] uppercase text-[#4A5D43] font-bold">
-                ESG Strategy
-              </span>
-            </div>
-
-            {/* Headline - Clear hierarchy */}
-            <h2 
-              id="impact-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 text-slate-900"
+    <section className="bg-[#F9F9F7] py-24 lg:py-32 px-6 lg:px-12 font-poppins">
+      <div className="max-w-[1400px] mx-auto">
+        
+        {/* Top Split Header - JP Morgan / Goldman Sachs style */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20 lg:mb-28">
+          <div className="lg:w-3/5">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-serif text-[#0F120F] leading-[1.05] tracking-tight"
             >
-              Sustainable Finance,<br />
-              <span className="text-[#5f6b56] font-serif italic">Lasting Impact.</span>
-            </h2>
-
-            {/* Lead Paragraph - High Readability */}
-            <p className="text-lg text-slate-700 leading-relaxed mb-10 max-w-xl">
-              At Lombard, we integrate ESG principles into every facet of our operations, ensuring that our financial solutions not only drive growth but also foster environmental stewardship and social responsibility across Africa.  
-            </p>
-
-            {/* Feature Grid - Hick's Law: Visual grouping with Icons */}
-            <div className="grid sm:grid-cols-2 gap-8 mb-10">
-              <div className="flex flex-col gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#E8EAE6] flex items-center justify-center shrink-0">
-                  <CapitalIcon />
-                </div>
-                <div>
-                  <h3 className="text-slate-900 font-bold text-lg mb-1">
-                    Responsible Capital
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Rigorous ESG risk assessment integrated into all corporate lending.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#E8EAE6] flex items-center justify-center shrink-0">
-                  <CommunityIcon />
-                </div>
-                <div>
-                  <h3 className="text-slate-900 font-bold text-lg mb-1">
-                    Community Growth
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Financing initiatives that empower local communities and promote sustainable development.                  
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Stats Row - Distinct Visual Container */}
-            <div className="bg-white border border-black/5 rounded-lg p-6 flex gap-10 mb-10 shadow-sm">
-               <div>
-                  <div className="text-3xl font-bold text-slate-900 tabular-nums">AAA</div>
-                  <div className="text-[10px] font-bold tracking-widest uppercase text-slate-500 mt-1">MSCI Rating</div>
-               </div>
-               <div className="w-px bg-black/10" />
-               <div>
-                  <div className="text-3xl font-bold text-slate-900 tabular-nums">2045</div>
-                  <div className="text-[10px] font-bold tracking-widest uppercase text-slate-500 mt-1">Net Zero Goal</div>
-               </div>
-            </div>
-
-            {/* Primary CTA - Fitts' Law: Large Target */}
-            <a 
-              href="/impact-report"
-              className="inline-flex items-center justify-center h-14 px-8 bg-[#1a1f1a] text-white font-medium text-sm tracking-wide uppercase hover:bg-[#2C332C] transition-colors rounded-md focus:ring-4 focus:ring-[#c7d3bc]/50 outline-none"
-            >
-              Read 2025 Report
-              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </motion.div>
-
-          {/* Right Column: Visual */}
-          <div className="relative h-[600px] lg:h-[750px] w-full rounded-2xl overflow-hidden bg-[#E8EAE6]">
-            <motion.div 
-              style={{ y }}
-              className="absolute inset-0 w-full h-[115%]"
-            >
-              <img 
-                src={impactBg} 
-                alt="Solar energy infrastructure project in Lekki"
-                loading="lazy"
-                onLoad={handleImageLoad}
-                className={`w-full h-full object-cover transition-opacity duration-1000 ${
-                  imageLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-              />
-              {/* Overlays for text legibility if needed, keeping it light for clarity */}
-              <div className="absolute inset-0 bg-black/10" />
-            </motion.div>
-
-            
-            
+              A Pan-African Powerhouse with Global Reach.
+            </motion.h2>
           </div>
-
+          
+          <div className="lg:w-2/5 flex flex-col justify-end pb-2">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="text-lg sm:text-xl text-[#0F120F]/80 font-light leading-relaxed border-l-2 border-[#4A5D43]/30 pl-6"
+            >
+              We leverage the full scale of our firm to empower clients and communities. With <strong className="font-semibold text-[#0F120F]">₦36.5T</strong> in total assets, a commanding presence across <strong className="font-semibold text-[#0F120F]">14 countries</strong>, and a robust <strong className="font-semibold text-[#0F120F]">AAA institutional rating</strong>, Lombard HoldCo is uniquely positioned to drive growth and value.
+            </motion.p>
+          </div>
         </div>
+
+        {/* 3-Column Card Grid - Goldman Sachs style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+          {profileCards.map((card, index) => (
+            <motion.a 
+              key={index}
+              href="/about"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col group cursor-pointer outline-none"
+            >
+              {/* Image Container */}
+              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 bg-black/5">
+                <img 
+                  src={card.image} 
+                  alt={card.title}
+                  loading="lazy"
+                  crossOrigin="anonymous"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
+
+              {/* Text Content */}
+              <h3 className="text-2xl font-serif text-[#0F120F] font-medium mb-3 transition-colors group-hover:text-[#4A5D43]">
+                {card.title}
+              </h3>
+              <p className="text-[#0F120F]/70 font-light leading-relaxed mb-6">
+                {card.description}
+              </p>
+              
+              {/* Underline Link */}
+              <div className="mt-auto text-sm font-semibold text-[#0F120F] group-hover:text-[#4A5D43] transition-colors border-b border-[#0F120F]/20 group-hover:border-[#4A5D43]/50 pb-1 w-fit">
+                {card.linkText}
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 };
 
-export default ImpactSection;
+export default TimelineSection;
