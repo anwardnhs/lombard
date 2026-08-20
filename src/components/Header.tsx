@@ -73,8 +73,7 @@ const Header = () => {
           title: "Our Firm",
           links: [
             { label: "Corporate Profile", href: "/about" },
-            { label: "Executive Leadership", href: "/about/leadership" },
-            { label: "Board of Directors", href: "/governance" }
+            { label: "Leadership & Board", href: "/governance" }
           ]
         },
         {
@@ -467,7 +466,7 @@ const Header = () => {
               <div className="grid md:grid-cols-[240px_1fr] gap-0 overflow-y-auto max-h-[92vh] overscroll-contain">
                 <div className="bg-white border-r border-black/10 p-6 flex flex-col items-center text-center md:border-b-0 border-b border-black/10">
                   <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-5 border border-black/10 mt-3">
-                    <img src={anwar} alt="Mr. Anwar Alhassan" className="w-full h-full object-cover" />
+                    <img src={anwar} alt="Mr. Anwar Alhassan" className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 </div>
 

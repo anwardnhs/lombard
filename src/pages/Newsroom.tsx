@@ -188,7 +188,7 @@ const Newsroom = () => {
               {/* Main Hero Story (Col Span 8) */}
               <article className="lg:col-span-8 group relative bg-white border-2 border-[#0F120F]/10 hover:border-[#0F120F]/20 hover:shadow-2xl transition-all duration-500 overflow-hidden">
                 <div className="aspect-[16/9] overflow-hidden bg-[#E5E5E5] relative">
-                  <img 
+                  <img loading="lazy" 
                     src={featuredStories[0].image} 
                     alt={featuredStories[0].title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -232,7 +232,7 @@ const Newsroom = () => {
                 {featuredStories.slice(1).map((story) => (
                   <article key={story.id} className="group flex-1 bg-white border-2 border-[#0F120F]/10 hover:border-[#0F120F]/20 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden">
                     <div className="aspect-[3/2] overflow-hidden bg-[#E5E5E5]">
-                      <img 
+                      <img loading="lazy" 
                         src={story.image} 
                         alt={story.title} 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -298,7 +298,7 @@ const Newsroom = () => {
                   >
                     {/* Card Image */}
                     <div className="aspect-[16/9] overflow-hidden bg-[#E5E5E5] relative">
-                      <img 
+                      <img loading="lazy" 
                         src={item.image} 
                         alt={item.title} 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ReactLenis } from "@studio-freight/react-lenis"; // 1. Import Lenis
 import Index from "./pages/Index";
 import Governance from "./pages/Governance";
-import ExecutiveLeadership from "./pages/ExecutiveLeadership";
 import CorporateProfile from "./pages/CorporateProfile";
 import Impact from "./pages/Impact";
 import Investors from "./pages/Investors";
@@ -35,7 +34,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<CorporateProfile />} />
             <Route path="/governance" element={<Governance />} />
-            <Route path="/about/leadership" element={<ExecutiveLeadership />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/investors" element={<Investors />} />
             <Route path="/contact" element={<Contact />} />

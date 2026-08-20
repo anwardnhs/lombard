@@ -1,4 +1,6 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+const fs = require('fs');
+
+const code = `import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { 
   FaFileContract, 
@@ -226,15 +228,15 @@ const GovernanceSection = () => {
   const NavItem = ({ section, label }: { section: string; label: string }) => (
     <button
       onClick={() => scrollToSection(section)}
-      className={`block w-full text-left py-3 px-6 text-xs font-bold uppercase tracking-[0.15em] transition-all relative ${
+      className={\`block w-full text-left py-3 px-6 text-xs font-bold uppercase tracking-[0.15em] transition-all relative \${
         activeSection === section
           ? 'text-[#0F120F]'
           : 'text-[#0F120F]/40 hover:text-[#0F120F]'
-      }`}
+      }\`}
     >
-      <div className={`absolute left-0 top-0 bottom-0 w-[3px] transition-all ${
+      <div className={\`absolute left-0 top-0 bottom-0 w-[3px] transition-all \${
         activeSection === section ? 'bg-[#C7D3BC]' : 'bg-transparent'
-      }`} />
+      }\`} />
       {label}
     </button>
   );
@@ -322,7 +324,7 @@ const GovernanceSection = () => {
                       }}
                       onMouseEnter={() => setHoveredCard(member.name)}
                       onMouseLeave={() => setHoveredCard(null)}
-                      className={`group bg-white border border-[#0F120F]/10 hover:border-[#C7D3BC]/40 rounded-sm overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_8px_32px_rgba(199,211,188,0.2)] ${isOtherHovered ? 'opacity-50 scale-[0.98]' : 'opacity-100'}`}
+                      className={\`group bg-white border border-[#0F120F]/10 hover:border-[#C7D3BC]/40 rounded-sm overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_8px_32px_rgba(199,211,188,0.2)] \${isOtherHovered ? 'opacity-50 scale-[0.98]' : 'opacity-100'}\`}
                     >
                       <div className="relative aspect-[4/5] overflow-hidden bg-[#e5e5e5]">
                         {!imageLoaded[member.name] && (
@@ -330,11 +332,11 @@ const GovernanceSection = () => {
                         )}
                         <img 
                           src={member.image} 
-                          alt={`${member.name}, ${member.role}`}
+                          alt={\`\${member.name}, \${member.role}\`}
                           onLoad={() => handleImageLoad(member.name)}
-                          className={`w-full h-full object-cover object-top transition-all duration-700 ${
+                          className={\`w-full h-full object-cover object-top transition-all duration-700 \${
                             imageLoaded[member.name] ? 'opacity-100' : 'opacity-0'
-                          } group-hover:scale-105`}
+                          } group-hover:scale-105\`}
                           loading="lazy"
                         />
                       </div>
@@ -402,7 +404,7 @@ const GovernanceSection = () => {
                           }}
                           onMouseEnter={() => setHoveredCard(member.name)}
                           onMouseLeave={() => setHoveredCard(null)}
-                          className={`group bg-white border border-[#0F120F]/10 hover:border-[#C7D3BC]/40 rounded-sm overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_8px_32px_rgba(199,211,188,0.2)] ${isOtherHovered ? 'opacity-50 scale-[0.98]' : 'opacity-100'}`}
+                          className={\`group bg-white border border-[#0F120F]/10 hover:border-[#C7D3BC]/40 rounded-sm overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_8px_32px_rgba(199,211,188,0.2)] \${isOtherHovered ? 'opacity-50 scale-[0.98]' : 'opacity-100'}\`}
                         >
                           <div className="relative aspect-[4/5] overflow-hidden bg-[#e5e5e5]">
                             {!imageLoaded[member.name] && (
@@ -410,11 +412,11 @@ const GovernanceSection = () => {
                             )}
                             <img 
                               src={member.image} 
-                              alt={`${member.name}, ${member.role}`}
+                              alt={\`\${member.name}, \${member.role}\`}
                               onLoad={() => handleImageLoad(member.name)}
-                              className={`w-full h-full object-cover object-top transition-all duration-700 ${
+                              className={\`w-full h-full object-cover object-top transition-all duration-700 \${
                                 imageLoaded[member.name] ? 'opacity-100' : 'opacity-0'
-                              } group-hover:scale-105`}
+                              } group-hover:scale-105\`}
                               loading="lazy"
                             />
                           </div>
@@ -555,3 +557,6 @@ const GovernanceSection = () => {
 };
 
 export default GovernanceSection;
+`;
+
+fs.writeFileSync('src/components/GovernanceSection.tsx', code);
