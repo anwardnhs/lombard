@@ -110,7 +110,7 @@ const Footer = () => {
 
       {/* Bottom Legal & Social Band */}
       <div className="border-t border-[#111]/10">
-        <div className="mx-auto max-w-[90rem] px-6 lg:px-12 py-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+        <div className="mx-auto max-w-[90rem] px-6 lg:px-12 py-8 lg:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-12 w-full lg:w-auto">
             {/* Social Icons */}
@@ -152,14 +152,6 @@ const Footer = () => {
 
         </div>
       </div>
-
-      {/* Massive Brand Typography Anchor */}
-      <div className="mx-auto max-w-[90rem] px-6 lg:px-12 pt-8 pb-4 flex justify-center items-end select-none pointer-events-none">
-        <h1 className="text-[13vw] leading-[0.8] font-bold tracking-tighter text-[#111] opacity-90">
-          LOMBARD<span className="font-serif italic text-[#4A5D43]">.</span>
-        </h1>
-      </div>
-
     </footer>
   );
 };
