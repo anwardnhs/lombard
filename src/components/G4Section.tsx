@@ -18,16 +18,9 @@ const businessUnits = [
     shortName: "Commercial Banking",
     tagline: "Consumer, Corporate & Private Banking",
     icon: FaBuildingColumns,
-    description: "Anchoring the Group's balance sheet with full-service corporate lending, trade finance, transaction banking, and digital retail platforms across 14 African markets.",
+    description: "One of Nigeria's leading commercial banks, providing a full spectrum of retail, corporate, and private banking services with a focus on innovation and customer-centric solutions.",
     image: bankImg,
-    badgeText: "Flagship Banking Subsidiary",
-    stats: [
-      { label: "Total Assets", val: "₦36.5T" },
-      { label: "Branch Network", val: "535" },
-      { label: "Agency Touchpoints", val: "48,000+" },
-      { label: "Active Customers", val: "10.2M" },
-    ],
-    divisions: ["Corporate & Investment Banking", "Commercial Banking", "SME Solutions", "Digital Retail Banking"],
+    badgeText: "Nigeria's Largest Bank by Assets",
     href: "/about",
   },
   {
@@ -37,54 +30,33 @@ const businessUnits = [
     shortName: "Investment Banking",
     tagline: "Merchant Banking & Advisory",
     icon: FaChartLine,
-    description: "Premier investment banking franchise delivering sovereign debt advisory, corporate M&A, equity capital underwriting, and top-tier securities brokerage on NGX & LSE.",
+    description: "A premier investment banking division offering capital markets solutions, M&A advisory, and strategic financial services to corporations, governments, and institutional investors. ",
     image: capitalImg,
-    badgeText: "#1 NGX Brokerage by Volume",
-    stats: [
-      { label: "Advisory Mandates", val: "$4.8B" },
-      { label: "NGX Market Rank", val: "#1" },
-      { label: "Eurobond Issuance", val: "$500M" },
-      { label: "Institutional Clients", val: "450+" },
-    ],
-    divisions: ["Securities & Trading", "M&A Strategic Advisory", "Debt Capital Markets", "Principal Investments"],
+    badgeText: "Leaders in West African Capital Markets",
     href: "/about",
   },
   {
     id: "wealth",
     num: "03",
     name: "Lombard Asset Management",
-    shortName: "Wealth & Pensions",
+    shortName: "Wealth & Trust Services",
     tagline: "Wealth Stewardship & Trust Services",
     icon: FaVault,
-    description: "Generational wealth management and pension administration, delivering tailored portfolio growth, private wealth preservation, and institutional trust services.",
+    description: "Providing comprehensive wealth management, pension fund administration, and corporate trusteeship services, Lombard Asset Management is dedicated to preserving and growing client assets with integrity and expertise. ",
     image: wealthImg,
-    badgeText: "₦340B+ Assets Under Management",
-    stats: [
-      { label: "Assets Under Mgmt", val: "₦340B+" },
-      { label: "PFA License", val: "Full PFA" },
-      { label: "Growth Fund", val: "$50M" },
-      { label: "Pensions Covered", val: "1.2M" },
-    ],
-    divisions: ["Pension Fund Admin (PFA)", "Private Wealth Management", "Corporate Trusteeship", "Venture Growth Equity"],
+    badgeText: "Managing Over $2 Billion in Assets",
     href: "/about",
   },
   {
     id: "insurance",
     num: "04",
-    name: "Lombard Insurance Group",
+    name: "Lombard Insurance",
     shortName: "General & Life Insurance",
     tagline: "Risk Transfer & Underwriting",
     icon: FaShieldHalved,
-    description: "Comprehensive risk transfer solutions providing marine cargo, general corporate liability, group life assurance, and specialized energy risk coverage across West Africa.",
+    description: "Lombard Insurance offers a full suite of general and life insurance products, providing risk management solutions for individuals and businesses, backed by global reinsurers with strong financial ratings.  ",
     image: insuranceImg,
-    badgeText: "A+ Rated Risk Underwriter",
-    stats: [
-      { label: "Underwriting Rating", val: "A+ (Stable)" },
-      { label: "General & Life Units", val: "Dual License" },
-      { label: "Marine Coverage", val: "Global" },
-      { label: "Claims Settled Ratio", val: "98.4%" },
-    ],
-    divisions: ["General & Commercial Insurance", "Marine & Aviation Cargo", "Group Life Assurance", "Health & Disability Cover"],
+    badgeText: "Assured by Global Reinsurers with A+ Ratings",
     href: "/about",
   },
 ];
@@ -111,16 +83,16 @@ const BusinessUnitsSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end border-b border-white/10 pb-10 mb-14 lg:mb-20 gap-6">
           <div>
             <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#C7D3BC] mb-4">
-              02 / Strategic Operating Pillars
+               Our Business 
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.05]">
               Capital Allocation Across <br />
-              <span className="italic text-[#C7D3BC]">4 Core Divisions</span>
+              <span className="italic text-[#C7D3BC]">Strategic Operating Pillars</span>
             </h2>
           </div>
           
           <p className="text-sm sm:text-base text-white/60 max-w-md font-light leading-relaxed border-l-2 border-[#C7D3BC]/40 pl-6">
-            Lombard HoldCo operates a decentralized multi-pillar structure, deploying capital across commercial banking, investment banking, asset management, and insurance.
+            Lombard HoldCo operates through four specialized subsidiaries, each with its own board of directors and C-suite leadership, ensuring focused expertise and governance across our diverse financial services portfolio.
           </p>
         </div>
 
@@ -179,14 +151,7 @@ const BusinessUnitsSection = () => {
             </div>
 
             {/* Quick Summary Footnote */}
-            <div className="p-6 bg-white/5 border border-white/10 rounded-sm">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C7D3BC] block mb-2">
-                Governance Boundary
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                Each subsidiary maintains an independent board of directors and specialized C-suite leadership operating under Group risk guidelines.
-              </p>
-            </div>
+            
           </div>
 
           {/* Column 2: Active Unit Content (4 Cols) */}
