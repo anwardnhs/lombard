@@ -86,7 +86,7 @@ const HeroSection = () => {
             variants={animationVariants}
             className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-12 sm:mb-16 leading-relaxed font-light"
           >
-            We are a leading financial services group in Africa, committed to delivering innovative solutions that drive economic growth and empower communities. Our diverse portfolio spans banking, insurance, investment, and more, all aimed at fostering financial inclusion and prosperity across the continent. 
+          Harnessing decades of expertise, we provide innovative financial solutions that drive growth and prosperity across Africa.
           </motion.p>
 
           {/* Call to Action Buttons */}
