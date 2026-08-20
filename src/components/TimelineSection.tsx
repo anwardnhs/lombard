@@ -101,8 +101,7 @@ const ImpactSection = () => {
 
             {/* Lead Paragraph - High Readability */}
             <p className="text-lg text-slate-700 leading-relaxed mb-10 max-w-xl">
-              We embed ESG standards across 100% of our banking decisions. 
-              We have committed <span className="font-semibold text-black bg-[#c7d3bc]/30 px-1 rounded-sm">$234M in green financing</span> by 2030 to accelerate the energy transition.
+              At Lombard, we integrate ESG principles into every facet of our operations, ensuring that our financial solutions not only drive growth but also foster environmental stewardship and social responsibility across Africa.  
             </p>
 
             {/* Feature Grid - Hick's Law: Visual grouping with Icons */}
@@ -130,7 +129,7 @@ const ImpactSection = () => {
                     Community Growth
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Deploying $52M annually to healthcare and digital inclusion.
+                    Financing initiatives that empower local communities and promote sustainable development.                  
                   </p>
                 </div>
               </div>
@@ -180,42 +179,8 @@ const ImpactSection = () => {
               <div className="absolute inset-0 bg-black/10" />
             </motion.div>
 
-            {/* Floating Card - Glassmorphism & Fitts' Law */}
-            <motion.div 
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="absolute bottom-8 left-6 right-6 sm:left-auto sm:right-8 sm:w-80 bg-white/90 backdrop-blur-xl p-6 rounded-xl border border-white/40 shadow-2xl"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] font-bold tracking-widest uppercase text-[#4A5D43]">
-                  Project Highlight
-                </span>
-                <span className="text-[10px] font-bold bg-[#E8EAE6] text-slate-600 px-2 py-1 rounded">
-                  120MW
-                </span>
-              </div>
-              
-              <h3 className="text-slate-900 text-lg font-bold mb-2">
-                Lekki Solar Complex
-              </h3>
-              
-              <p className="text-sm text-slate-600 leading-relaxed mb-5">
-                Providing clean energy to 50,000 households via Lombard Capital.
-              </p>
-              
-              {/* Card CTA - Full width for easy tapping */}
-              <a 
-                href="/projects/lekki-solar"
-                className="group flex items-center justify-between w-full py-3 px-4 bg-[#F5F7F4] hover:bg-[#E8EAE6] text-xs font-bold uppercase tracking-wider text-slate-900 rounded-lg transition-colors"
-              >
-                View Project
-                <svg className="w-4 h-4 text-[#4A5D43] transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </motion.div>
+            
+            
           </div>
 
         </div>
