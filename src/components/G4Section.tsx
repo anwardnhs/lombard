@@ -72,28 +72,25 @@ const BusinessUnitsSection = () => {
   return (
     <section 
       id="businesses"
-      className="relative bg-[#0F120F] text-white py-24 lg:py-36 px-6 lg:px-12 font-poppins overflow-hidden"
+      className="relative py-24 lg:py-36 px-6 lg:px-12 font-poppins overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=1920&auto=format&fit=crop&q=80')` }}
     >
-      {/* Background Subtle Gradient & Grid Accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F120F] via-[#141814] to-[#0F120F] opacity-90 pointer-events-none" />
+      {/* Semi-transparent white overlay to ensure text readability on the texture */}
+      <div className="absolute inset-0 bg-white/85 pointer-events-none" />
 
-      <div className="container max-w-[1400px] mx-auto relative z-10">
+      <div className="container max-w-[1400px] mx-auto relative z-10 text-[#0F120F]">
         
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end border-b border-white/10 pb-10 mb-14 lg:mb-20 gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end border-b border-[#4A5D43]/30 pb-10 mb-14 lg:mb-20 gap-6">
           <div>
-            <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#C7D3BC] mb-4">
+            <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#4A5D43] mb-4">
                Our Business 
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.05]">
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#0F120F] tracking-tight leading-[1.05]">
               Capital Allocation Across <br />
-              <span className="italic text-[#C7D3BC]">Strategic Operating Pillars</span>
+              <span className="italic text-[#4A5D43]">Strategic Operating Pillars</span>
             </h2>
           </div>
-          
-          <p className="text-sm sm:text-base text-white/60 max-w-md font-light leading-relaxed border-l-2 border-[#C7D3BC]/40 pl-6">
-            Lombard HoldCo operates through four specialized subsidiaries, each with its own board of directors and C-suite leadership, ensuring focused expertise and governance across our diverse financial services portfolio.
-          </p>
         </div>
 
         {/* 3-Column Editorial Layout */}
@@ -101,7 +98,7 @@ const BusinessUnitsSection = () => {
           
           {/* Column 1: Editorial Navigation Menu (4 Cols) */}
           <div className="lg:col-span-4 flex flex-col justify-between space-y-4">
-            <div className="flex flex-col divide-y divide-white/10">
+            <div className="flex flex-col divide-y divide-[#4A5D43]/20 border-b border-[#4A5D43]/20 border-t">
               {businessUnits.map((unit, index) => {
                 const isActive = activeIndex === index;
                 const Icon = unit.icon;
@@ -111,22 +108,22 @@ const BusinessUnitsSection = () => {
                     onClick={() => handleSelect(index)}
                     className={`group text-left py-6 px-4 transition-all duration-300 relative outline-none flex items-center justify-between ${
                       isActive 
-                        ? "bg-white/10 text-white shadow-xl" 
-                        : "hover:bg-white/5 text-white/50 hover:text-white"
+                        ? "bg-[#4A5D43]/5 text-[#0F120F]" 
+                        : "hover:bg-black/5 text-[#0F120F]/60 hover:text-[#0F120F]"
                     }`}
                   >
                     {/* Active Left Indicator Bar */}
                     {isActive && (
                       <motion.div 
                         layoutId="activeTabIndicator"
-                        className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#C7D3BC]"
+                        className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#4A5D43]"
                         transition={{ duration: 0.4, ease: transitionEase }}
                       />
                     )}
 
                     <div className="flex items-center gap-4">
                       <span className={`text-xs font-mono font-bold transition-colors ${
-                        isActive ? "text-[#C7D3BC]" : "text-white/30 group-hover:text-white/60"
+                        isActive ? "text-[#4A5D43]" : "text-[#0F120F]/40 group-hover:text-[#0F120F]/60"
                       }`}>
                         {unit.num}
                       </span>
@@ -135,7 +132,7 @@ const BusinessUnitsSection = () => {
                           {unit.name}
                         </h3>
                         <p className={`text-[10px] uppercase tracking-widest font-mono ${
-                          isActive ? "text-[#C7D3BC]" : "text-white/40"
+                          isActive ? "text-[#4A5D43]" : "text-[#0F120F]/50"
                         }`}>
                           {unit.shortName}
                         </p>
@@ -143,19 +140,16 @@ const BusinessUnitsSection = () => {
                     </div>
 
                     <Icon className={`text-lg transition-transform duration-300 ${
-                      isActive ? "text-[#C7D3BC] scale-110" : "text-white/20 group-hover:text-white/50"
+                      isActive ? "text-[#4A5D43] scale-110" : "text-[#0F120F]/30 group-hover:text-[#0F120F]/50"
                     }`} />
                   </button>
                 );
               })}
             </div>
-
-            {/* Quick Summary Footnote */}
-            
           </div>
 
           {/* Column 2: Active Unit Content (4 Cols) */}
-          <div className="lg:col-span-4 flex flex-col justify-between bg-[#151915] border border-white/10 p-8 sm:p-10 rounded-sm">
+          <div className="lg:col-span-4 flex flex-col justify-between bg-white/70 backdrop-blur-sm border border-[#4A5D43]/20 p-8 sm:p-10 rounded-sm shadow-sm">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeUnit.id}
@@ -167,29 +161,24 @@ const BusinessUnitsSection = () => {
               >
                 <div>
                   {/* Category Pill */}
-                  <span className="inline-block px-3 py-1 bg-[#C7D3BC]/20 text-[#C7D3BC] text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                  <span className="inline-block px-3 py-1 bg-[#4A5D43]/10 text-[#4A5D43] text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                     {activeUnit.tagline}
                   </span>
 
-                  <h3 className="font-serif text-3xl sm:text-4xl text-white mb-4 leading-tight">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#0F120F] mb-4 leading-tight">
                     {activeUnit.name}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-white/80 font-light leading-relaxed mb-8">
+                  <p className="text-sm sm:text-base text-[#0F120F]/80 font-light leading-relaxed mb-8">
                     {activeUnit.description}
                   </p>
-
-                  {/* Division Focus Tags */}
-                  
                 </div>
 
                 {/* Key Metrics Grid */}
-                <div className="pt-6 border-t border-white/10">
-                  
-
+                <div className="pt-6 border-t border-[#4A5D43]/20">
                   <a
                     href={activeUnit.href}
-                    className="group flex items-center justify-between w-full py-3.5 px-5 bg-[#C7D3BC] text-[#0F120F] text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-sm"
+                    className="group flex items-center justify-between w-full py-3.5 px-5 bg-[#4A5D43] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#2A3626] transition-colors rounded-sm"
                   >
                     <span>Corporate Overview</span>
                     <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -200,7 +189,7 @@ const BusinessUnitsSection = () => {
           </div>
 
           {/* Column 3: High-End Editorial Photography Showcase (4 Cols) */}
-          <div className="lg:col-span-4 relative min-h-[400px] lg:min-h-[640px] overflow-hidden border border-white/10 rounded-sm">
+          <div className="lg:col-span-4 relative min-h-[400px] lg:min-h-[640px] overflow-hidden border border-[#4A5D43]/20 rounded-sm shadow-sm">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeUnit.id}
@@ -216,18 +205,18 @@ const BusinessUnitsSection = () => {
                   className="w-full h-full object-cover object-center filter contrast-105 brightness-95"
                 />
 
-                {/* Dark Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F120F] via-transparent to-black/20" />
+                {/* Light Vignette Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F120F]/60 via-transparent to-transparent" />
 
                 {/* Floating Glassmorphism Badge */}
-                <div className="absolute bottom-6 left-6 right-6 p-5 bg-[#0F120F]/90 backdrop-blur-md border border-white/15 text-white">
+                <div className="absolute bottom-6 left-6 right-6 p-5 bg-white/95 backdrop-blur-md border border-[#4A5D43]/20 text-[#0F120F] shadow-lg">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="w-2 h-2 rounded-full bg-[#C7D3BC] animate-pulse" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#C7D3BC]">
+                    <span className="w-2 h-2 rounded-full bg-[#4A5D43] animate-pulse" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#4A5D43]">
                       Division Focus
                     </span>
                   </div>
-                  <p className="font-serif text-lg text-white font-medium">
+                  <p className="font-serif text-lg text-[#0F120F] font-medium">
                     {activeUnit.badgeText}
                   </p>
                 </div>
