@@ -180,35 +180,12 @@ const BusinessUnitsSection = () => {
                   </p>
 
                   {/* Division Focus Tags */}
-                  <div className="mb-8">
-                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3">
-                      Specialized Divisions
-                    </h4>
-                    <div className="space-y-2.5">
-                      {activeUnit.divisions.map((div, i) => (
-                        <div key={i} className="flex items-center gap-3 text-xs text-white/90 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#C7D3BC]" />
-                          <span>{div}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  
                 </div>
 
                 {/* Key Metrics Grid */}
                 <div className="pt-6 border-t border-white/10">
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    {activeUnit.stats.map((stat, i) => (
-                      <div key={i} className="bg-white/5 p-3.5 border border-white/5">
-                        <span className="text-[9px] uppercase tracking-wider text-white/50 block mb-1">
-                          {stat.label}
-                        </span>
-                        <span className="text-lg font-bold text-[#C7D3BC]">
-                          {stat.val}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                  
 
                   <a
                     href={activeUnit.href}
