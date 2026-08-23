@@ -133,13 +133,13 @@ const InvestorsSection = () => {
                 </nav>
 
                 {/* Quick IR Contact */}
-                <div className="bg-[#0F120F] text-white p-6 shadow-xl">
-                  <h4 className="font-serif text-lg mb-2">IR Contact</h4>
-                  <p className="text-xs text-white/60 mb-4">
+                <div className="bg-white border-2 border-[#0F120F]/10 p-6 mt-6">
+                  <h4 className="font-serif text-lg mb-2 text-[#0F120F]">IR Contact</h4>
+                  <p className="text-xs text-[#0F120F]/60 mb-4">
                     For institutional inquiries:
                   </p>
-                  <a href="mailto:ir@lombard.com" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C7D3BC] hover:text-white transition-colors">
-                    <FaEnvelope /> ir@lombard.com
+                  <a href="mailto:ir@lombardholdco.com" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-[#C7D3BC] transition-colors">
+                    <FaEnvelope /> ir@lombardholdco.com
                   </a>
                 </div>
               </div>
@@ -152,32 +152,32 @@ const InvestorsSection = () => {
               <section id="overview" ref={sections.overview} className="scroll-mt-32">
                 <div className="grid md:grid-cols-2 gap-6 mb-12">
                   {[tickers.ngx, tickers.lse].map((ticker, idx) => (
-                    <div key={idx} className="bg-[#0F120F] text-white p-8 shadow-2xl group transition-transform hover:-translate-y-1">
+                    <div key={idx} className="bg-white border-2 border-[#0F120F]/10 p-8 hover:shadow-xl hover:border-[#C7D3BC] transition-all duration-300 group">
                       <div className="flex justify-between items-start mb-6">
                         <div>
-                          <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">
+                          <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 mb-1">
                             {ticker.exchange} Ticker
                           </span>
-                          <span className="font-mono text-3xl font-bold tracking-tight">
-                            {ticker.symbol}
-                          </span>
+                          <span className="text-2xl font-mono font-bold text-[#0F120F]">{ticker.symbol}</span>
                         </div>
-                        <div className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-bold ${ticker.change >= 0 ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
-                          {ticker.change >= 0 ? <FaArrowTrendUp /> : <FaArrowTrendDown />}
-                          {ticker.changePercent}%
-                        </div>
+                        <span className={`px-2 py-1 text-xs font-bold font-mono rounded ${
+                          ticker.change.toString().startsWith('+') ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                        }`}>
+                          {ticker.change.toString().startsWith('+') ? <FaArrowUp className="inline text-[10px] mr-1" /> : <FaArrowDown className="inline text-[10px] mr-1" />}
+                          {ticker.change}%
+                        </span>
                       </div>
                       
-                      <div className="flex justify-between items-end border-t border-white/10 pt-4">
+                      <div className="flex justify-between items-end border-t border-[#0F120F]/10 pt-4">
                         <div>
-                          <span className="block text-xs text-white/40 mb-1">Current Price</span>
-                          <span className="text-2xl font-bold">
+                          <p className="text-[10px] uppercase tracking-widest text-[#0F120F]/50 mb-1">Current Price</p>
+                          <p className="font-mono text-2xl font-bold text-[#0F120F]">
                             {ticker.currency === "GBP" ? "£" : "₦"}{ticker.price}
-                          </span>
+                          </p>
                         </div>
-                        <span className="text-[10px] text-white/30">
+                        <p className="text-xs text-[#0F120F]/40 italic">
                           Updated: {new Date(ticker.lastUpdated).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                        </span>
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -393,27 +393,27 @@ const InvestorsSection = () => {
 
               {/* 6. SHAREHOLDER SERVICES */}
               <section id="services" ref={sections.services} className="scroll-mt-32">
-                <div className="bg-[#0F120F] text-white p-10 md:p-12">
-                  <h2 className="font-serif text-3xl mb-8">Shareholder Services</h2>
+                <div className="bg-white border-2 border-[#0F120F]/10 p-10 md:p-12">
+                  <h2 className="font-serif text-3xl mb-8 text-[#0F120F]">Shareholder Services</h2>
                   
                   <div className="grid md:grid-cols-2 gap-12">
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#C7D3BC] mb-4">Registrar Contact</h4>
-                      <p className="text-lg font-bold mb-2">{shareholderServices.registrar.name}</p>
-                      <address className="not-italic text-white/60 text-sm leading-relaxed mb-6">
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#0F120F]/50 mb-4">Registrar Contact</h4>
+                      <p className="text-lg font-bold mb-2 text-[#0F120F]">{shareholderServices.registrar.name}</p>
+                      <address className="not-italic text-[#0F120F]/70 text-sm leading-relaxed mb-6">
                         {shareholderServices.registrar.address}<br />
-                        <span className="block mt-2 text-white">T: {shareholderServices.registrar.phone}</span>
-                        <span className="block text-white">E: {shareholderServices.registrar.email}</span>
+                        <span className="block mt-2 text-[#0F120F]">T: {shareholderServices.registrar.phone}</span>
+                        <span className="block text-[#0F120F]">E: {shareholderServices.registrar.email}</span>
                       </address>
                     </div>
 
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#C7D3BC] mb-4">Downloads</h4>
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#0F120F]/50 mb-4">Downloads</h4>
                       <div className="grid gap-3">
                         {shareholderServices.forms.map((form, idx) => (
-                          <a key={idx} href={form.url} className="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors group">
-                            <span className="text-sm font-medium">{form.title}</span>
-                            <FaDownload className="text-white/40 group-hover:text-white" />
+                          <a key={idx} href={form.url} className="flex items-center justify-between p-4 bg-[#0F120F]/5 hover:bg-[#0F120F]/10 border border-[#0F120F]/10 transition-colors group">
+                            <span className="text-sm font-medium text-[#0F120F]">{form.title}</span>
+                            <FaDownload className="text-[#0F120F]/40 group-hover:text-[#0F120F]" />
                           </a>
                         ))}
                       </div>

@@ -161,16 +161,15 @@ const CorporateProfileSection = () => {
                 
                 {/* Enhanced CTA card with better contrast */}
                 <motion.div 
-                  className="bg-[#0F120F] text-white p-8 rounded-none shadow-xl"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
+                  className="bg-white border-2 border-[#0F120F]/10 text-[#0F120F] p-8 hover:border-[#C7D3BC] hover:shadow-xl transition-all duration-300"
+                  whileHover={{ y: -4 }}
                 >
                   <FaFilePdf className="text-3xl mb-5 text-[#C7D3BC]" />
                   <h3 className="font-serif text-xl mb-3 leading-tight">Investor Fact Sheet</h3>
-                  <p className="text-sm text-white/70 mb-8 leading-relaxed">
+                  <p className="text-sm text-[#0F120F]/70 mb-8 leading-relaxed">
                     Download our comprehensive Q4 2025 corporate profile and investor presentation.
                   </p>
-                  <button className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-[#C7D3BC] hover:text-white transition-colors group py-2">
+                  <button className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-[#0F120F] hover:text-[#C7D3BC] transition-colors group py-2">
                     <FaDownload className="text-base group-hover:animate-bounce" />
                     Download PDF
                     <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
@@ -230,8 +229,8 @@ const CorporateProfileSection = () => {
                   
                   {/* Enhanced metrics card with better visual hierarchy */}
                   <div className="lg:col-span-3">
-                    <div className="bg-[#0F120F] text-white p-10 h-full">
-                      <h3 className="font-serif text-2xl mb-10 text-[#C7D3BC] pb-4 border-b border-white/10">
+                    <div className="bg-white border-2 border-[#0F120F]/10 text-[#0F120F] p-10 h-full hover:shadow-xl hover:border-[#C7D3BC] transition-all duration-300">
+                      <h3 className="font-serif text-2xl mb-10 text-[#0F120F] pb-4 border-b border-[#0F120F]/10">
                         Group Key Metrics (2025)
                       </h3>
                       <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10">
@@ -239,15 +238,15 @@ const CorporateProfileSection = () => {
                           <div key={i}>
                             <div className="flex items-center gap-2 mb-2">
                               <FaChartPie className="text-[#C7D3BC] text-xs" />
-                              <p className="text-[10px] uppercase tracking-widest text-white/50 font-bold">
+                              <p className="text-[10px] uppercase tracking-widest text-[#0F120F]/50 font-bold">
                                 {metric.label}
                               </p>
                             </div>
-                            <p className="text-3xl font-semibold mb-1">
+                            <p className="text-3xl font-semibold mb-1 text-[#0F120F]">
                               {metric.prefix}{metric.value}{metric.suffix}
                             </p>
                             {metric.subValue && (
-                              <p className="text-xs font-mono text-white/50">{metric.subValue}</p>
+                              <p className="text-xs font-mono text-[#0F120F]/50">{metric.subValue}</p>
                             )}
                           </div>
                         ))}
@@ -321,14 +320,14 @@ const CorporateProfileSection = () => {
                   
                   {/* Enhanced info card */}
                   <div className="lg:col-span-1">
-                    <div className="bg-[#0F120F] text-white p-8 sticky top-32">
-                      <h4 className="font-serif text-xl mb-5 text-[#C7D3BC]">Founding Consortium</h4>
+                    <div className="bg-white border-2 border-[#0F120F]/10 text-[#0F120F] p-8 sticky top-32">
+                      <h4 className="font-serif text-xl mb-5 text-[#0F120F]">Founding Consortium</h4>
                       <div className="space-y-4">
-                        <div className="pb-4 border-b border-white/10">
-                          <p className="text-xs uppercase tracking-wider text-white/50 mb-2">Collective Stake</p>
+                        <div className="pb-4 border-b border-[#0F120F]/10">
+                          <p className="text-xs uppercase tracking-wider text-[#0F120F]/50 mb-2">Collective Stake</p>
                           <p className="text-3xl font-bold">28.5%</p>
                         </div>
-                        <p className="text-sm text-white/80 leading-relaxed">
+                        <p className="text-sm text-[#0F120F]/80 leading-relaxed">
                           The founding consortium collectively holds 28.5% through SPVs, providing long-term stewardship alongside institutional shareholders and a broad public float.
                         </p>
                       </div>
