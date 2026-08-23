@@ -167,18 +167,18 @@ const ContactSection = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <a 
                     href="#contact-form"
-                    className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#4A5D43] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC] shadow-lg"
+                    className="group flex sm:inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#4A5D43] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC] shadow-lg w-full sm:w-auto"
                   >
-                    <FaEnvelope className="text-base" />
-                    Send a Message
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <FaEnvelope className="text-base flex-shrink-0" />
+                    <span className="whitespace-nowrap">Send a Message</span>
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   </a>
                   <a 
                     href="tel:+2341448000"
-                    className="group inline-flex items-center justify-center gap-3 px-10 py-5 border-2 border-[#0F120F] text-[#0F120F] text-sm font-bold uppercase tracking-wider hover:bg-[#0F120F] hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]"
+                    className="group flex sm:inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 border-2 border-[#0F120F] text-[#0F120F] text-sm font-bold uppercase tracking-wider hover:bg-[#0F120F] hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC] w-full sm:w-auto"
                   >
-                    <FaPhone className="text-base" />
-                    Call Us Now
+                    <FaPhone className="text-base flex-shrink-0" />
+                    <span className="whitespace-nowrap">Call Us Now</span>
                   </a>
                 </div>
 
@@ -226,15 +226,15 @@ const ContactSection = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     variants={fadeInVariants}
                     custom={idx * 0.1}
-                    className="group bg-[#F9F9F7] border-2 border-[#0F120F]/10 p-10 hover:border-[#C7D3BC] hover:shadow-2xl transition-all duration-300"
+                    className="group bg-[#F9F9F7] border-2 border-[#0F120F]/10 p-6 sm:p-10 hover:border-[#C7D3BC] hover:shadow-2xl transition-all duration-300"
                     whileHover={{ y: -8 }}
                   >
-                    <div className="flex items-start gap-6">
-                      <div className="w-16 h-16 rounded-full bg-[#0F120F] flex items-center justify-center flex-shrink-0 group-hover:bg-[#4A5D43] transition-colors">
-                        <Icon className="w-7 h-7 text-white" />
+                    <div className="flex flex-col sm:flex-row items-start gap-5 sm:gap-6">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#0F120F] flex items-center justify-center flex-shrink-0 group-hover:bg-[#4A5D43] transition-colors">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-serif font-bold text-[#0F120F] mb-3">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-2xl font-serif font-bold text-[#0F120F] mb-3 break-words">
                           {contact.title}
                         </h3>
                         <p className="text-base text-[#0F120F]/80 mb-6 leading-relaxed">
@@ -245,11 +245,11 @@ const ContactSection = () => {
                         <div className="space-y-4">
                           <a 
                             href={`mailto:${contact.email}`}
-                            className="flex items-center gap-3 text-base font-bold text-[#0F120F] hover:text-[#4A5D43] transition-colors group/link py-2"
+                            className="flex items-center gap-3 text-base font-bold text-[#0F120F] hover:text-[#4A5D43] transition-colors group/link py-2 w-full"
                           >
-                            <FaEnvelope className="text-sm text-[#C7D3BC]" />
-                            <span className="group-hover/link:underline">{contact.email}</span>
-                            <FaArrowRight className="text-xs opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
+                            <FaEnvelope className="text-sm text-[#C7D3BC] flex-shrink-0" />
+                            <span className="group-hover/link:underline truncate">{contact.email}</span>
+                            <FaArrowRight className="text-xs opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all flex-shrink-0 hidden sm:block" />
                           </a>
                           <a 
                             href={`tel:${contact.phone.replace(/\s/g, '')}`}
