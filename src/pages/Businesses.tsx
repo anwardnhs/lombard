@@ -2,10 +2,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
-import bankingImg from "@/assets/mainland.jpg";
-import capitalImg from "@/assets/deal.png";
-import assetImg from "@/assets/meeting.jpg";
-import insuranceImg from "@/assets/health.jpg";
+
+const bankingImg = "https://media.istockphoto.com/id/2280867613/photo/a-young-couple-stands-together-in-a-stylish-kitchen-smiling-as-they-look-at-a-smartphone-two.jpg?s=612x612&w=0&k=20&c=HpOAKkbTxrUkPjdoRP_TvvuMghULMb8ax1jleC1mpMA=";
+const capitalImg = "https://media.istockphoto.com/id/1506554794/photo/an-aerial-view-of-the-surulere-area-of-lagos-nigeria-showing-the-residential-areas-and.jpg?s=612x612&w=0&k=20&c=Kr6JuE0uKC-eIc1YIHg8GvJgV3TkMgbKUsr10DJcULY=";
+const assetImg = "https://media.istockphoto.com/id/2184415651/photo/national-theatre-lagos.jpg?s=612x612&w=0&k=20&c=YIw0OEcG680lIJ9QkCs45CCUqDUxsQnI3cLNbUSK6HI=";
+const insuranceImg = "https://media.istockphoto.com/id/178367126/photo/african-family-on-grey.jpg?s=612x612&w=0&k=20&c=CUYW5Z1LW0V6pstGt147yX11uTrlPuNyPBGHJKv2bhs=";
 
 const Businesses = () => {
   const subsidiaries = [
@@ -19,22 +20,22 @@ const Businesses = () => {
     {
       id: "capital",
       name: "Lombard Capital",
-      description: "The premier investment banking and advisory firm structuring major infrastructure, sovereign debt, and M&A deals on the continent.",
-      metrics: ["₦4.5T Deals Advised", "AAA Rated", "Top Tier IBD"],
+      description: "Premier investment banking, advisory, and capital markets firm facilitating major transactions across the continent.",
+      metrics: ["₦2.5T AUA", "M&A Advisory", "Project Finance"],
       image: capitalImg,
     },
     {
-      id: "asset-management",
+      id: "asset",
       name: "Lombard Asset Management",
-      description: "Providing world-class wealth management, institutional investing, and alternative asset strategies for global and regional investors.",
-      metrics: ["₦8.4T AUM", "Pension & Mutual Funds", "Global Equities"],
+      description: "Wealth and asset management division preserving and growing capital for institutions and high-net-worth individuals.",
+      metrics: ["₦1.8T AUM", "Pension Funds", "Alternative Investments"],
       image: assetImg,
     },
     {
       id: "insurance",
       name: "Lombard Insurance",
-      description: "Comprehensive risk management solutions covering life assurance, general insurance, and specialized corporate underwriting.",
-      metrics: ["₦1.1T Gross Premium", "Life & General", "Pan-African Reach"],
+      description: "Comprehensive risk management and insurance solutions spanning life, general, and corporate coverage.",
+      metrics: ["Life Assurance", "General Insurance", "Risk Consulting"],
       image: insuranceImg,
     }
   ];
@@ -42,8 +43,9 @@ const Businesses = () => {
   return (
     <div className="min-h-screen bg-[#F4F4F0] font-poppins selection:bg-[#4A5D43] selection:text-[#F4F4F0]">
       <Header />
+      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0F120F] z-40" aria-hidden="true" />
 
-      <main className="pt-32 pb-24">
+      <main className="pt-32 pb-24 relative z-30">
         {/* Page Header */}
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px] mb-20">
           <motion.div 
