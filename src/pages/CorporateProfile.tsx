@@ -33,7 +33,7 @@ const CorporateProfileSection = () => {
       // Show scroll to top button
       setShowScrollTop(window.scrollY > 800);
 
-      const sections = ["overview", "ownership", "history", "g4", "structure"];
+      const sections = ["overview", "ownership", "history", "g4"];
       const scrollPosition = window.scrollY + 250;
 
       for (const section of sections) {
@@ -156,7 +156,6 @@ const CorporateProfileSection = () => {
                     <NavItem id="ownership" label="Shareholding" number="02" />
                     <NavItem id="history" label="Our History" number="03" />
                     <NavItem id="g4" label="Founding Partners" number="04" />
-                    <NavItem id="structure" label="Structure" number="05" />
                   </div>
                 </nav>
                 
@@ -498,186 +497,7 @@ const CorporateProfileSection = () => {
                 </div>
               </section>
 
-              {/* 5. STRUCTURE - Enhanced cards with better visual hierarchy */}
-              <section id="structure" className="scroll-mt-32">
-                <div className="flex items-center gap-4 mb-10">
-                  <span className="text-5xl font-mono font-bold text-[#0F120F]/10">05</span>
-                  <h2 className="font-serif text-4xl text-[#0F120F]">Operating Structure</h2>
-                </div>
-                
-                <div className="space-y-10">
-                  
-                  {/* Enhanced Bank subsidiary card */}
-                  <div className="group border-2 border-[#0F120F]/10 bg-white overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div className="bg-[#0F120F] text-white p-6 flex justify-between items-center">
-                      <div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">Subsidiary A</span>
-                        <h3 className="font-serif text-2xl mt-1">Lombard Bank Plc</h3>
-                      </div>
-                      <span className="px-4 py-2 bg-[#C7D3BC] text-[#0F120F] text-xs font-bold uppercase tracking-wider">
-                        Commercial Banking
-                      </span>
-                    </div>
-                    
-                    <div className="p-10">
-                      <div className="flex flex-col md:flex-row justify-between mb-8 pb-8 border-b-2 border-[#0F120F]/10">
-                        <div>
-                          <p className="text-sm text-[#0F120F]/70 mb-2 uppercase tracking-wider font-semibold">Flagship Banking Subsidiary</p>
-                        </div>
-                        <div className="mt-4 md:mt-0 text-right">
-                          <p className="text-xs uppercase font-bold text-[#0F120F]/60 mb-1">Chief Executive Officer</p>
-                          <p className="font-bold text-lg">Mrs. Kemi Adeleke</p>
-                        </div>
-                      </div>
-                      
-                      <p className="text-base text-[#0F120F]/80 leading-loose mb-10">
-                        Lombard Bank Plc serves Corporate & Investment, Commercial, and Retail clients. The Bank anchors
-                        the Group's balance sheet and distribution network, providing the scale required to finance
-                        households and enterprises across priority sectors.
-                      </p>
-                      
-                      <div className="grid md:grid-cols-2 gap-10">
-                        <div className="bg-[#F9F9F7] p-6 border-l-4 border-[#C7D3BC]">
-                          <h4 className="font-bold text-[#0F120F] mb-4 uppercase text-xs tracking-widest">Network Scale</h4>
-                          <ul className="space-y-3 text-base text-[#0F120F]/85">
-                            <li className="flex items-start gap-2">
-                              <span className="text-[#C7D3BC] mt-1">•</span>
-                              <span>535 branches (Nigeria: 430 | Regional: 105)</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <span className="text-[#C7D3BC] mt-1">•</span>
-                              <span>48,000+ agent banking locations</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="bg-[#F9F9F7] p-6 border-l-4 border-[#C7D3BC]">
-                          <h4 className="font-bold text-[#0F120F] mb-4 uppercase text-xs tracking-widest">Business Units</h4>
-                          <p className="text-base text-[#0F120F]/85 leading-relaxed">
-                            Retail Banking, Corporate Banking, SME Banking, and Private Banking
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Enhanced Capital & Asset Management Grid */}
-                  <div className="grid md:grid-cols-2 gap-10">
-                    {/* Capital Markets */}
-                    <div className="border-2 border-[#0F120F]/10 bg-white hover:shadow-xl transition-all duration-300">
-                      <div className="bg-[#0F120F]/5 p-6 border-b-2 border-[#0F120F]/10">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/60">Subsidiary B</span>
-                        <h3 className="font-serif text-xl mt-1 text-[#0F120F]">Lombard Capital Markets</h3>
-                        <p className="text-xs text-[#0F120F]/60 mt-2 uppercase tracking-wider font-semibold">Investment Banking</p>
-                      </div>
-                      
-                      <div className="p-8">
-                        <div className="mb-6 pb-4 border-b border-[#0F120F]/10">
-                          <p className="text-xs uppercase tracking-wider text-[#0F120F]/60 mb-1">Chief Executive Officer</p>
-                          <p className="font-bold text-base">Mr. Tunde Balogun</p>
-                        </div>
-                        
-                        <p className="text-base text-[#0F120F]/80 leading-relaxed mb-6">
-                          The investment banking platform delivers advisory, capital raising, and structured finance
-                          solutions for corporates, sovereigns, and institutional investors across Africa.
-                        </p>
-                        
-                        <ul className="space-y-3 text-sm text-[#0F120F]/85">
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>Lombard Securities (leading NGX broker by volume)</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>M&A and strategic advisory</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>Structured finance and project finance</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>Private equity and principal investments</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* Asset Management */}
-                    <div className="border-2 border-[#0F120F]/10 bg-white hover:shadow-xl transition-all duration-300">
-                      <div className="bg-[#0F120F]/5 p-6 border-b-2 border-[#0F120F]/10">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/60">Subsidiary C</span>
-                        <h3 className="font-serif text-xl mt-1 text-[#0F120F]">Lombard Asset Management</h3>
-                        <p className="text-xs text-[#0F120F]/60 mt-2 uppercase tracking-wider font-semibold">Wealth & Asset Management</p>
-                      </div>
-                      
-                      <div className="p-8">
-                        <div className="mb-6 pb-4 border-b border-[#0F120F]/10">
-                          <p className="text-xs uppercase tracking-wider text-[#0F120F]/60 mb-1">Chief Executive Officer</p>
-                          <p className="font-bold text-base">Mrs. Zainab Tijani, CFA</p>
-                        </div>
-                        
-                        <p className="text-base text-[#0F120F]/80 leading-relaxed mb-6">
-                          The wealth platform manages pensions, trusts, and investments for institutions and individuals,
-                          leveraging a disciplined investment process and strong governance standards.
-                        </p>
-                        
-                        <ul className="space-y-3 text-sm text-[#0F120F]/85">
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>Licensed Pension Fund Administrator (PFA)</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>Corporate trusteeship and estate planning</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-[#C7D3BC] mt-1">•</span>
-                            <span>$50M fintech and growth‑equity fund</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Enhanced Insurance */}
-                  <div className="border-2 border-[#0F120F]/10 bg-white hover:shadow-xl transition-all duration-300">
-                    <div className="bg-[#0F120F]/5 p-6 border-b-2 border-[#0F120F]/10 flex justify-between items-center">
-                      <div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/60">Subsidiary D</span>
-                        <h3 className="font-serif text-xl mt-1 text-[#0F120F]">Insurance Operations</h3>
-                      </div>
-                      <span className="text-xs text-[#0F120F]/60 uppercase tracking-wider font-semibold">Insurance</span>
-                    </div>
-                    
-                    <div className="p-10 grid md:grid-cols-2 gap-10">
-                      <div className="border-l-4 border-[#C7D3BC] pl-6">
-                        <h4 className="font-serif text-xl mb-3 text-[#0F120F]">General Insurance Plc</h4>
-                        <div className="mb-4 pb-4 border-b border-[#0F120F]/10">
-                          <p className="text-xs uppercase tracking-wider text-[#0F120F]/60 mb-1">CEO</p>
-                          <p className="font-bold">Mr. Ikenna Okonkwo</p>
-                        </div>
-                        <p className="text-base text-[#0F120F]/80 leading-relaxed">
-                          Licensed by NAICOM to provide general, marine, and commercial risk coverage supported by
-                          disciplined underwriting and claims management.
-                        </p>
-                      </div>
-                      
-                      <div className="border-l-4 border-[#C7D3BC] pl-6">
-                        <h4 className="font-serif text-xl mb-3 text-[#0F120F]">Life Assurance Ltd</h4>
-                        <div className="mb-4 pb-4 border-b border-[#0F120F]/10">
-                          <p className="text-xs uppercase tracking-wider text-[#0F120F]/60 mb-1">CEO</p>
-                          <p className="font-bold">Mrs. Nifemi Ademola</p>
-                        </div>
-                        <p className="text-base text-[#0F120F]/80 leading-relaxed">
-                          Life protection, group cover, and annuity solutions designed for individuals, families, and
-                          corporates.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </section>
 
             </div>
           </div>
