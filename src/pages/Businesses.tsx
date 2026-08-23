@@ -41,26 +41,26 @@ const Businesses = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F4F0] font-poppins selection:bg-[#4A5D43] selection:text-[#F4F4F0]">
+    <div className="min-h-screen bg-[#F9F9F7] font-poppins text-[#0F120F] selection:bg-[#0F120F] selection:text-[#F9F9F7]">
       <Header />
       <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0F120F] z-40" aria-hidden="true" />
 
       <main className="pt-32 pb-24 relative z-30">
         {/* Page Header */}
-        <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px] mb-20">
+        <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px] mb-20 mt-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <span className="text-[#4A5D43] font-mono text-xs uppercase tracking-widest font-bold mb-6 block">
+            <span className="text-[#0F120F]/50 font-mono text-xs uppercase tracking-widest font-bold mb-6 block">
               Operating Subsidiaries
             </span>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#111] leading-[0.9] tracking-tight mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#0F120F] leading-[0.9] tracking-tight mb-8">
               A diversified engine of growth.
             </h1>
-            <p className="text-lg md:text-xl text-[#111]/70 leading-relaxed font-light max-w-2xl">
+            <p className="text-lg md:text-xl text-[#0F120F]/70 leading-relaxed font-light max-w-2xl">
               Lombard HoldCo operates through four specialized, market-leading subsidiaries. 
               Together, they form a comprehensive financial ecosystem designed to drive Africa's economic transformation.
             </p>
@@ -77,45 +77,46 @@ const Businesses = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group flex flex-col"
+                className="group flex flex-col bg-white border-2 border-[#0F120F]/10 hover:border-[#C7D3BC] hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden mb-8 bg-[#111]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#E5E5E5] border-b-2 border-[#0F120F]/10">
                   <img 
                     src={sub.image} 
                     alt={sub.name} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-[#0F120F]/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
 
                 {/* Content */}
-                <div className="flex-grow">
-                  <h2 className="text-3xl lg:text-4xl font-serif text-[#111] mb-4">
+                <div className="p-10 flex-grow flex flex-col">
+                  <h2 className="text-3xl lg:text-4xl font-serif text-[#0F120F] mb-4">
                     {sub.name}.
                   </h2>
-                  <p className="text-[#111]/70 text-base leading-relaxed font-light mb-8 max-w-lg">
+                  <p className="text-[#0F120F]/80 text-base leading-relaxed mb-8 max-w-lg">
                     {sub.description}
                   </p>
                   
                   {/* Metrics */}
-                  <ul className="flex flex-wrap gap-x-8 gap-y-4 mb-10 border-t border-[#111]/10 pt-6">
+                  <ul className="flex flex-wrap gap-x-8 gap-y-4 mb-10 border-t border-[#0F120F]/10 pt-6">
                     {sub.metrics.map((metric, mIdx) => (
-                      <li key={mIdx} className="text-xs font-mono tracking-widest uppercase text-[#111]/60">
+                      <li key={mIdx} className="text-[10px] font-bold tracking-widest uppercase text-[#0F120F]/60">
                         {metric}
                       </li>
                     ))}
                   </ul>
+                  
+                  {/* Action */}
+                  <a href={`/businesses/${sub.id}`} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#0F120F] hover:text-[#C7D3BC] transition-colors mt-auto group/link">
+                    Explore {sub.name}
+                    <div className="w-8 h-8 rounded-full border border-[#0F120F]/20 flex items-center justify-center group-hover/link:border-[#C7D3BC] transition-colors">
+                      <FaArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
+                    </div>
+                  </a>
                 </div>
 
-                {/* Action */}
-                <a href={`/businesses/${sub.id}`} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#111] hover:text-[#4A5D43] transition-colors mt-auto group/link">
-                  Explore {sub.name}
-                  <div className="w-8 h-8 rounded-full border border-[#111]/20 flex items-center justify-center group-hover/link:border-[#4A5D43] transition-colors">
-                    <FaArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
-                  </div>
-                </a>
               </motion.article>
             ))}
           </div>

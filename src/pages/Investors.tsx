@@ -10,7 +10,9 @@ import {
   FaArrowTrendDown,
   FaFilePdf,
   FaEnvelope,
-  FaPhone
+  FaPhone,
+  FaArrowUp,
+  FaArrowDown
 } from "react-icons/fa6";
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Header from "@/components/Header";
