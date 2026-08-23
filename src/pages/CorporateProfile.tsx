@@ -155,7 +155,7 @@ const CorporateProfileSection = () => {
                     <NavItem id="overview" label="At A Glance" number="01" />
                     <NavItem id="ownership" label="Shareholding" number="02" />
                     <NavItem id="history" label="Our History" number="03" />
-                    <NavItem id="g4" label="The G4 Partners" number="04" />
+                    <NavItem id="g4" label="Founding Partners" number="04" />
                     <NavItem id="structure" label="Structure" number="05" />
                   </div>
                 </nav>
@@ -421,11 +421,11 @@ const CorporateProfileSection = () => {
                 </div>
               </section>
 
-              {/* 4. THE G4 PARTNERS - Enhanced cards with better readability */}
+              {/* 4. FOUNDING PARTNERS - Enhanced cards with better readability */}
               <section id="g4" className="scroll-mt-32">
                 <div className="flex items-center gap-4 mb-10">
                   <span className="text-5xl font-mono font-bold text-[#0F120F]/10">04</span>
-                  <h2 className="font-serif text-4xl text-[#0F120F]">The "G4" Partners</h2>
+                  <h2 className="font-serif text-4xl text-[#0F120F]">Founding Partners</h2>
                 </div>
                 
                 {/* Enhanced hero image */}
