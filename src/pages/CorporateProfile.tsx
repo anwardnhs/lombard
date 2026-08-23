@@ -40,7 +40,7 @@ const CorporateProfile = () => {
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">01 — At a Glance</span>
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">01 â€” At a Glance</span>
                 <h2 className="font-serif text-4xl sm:text-5xl mb-10">The Lombard <br/>Tower.</h2>
                 <dl className="space-y-8 max-w-sm">
                   {[
@@ -77,7 +77,7 @@ const CorporateProfile = () => {
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div>
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F9F9F7]/50 block mb-6">02 — Scale</span>
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F9F9F7]/50 block mb-6">02 â€” Scale</span>
                 <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-tight">Delivering pan-African impact at scale.</h2>
               </div>
               <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#C7D3BC] transition-colors pb-2 border-b border-white/20 hover:border-[#C7D3BC]">
@@ -101,7 +101,7 @@ const CorporateProfile = () => {
         {/* FOUNDERS GRID */}
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
           <div className="mb-20">
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 — Genesis</span>
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 â€” Genesis</span>
             <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl max-w-4xl leading-[1.1] mb-8">
               The founding consortium that built the franchise.
             </h2>
@@ -144,9 +144,8 @@ const CorporateProfile = () => {
                   />
                 </div>
                 <div className="sm:w-1/2 flex flex-col justify-center">
-                  <h3 className="font-serif text-3xl mb-2 leading-tight">{partner.name}</h3>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C7D3BC] mb-6">{partner.role}</p>
-                  <p className="text-base text-[#0F120F]/70 leading-relaxed font-light">{partner.bio}</p>
+                  <h3 className="font-serif text-3xl mb-3 leading-tight">{partner.name}</h3>
+                  <p className="text-sm font-extrabold uppercase tracking-widest text-[#4A5D43]">{partner.role}</p>
                 </div>
               </div>
             ))}
@@ -161,4 +160,5 @@ const CorporateProfile = () => {
 };
 
 export default CorporateProfile;
+
 
