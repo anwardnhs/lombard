@@ -161,7 +161,7 @@ const Header = () => {
         role="banner"
         onMouseLeave={() => setActiveMenu(null)}
       >
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 flex items-center justify-between max-w-[1800px]">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 flex items-center justify-between gap-8 xl:gap-12 max-w-[1800px]">
           
           {/* Logo */}
           <a 
