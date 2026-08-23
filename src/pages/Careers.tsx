@@ -57,7 +57,7 @@ const Careers = () => {
       <Header />
       
       {/* Decorative Header Overlay - Kept subtle */}
-      <div className="fixed top-0 left-0 w-full h-20 bg-[#0F120F]/90 backdrop-blur-md z-40 border-b border-[#0F120F]/5" aria-hidden="true" />
+      <div className="fixed top-0 left-0 w-full h-20 bg-[#0a0c0a]/95 backdrop-blur-md z-40 border-b border-[#0F120F]/5" aria-hidden="true" />
 
       {/* --- HERO SECTION --- */}
       <section className="pt-32 lg:pt-48 pb-20 px-6 lg:px-12 border-b border-[#0F120F]/5">
@@ -84,7 +84,7 @@ const Careers = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
                   onClick={() => document.getElementById('open-roles').scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-widest hover:bg-[#2A332A] transition-colors flex justify-center items-center gap-3 rounded-sm"
+                  className="px-8 py-4 bg-[#0a0c0a] text-white text-sm font-bold uppercase tracking-widest hover:bg-[#2A332A] transition-colors flex justify-center items-center gap-3 rounded-sm"
                 >
                   View Open Roles <FaArrowRight />
                 </button>
@@ -129,7 +129,7 @@ const Careers = () => {
               { title: "Institutional Impact", desc: "Structure landmark sovereign bonds, underwrite renewable infrastructure, and build financial platforms shaping African economies." }
             ].map((item, i) => (
               <div key={i} className="group cursor-default">
-                <div className="w-12 h-[2px] bg-[#C7D3BC] mb-6 group-hover:w-24 group-hover:bg-[#0F120F] transition-all duration-300" />
+                <div className="w-12 h-[2px] bg-[#C7D3BC] mb-6 group-hover:w-24 group-hover:bg-[#0a0c0a] transition-all duration-300" />
                 <h3 className="font-serif text-2xl mb-4 text-[#0F120F]">{item.title}</h3>
                 <p className="text-base text-[#0F120F]/70 leading-loose">{item.desc}</p>
               </div>
@@ -245,7 +245,7 @@ const Careers = () => {
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 lg:pl-4">
                           <span className="text-sm text-[#0F120F]/55">{role.company}</span>
-                          <button className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.14em] border border-[#0F120F]/20 px-5 py-2.5 rounded-sm hover:bg-[#0F120F] hover:text-white hover:border-[#0F120F] transition-colors">
+                          <button className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.14em] border border-[#0F120F]/20 px-5 py-2.5 rounded-sm hover:bg-[#0a0c0a] hover:text-white hover:border-[#0F120F] transition-colors">
                             Apply
                             <FaArrowRight className="w-3 h-3" />
                           </button>

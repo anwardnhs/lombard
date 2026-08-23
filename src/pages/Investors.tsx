@@ -86,8 +86,8 @@ const InvestorsSection = () => {
       onClick={() => scrollTo(id)}
       className={`group flex items-center w-full text-left py-3 pl-4 border-l-[3px] text-xs font-bold uppercase tracking-widest transition-all duration-300 ${
         activeSection === id
-          ? "border-[#0F120F] text-[#0F120F] bg-[#0F120F]/5"
-          : "border-transparent text-[#0F120F]/50 hover:text-[#0F120F] hover:bg-[#0F120F]/[0.02]"
+          ? "border-[#0F120F] text-[#0F120F] bg-[#0a0c0a]/5"
+          : "border-transparent text-[#0F120F]/50 hover:text-[#0F120F] hover:bg-[#0a0c0a]/[0.02]"
       }`}
     >
       <span className="flex-1">{label}</span>
@@ -98,7 +98,7 @@ const InvestorsSection = () => {
   return (
     <>
       <Header />
-      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0F120F] z-40" aria-hidden="true" />
+      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0a0c0a] z-40" aria-hidden="true" />
       
       <div className="bg-[#F9F9F7] font-poppins text-[#0F120F] min-h-screen pt-20 pb-24">
         
@@ -186,7 +186,7 @@ const InvestorsSection = () => {
                 </div>
 
                 {/* Key Metrics Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#0F120F]/10 border border-[#0F120F]/10 overflow-hidden rounded-sm">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#0a0c0a]/10 border border-[#0F120F]/10 overflow-hidden rounded-sm">
                   {keyMetrics.map((metric, idx) => (
                     <div key={idx} className="bg-white p-6 hover:bg-[#F9F9F7] transition-colors">
                       <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#0F120F]/50 mb-2">
@@ -232,7 +232,7 @@ const InvestorsSection = () => {
                     </div>
 
                     <div className="flex flex-wrap gap-3 pt-6 border-t border-[#0F120F]/5">
-                      <a href={latestEarnings.deckUrl} className="flex items-center gap-2 px-4 py-3 bg-[#0F120F] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#C7D3BC] hover:text-[#0F120F] transition-colors">
+                      <a href={latestEarnings.deckUrl} className="flex items-center gap-2 px-4 py-3 bg-[#0a0c0a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#C7D3BC] hover:text-[#0F120F] transition-colors">
                         <FaDownload /> Presentation
                       </a>
                       <a href={latestEarnings.transcriptUrl} className="flex items-center gap-2 px-4 py-3 border border-[#0F120F]/20 text-[#0F120F] text-xs font-bold uppercase tracking-widest hover:border-[#0F120F] transition-colors">
@@ -298,7 +298,7 @@ const InvestorsSection = () => {
                         onClick={() => setPriceView(view as any)}
                         className={`px-6 py-2 text-xs font-bold transition-colors ${
                           priceView === view 
-                            ? 'bg-[#0F120F] text-white' 
+                            ? 'bg-[#0a0c0a] text-white' 
                             : 'bg-white text-[#0F120F]/50 hover:text-[#0F120F]'
                         }`}
                       >
@@ -351,7 +351,7 @@ const InvestorsSection = () => {
                         <th className="py-4 px-6 text-left font-bold text-[#0F120F] uppercase tracking-wider text-xs">Fiscal Year</th>
                         <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs">Interim</th>
                         <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs">Final</th>
-                        <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs bg-[#0F120F]/5">Total</th>
+                        <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs bg-[#0a0c0a]/5">Total</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-[#0F120F]/5">
@@ -360,7 +360,7 @@ const InvestorsSection = () => {
                           <td className="py-4 px-6 font-bold">{div.year}</td>
                           <td className="py-4 px-6 text-right tabular-nums text-[#0F120F]/70">₦{div.interim}</td>
                           <td className="py-4 px-6 text-right tabular-nums text-[#0F120F]/70">₦{div.final}</td>
-                          <td className="py-4 px-6 text-right tabular-nums font-bold bg-[#0F120F]/5">₦{div.total}</td>
+                          <td className="py-4 px-6 text-right tabular-nums font-bold bg-[#0a0c0a]/5">₦{div.total}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -413,7 +413,7 @@ const InvestorsSection = () => {
                       <h4 className="text-xs font-bold uppercase tracking-widest text-[#0F120F]/50 mb-4">Downloads</h4>
                       <div className="grid gap-3">
                         {shareholderServices.forms.map((form, idx) => (
-                          <a key={idx} href={form.url} className="flex items-center justify-between p-4 bg-[#0F120F]/5 hover:bg-[#0F120F]/10 border border-[#0F120F]/10 transition-colors group">
+                          <a key={idx} href={form.url} className="flex items-center justify-between p-4 bg-[#0a0c0a]/5 hover:bg-[#0a0c0a]/10 border border-[#0F120F]/10 transition-colors group">
                             <span className="text-sm font-medium text-[#0F120F]">{form.title}</span>
                             <FaDownload className="text-[#0F120F]/40 group-hover:text-[#0F120F]" />
                           </a>

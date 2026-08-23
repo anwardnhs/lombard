@@ -12,9 +12,9 @@ import kurfi from "@/assets/Ebuka.png";
 
 const CorporateProfile = () => {
   return (
-    <div className="min-h-screen bg-[#F9F9F7] font-poppins text-[#0F120F] selection:bg-[#0F120F] selection:text-[#F9F9F7]">
+    <div className="min-h-screen bg-[#F9F9F7] font-poppins text-[#0F120F] selection:bg-[#0a0c0a] selection:text-[#F9F9F7]">
       <Header />
-      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0F120F] z-40" aria-hidden="true" />
+      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0a0c0a] z-40" aria-hidden="true" />
 
       <main className="pt-32 pb-32">
         {/* HERO SECTION */}
@@ -73,7 +73,7 @@ const CorporateProfile = () => {
         </section>
 
         {/* METRICS */}
-        <section className="bg-[#0F120F] text-[#F9F9F7] py-32 mb-40">
+        <section className="bg-[#0a0c0a] text-[#F9F9F7] py-32 mb-40">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div>

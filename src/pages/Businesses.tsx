@@ -41,9 +41,9 @@ const Businesses = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F9F9F7] font-poppins text-[#0F120F] selection:bg-[#0F120F] selection:text-[#F9F9F7]">
+    <div className="min-h-screen bg-[#F9F9F7] font-poppins text-[#0F120F] selection:bg-[#0a0c0a] selection:text-[#F9F9F7]">
       <Header />
-      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0F120F] z-40" aria-hidden="true" />
+      <div className="fixed top-0 left-0 w-full h-20 sm:h-24 bg-[#0a0c0a] z-40" aria-hidden="true" />
 
       <main className="pt-32 pb-24 relative z-30">
         {/* Page Header */}
@@ -87,7 +87,7 @@ const Businesses = () => {
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-[#0F120F]/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-[#0a0c0a]/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
 
                 {/* Content */}
