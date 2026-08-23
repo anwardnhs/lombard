@@ -60,13 +60,13 @@ const TimelineSection = () => {
           
           <div className="lg:w-2/5 flex flex-col justify-end pb-2">
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-lg sm:text-xl text-[#0F120F]/80 font-light leading-relaxed border-l-2 border-[#4A5D43]/30 pl-6"
             >
-              We leverage the full scale of our firm to empower clients and communities. With <strong className="font-semibold text-[#0F120F]">₦36.5T</strong> in total assets, a commanding presence across <strong className="font-semibold text-[#0F120F]">14 countries</strong>, and a robust <strong className="font-semibold text-[#0F120F]">AAA institutional rating</strong>, Lombard HoldCo is uniquely positioned to drive growth and value.
+              Empowering clients and communities through unmatched scale. We are uniquely positioned to drive sustainable growth and long-term value.
             </motion.p>
           </div>
         </div>
