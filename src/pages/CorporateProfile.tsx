@@ -22,6 +22,10 @@ import { founders as g4Founders, subsidiaries as groupSubsidiaries, holdCoMetric
 // Placeholder assets
 import lombardt from "@/assets/hq11.jpg";
 import careers from "@/assets/careers.jpg";
+import anwar from "@/assets/anwar.png";
+import chidi from "@/assets/chidi.png";
+import babatunde from "@/assets/babatunde.png";
+import kurfi from "@/assets/Ebuka.png";
 
 const CorporateProfileSection = () => {
   const [activeSection, setActiveSection] = useState("overview");
@@ -419,78 +423,63 @@ const CorporateProfileSection = () => {
                 </div>
               </section>
 
-              {/* 4. FOUNDING PARTNERS - Enhanced cards with better readability */}
+              {/* 4. FOUNDING PARTNERS - Clean, image-led grid */}
               <section id="g4" className="scroll-mt-32">
                 <div className="flex items-center gap-4 mb-10">
                   <span className="text-5xl font-mono font-bold text-[#0F120F]/10">04</span>
                   <h2 className="font-serif text-4xl text-[#0F120F]">Founding Partners</h2>
                 </div>
                 
-                {/* Enhanced hero image */}
-                <figure className="mb-16">
-                  <div className="w-full h-[500px] bg-[#E5E5E5] overflow-hidden border-2 border-[#0F120F]/10 shadow-lg">
-                    <img
-                      src={careers}
-                      alt="Founding partners"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <figcaption className="mt-4 text-sm text-[#0F120F]/60 italic text-center">
-                    The founding consortium that transformed Lombard
-                  </figcaption>
-                </figure>
+                <p className="text-lg text-[#0F120F]/70 leading-relaxed mb-12 max-w-3xl">
+                  The founding consortium that transformed Lombard into a pan-African powerhouse through the 1994 leveraged buyout.
+                </p>
 
-                {/* Enhanced partner cards with better spacing (Fitt's Law) */}
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {[
                     {
                       name: "Mr. Anwar Alhassan, CFR",
                       role: "Group Chairman",
-                      age: "64",
-                      bio: "Seasoned banking leader with four decades of experience in global structured finance. Former Vice President at Citibank (New York/London) and Group CEO (1994–2010). Serves on the Mo Ibrahim Foundation Board.",
-                      edu: "Economics (ABU), MBA (INSEAD)"
+                      bio: "Seasoned banking leader and former Citibank Vice President. Led the 1994 buyout and served as Group CEO until 2010.",
+                      image: anwar
                     },
                     {
                       name: "Mr. Obi Nnamani, CFA",
                       role: "NED, Capital Markets",
-                      age: "59",
-                      bio: "Former Goldman Sachs M&A executive and founder of Nnamani Capital. Led the build‑out of Lombard's capital markets franchise and advisory platform across Africa.",
-                      edu: "Economics (Oxford), CFA Charterholder"
+                      bio: "Former Goldman Sachs M&A executive. Led the build-out of Lombard's capital markets franchise across Africa.",
+                      image: chidi // Using chidi placeholder as requested
                     },
                     {
                       name: "Otunba Folarin Bakare, CON",
                       role: "Chairman, Lombard Bank",
-                      age: "63",
-                      bio: "Operations and scaling specialist who built the 500+ branch footprint and national agent banking network. Former Operations Manager at Unilever Nigeria.",
-                      edu: "BSc Industrial Engineering (Unilag)"
+                      bio: "Operations specialist who architected Lombard's 500+ branch footprint and national agent banking network.",
+                      image: babatunde // Using babatunde placeholder as requested
                     },
                     {
                       name: "Mr. Abdullahi Kurfi, OON",
                       role: "NED, Lombard HoldCo",
-                      age: "62",
-                      bio: "Risk governance authority and architect of the Lombard Enterprise Risk Framework (LERF). Former Risk Analyst at Swiss Re, Zurich, with deep expertise in Basel-aligned risk controls.",
-                      edu: "Actuarial Science (LSE), MSc Financial Engineering (MIT)"
+                      bio: "Risk governance authority and architect of the Lombard Enterprise Risk Framework. Former Risk Analyst at Swiss Re.",
+                      image: kurfi
                     }
                   ].map((partner, i) => (
                     <motion.div 
                       key={i} 
-                      className="bg-white p-10 border-2 border-[#0F120F]/10 hover:border-[#0F120F]/30 hover:shadow-xl transition-all duration-300"
+                      className="group flex flex-col"
                       whileHover={{ y: -4 }}
+                      transition={{ duration: 0.2 }}
                     >
-                      <div className="mb-6 pb-6 border-b-2 border-[#0F120F]/10">
-                        <h3 className="font-serif text-2xl text-[#0F120F] mb-2 leading-tight">{partner.name}</h3>
-                        <p className="text-xs font-bold uppercase tracking-widest text-[#C7D3BC]">{partner.role}</p>
+                      <div className="aspect-[4/5] overflow-hidden bg-[#F9F9F7] mb-6">
+                        <img 
+                          src={partner.image} 
+                          alt={partner.name}
+                          className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                          loading="lazy"
+                        />
                       </div>
-                      
-                      <p className="text-base text-[#0F120F]/80 leading-relaxed mb-8 min-h-[120px]">
+                      <h3 className="font-serif text-xl text-[#0F120F] mb-1 leading-tight">{partner.name}</h3>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/50 mb-4">{partner.role}</p>
+                      <p className="text-sm text-[#0F120F]/70 leading-relaxed">
                         {partner.bio}
                       </p>
-                      
-                      <div className="pt-6 border-t border-[#0F120F]/10">
-                        <p className="text-xs text-[#0F120F]/60 uppercase tracking-wide mb-1">Education</p>
-                        <p className="text-sm text-[#0F120F]/90 font-medium">{partner.edu}</p>
-                      </div>
                     </motion.div>
                   ))}
                 </div>
