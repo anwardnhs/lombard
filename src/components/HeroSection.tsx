@@ -103,7 +103,7 @@ const HeroSection = () => {
               className="btn-primary-dark group"
               aria-label="View our business divisions"
             >
-              Our Businesses
+              Explore Our Businesses
               <svg 
                 className="w-4 h-4 transition-transform group-hover:translate-x-1" 
                 fill="none" 

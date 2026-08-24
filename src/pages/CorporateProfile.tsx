@@ -30,7 +30,7 @@ const CorporateProfile = () => {
               <span className="italic text-[#0F120F]/60">African capital.</span>
             </h1>
             <p className="text-xl md:text-2xl text-[#0F120F]/70 font-light max-w-2xl leading-relaxed">
-              For over seven decades, Lombard HoldCo has engineered the financial infrastructure driving enterprise and wealth creation across the continent.
+              Lombard HoldCo Plc is a pan-African financial services group with a legacy of delivering capital, advisory, and banking solutions across the continent. Our mission is to empower businesses, governments, and communities through innovative financial strategies and sustainable growth.
             </p>
           </motion.div>
         </section>
@@ -46,7 +46,6 @@ const CorporateProfile = () => {
                   {[
                     { icon: FaFileContract, label: "Incorporation", value: "Nigeria (RC 10442)" },
                     { icon: FaLandmark, label: "Headquarters", value: "The Lombard Tower, 44 Marina, Lagos Island, Lagos" },
-                    { icon: FaBriefcase, label: "Auditors", value: "PwC International" },
                     { icon: FaShieldHalved, label: "Credit Ratings", value: "Moody's: B2 (Stable) | Fitch: B+ (Stable)" },
                   ].map((item, i) => (
                     <div key={i} className="pb-6 border-b border-[#0F120F]/10 last:border-0">
@@ -78,7 +77,7 @@ const CorporateProfile = () => {
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div>
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F9F9F7]/50 block mb-6">02 — Scale</span>
-                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-tight">Delivering pan-African impact at scale.</h2>
+                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-tight">Delivering impact at scale.</h2>
               </div>
               <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#C7D3BC] transition-colors pb-2 border-b border-white/20 hover:border-[#C7D3BC]">
                 Investor Relations
@@ -103,7 +102,7 @@ const CorporateProfile = () => {
           <div className="mb-20">
             <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 — Genesis</span>
             <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl max-w-4xl leading-[1.1] mb-8">
-              The founding consortium that built the franchise.
+              The founding consortium that built the Institution 
             </h2>
           </div>
 
@@ -112,25 +111,25 @@ const CorporateProfile = () => {
               {
                 name: "Mr. Anwar Alhassan, CFR",
                 role: "Group Chairman",
-                bio: "Seasoned banking leader and former Citibank Vice President. Architected the 1994 leveraged buyout and served as Group CEO until 2010.",
+                bio: "Former CEO of Lombard Bank and a pioneer in Nigeria's banking sector. He has over 30 years of experience in financial services and corporate governance.",
                 image: anwar
               },
               {
                 name: "Mr. Obi Nnamani, CFA",
-                role: "NED, Capital Markets",
-                bio: "Former Goldman Sachs M&A executive. Founded Nnamani Capital and built Lombard's debt capital markets and advisory franchise.",
+                role: "Non-Executive Director, Lombard Capital",
+                bio: "Investment banking veteran with a track record of structuring complex financial transactions across Africa. Former Managing Director at a leading investment bank.  ",
                 image: obi
               },
               {
                 name: "Otunba Folarin Bakare, CON",
-                role: "Chairman, Lombard Bank",
-                bio: "Operations specialist who built Lombard's 500+ branch footprint and orchestrated the national agent banking network.",
+                role: "Chairman, Lombard Bank Plc",
+                bio: "Seasoned banker and entrepreneur with extensive experience in banking, finance, and corporate governance. He has played a pivotal role in shaping the strategic direction of Lombard Bank.  ",
                 image: folarin
               },
               {
                 name: "Mr. Abdullahi Kurfi, OON",
-                role: "NED, Lombard HoldCo",
-                bio: "Risk governance authority and architect of the Lombard Enterprise Risk Framework (LERF). Former Risk Analyst at Swiss Re.",
+                role: "Non-Executive Director, Lombard HoldCo",
+                bio: "Veteran banker and financial strategist with a deep understanding of the African financial landscape. He has been instrumental in driving Lombard's growth and expansion across the continent.  ",
                 image: kurfi
               }
             ].map((partner, i) => (

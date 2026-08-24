@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 const profileCards = [
   {
     title: "14 Active Markets",
-    description: "Driving economic transformation across the African continent with a deep local footprint in major financial hubs.",
+    description: "Operating across 14 African countries, we leverage local insights and global expertise to deliver tailored financial solutions that drive growth and development. ",
     image: "https://media.istockphoto.com/id/2238578453/photo/aerial-view-gaborone-capital-of-botswana-in-africa-new-development-in-the-city-center.jpg?s=612x612&w=0&k=20&c=KzOIM3-Ag59FQ8z5PCKljeBR1qp60Le42CV9ZCfkhNg=",
     linkText: "View Our Footprint"
   },
   {
     title: "₦36.5T Total Assets",
-    description: "Unmatched financial strength and liquidity, positioning us as the premier partner for sovereign and corporate financing.",
+    description: "A testament to our financial strength and stability, enabling us to support large-scale projects and investments across Africa. ",
     image: "https://media.istockphoto.com/id/519328889/photo/kigali-parliament-building-and-convention-centre.jpg?s=612x612&w=0&k=20&c=icFcd2CnroiM3KV8unrOK7uucr4ossN71sbw1IMwmHI=",
     linkText: "Read Financial Reports"
   },
@@ -20,14 +20,14 @@ const profileCards = [
     linkText: "Investor Relations"
   },
   {
-    title: "70 Years of Excellence",
-    description: "A legacy of trust and performance, built by generations of exceptional talent dedicated to client success.",
+    title: "A Legacy of Leadership",
+    description: "With decades of experience, we have consistently demonstrated our ability to navigate complex markets and deliver sustainable growth. ",
     image: "https://media.istockphoto.com/id/2290422374/photo/business-team-applauding-success-after-meeting-presentation-in-office.jpg?s=612x612&w=0&k=20&c=ueM1i1XvkUxeEcTahR2OpEbIuJlCVuIbwgTZ7jPpkhw=",
     linkText: "Our History"
   },
   {
     title: "The Business of Impact",
-    description: "Deploying capital to critical infrastructure, energy transition, and community development projects that shape the future.",
+    description: "Driving positive change through investments that prioritize environmental sustainability, social responsibility, and economic development.  ",
     image: "https://media.istockphoto.com/id/1297780280/photo/teamwork-is-the-key-ingredient-in-quality-construction.jpg?s=612x612&w=0&k=20&c=gyPLOWBiYUrjA--goj1K8TQ1BVbI3Fwkb834MbXf3sI=",
     linkText: "Sustainability Initiatives"
   },

@@ -40,7 +40,7 @@ const Newsroom = () => {
       category: "Press Release",
       date: "Nov 01, 2025",
       title: "Lombard HoldCo Reports Record Revenue of ₦1.6 Trillion for FY 2025",
-      excerpt: "The Group's diversified portfolio and strategic investments across banking, capital markets, and insurance drove a 15% year-over-year growth, underscoring its resilience in a challenging economic environment.  ",
+      excerpt: "The Group's strong performance reflects its diversified business model, strategic investments, and commitment to sustainable growth across Africa.",
       image: featuredImg,
       readTime: "5 min read"
     },
@@ -49,7 +49,7 @@ const Newsroom = () => {
       type: "Sub",
       category: "Market Insights",
       date: "Oct 28, 2025",
-      title: "Global Trade Outlook: Implications for African Sovereign Debt",
+      title: "Navigating Volatility: Lombard's Perspective on African Markets Amid Global Uncertainty",
       image: marketImg,
       readTime: "6 min read"
     },
@@ -58,7 +58,7 @@ const Newsroom = () => {
       type: "Sub",
       category: "ESG & Impact",
       date: "Oct 25, 2025",
-      title: "Lombard Foundation Commits $50M to Climate Adaptation Projects in West Africa.",
+      title: "Lombard's ESG Initiatives Drive Sustainable Development Across Africa",
       image: esgImg,
       readTime: "4 min read"
     }
@@ -70,8 +70,8 @@ const Newsroom = () => {
       id: 102,
       category: "Corporate Updates",
       date: "Oct 12, 2025",
-      title: "Lombard HoldCo Appoints Group Chief Digital & Innovation Officer",
-      excerpt: "The appointment reflects the Group's commitment to digital transformation and innovation across its banking, capital markets, and insurance businesses. ",
+      title: "Lombard Appoints New Chief Technology Officer to Lead Digital Transformation",
+      excerpt: "The appointment underscores Lombard's commitment to leveraging technology for enhanced client experiences and operational efficiency. ",
       image: techImg,
       readTime: "4 min read"
     },
@@ -79,8 +79,8 @@ const Newsroom = () => {
       id: 103,
       category: "Press Releases",
       date: "Oct 05, 2025",
-      title: "Lombard Capital Markets Advises on $500M Infrastructure Bond for Federal Government of Nigeria",
-      excerpt: "The bond issuance will fund critical infrastructure projects, supporting economic growth and job creation across the country.",
+      title: "Lombard Capital Markets Leads Successful ₦150 Billion Bond Issuance for Lagos State Government",
+      excerpt: "The issuance reflects strong investor confidence in Lombard's capabilities and the Nigerian capital markets.",
       image: dealImg,
       readTime: "3 min read"
     },

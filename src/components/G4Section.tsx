@@ -5,14 +5,14 @@ import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 const services = [
   {
     id: "commercial-banking",
-    title: "Commercial & Corporate Banking",
-    description: "Financing, trade solutions, and transaction banking tailored for corporate clients and enterprises.",
+    title: "Retail & Commercial Banking",
+    description: "Comprehensive banking solutions for individuals, SMEs, and large corporations, including deposits, loans, and payment services. ",
     image: "https://media.istockphoto.com/id/2255145992/photo/business-partners-in-meeting.jpg?s=612x612&w=0&k=20&c=oLdJka3RC-jsckC-RaN7PINzSH1RtTANAYnIObZccd4=",
     href: "/about",
   },
   {
     id: "investment-banking",
-    title: "Investment Banking & Markets",
+    title: "Investment Banking & Capital Markets",
     description: "Advisory, capital raising, and securities trading for institutions, corporations, and governments.",
     image: "https://media.istockphoto.com/id/1282745735/photo/asian-woman-research-data-design.jpg?s=612x612&w=0&k=20&c=VZiXZILdIhcAenxT9gGrZ_DIn2_u_j7oD3e8tw5BtHI=",
     href: "/about",

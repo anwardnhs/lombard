@@ -40,34 +40,28 @@ const Impact = () => {
     {
       icon: FaGraduationCap,
       title: "Education",
-      description: "Scholarships, STEM programs, and digital literacy initiatives reaching 12,000+ students across 14 markets.",
+      description: "Scholarship programs, school infrastructure development, and digital learning initiatives to enhance educational access and quality.",
       image: educationImage,
-      metric: "12,000+",
-      metricLabel: "Students Reached"
     },
     {
       icon: FaHeartPulse,
       title: "Health",
-      description: "Primary healthcare access, maternal health programs, and medical equipment donations to underserved communities.",
+      description: "Community health programs, mobile clinics, and partnerships with healthcare providers to improve access to essential medical services.  ",
       image: healthImage,
-      metric: "45",
-      metricLabel: "Health Centers"
     },
     {
       icon: FaChartLine,
       title: "Enterprise",
       description: "SME financing, business development training, and support for women-led enterprises across Africa.",
       image: enterpriseImage,
-      metric: "₦2.4B",
-      metricLabel: "SME Financing"
     }
   ];
 
   const impactHighlights = [
-    { value: "Net-Zero", label: "by 2050" },
-    { value: "₦540M", label: "Impact Funding (Annual)" },
-    { value: "24,800", label: "Employees" },
-    { value: "14", label: "Markets" }
+    { value: "22%", label: "Carbon Reduction" },
+    { value: "₦18B", label: "Green Financing" },
+    { value: "A+", label: "ESG Rating" },
+    { value: "48K+", label: "Agent Locations" }
   ];
 
   return (
@@ -132,26 +126,11 @@ const Impact = () => {
               </h2>
 
               <p className="text-base sm:text-lg font-semibold text-[#0F120F]/90 leading-relaxed mb-8">
-                Lombard HoldCo mandates Equator Principles compliance and climate risk stress-testing across all operating subsidiaries. As a financial holding company, we deploy capital to accelerate Africa's energy transition, fund climate-resilient infrastructure, and enforce high ESG governance standards.
+                Lombard is committed to integrating ESG principles into our business strategy, operations, and investment decisions. Our focus on climate action, social responsibility, and strong governance ensures long-term value creation for our stakeholders. 
               </p>
 
               {/* Metrics */}
-              <div className="grid grid-cols-3 gap-6 mb-8 pb-8 border-b border-[#0F120F]/10">
-                {[
-                  { value: "22%", label: "Carbon Reduction" },
-                  { value: "₦18B", label: "Green Financing" },
-                  { value: "A+", label: "ESG Rating" }
-                ].map((metric, idx) => (
-                  <div key={idx}>
-                    <div className="text-2xl sm:text-3xl font-bold text-[#0F120F] mb-1 tabular-nums">
-                      {metric.value}
-                    </div>
-                    <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">
-                      {metric.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              
 
             </motion.div>
 
@@ -257,14 +236,7 @@ const Impact = () => {
                     </p>
 
                     {/* Metric */}
-                    <div className="pt-4 border-t border-[#0F120F]/10">
-                      <div className="text-2xl font-bold text-[#0F120F] mb-1 tabular-nums">
-                        {initiative.metric}
-                      </div>
-                      <div className="text-[10px] uppercase tracking-[0.15em] text-[#C7D3BC] font-semibold">
-                        {initiative.metricLabel}
-                      </div>
-                    </div>
+                   
                   </div>
                 </motion.article>
               );
