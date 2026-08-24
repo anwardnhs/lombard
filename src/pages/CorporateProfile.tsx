@@ -62,7 +62,7 @@ const CorporateProfile = () => {
               <span className="text-[#0F120F]/60">African capital.</span>
             </h1>
             <p className="text-lg md:text-xl text-[#0F120F]/70 font-sans font-light max-w-3xl leading-relaxed">
-              Lombard HoldCo Plc is a pan-African financial services group with a legacy of delivering capital, advisory, and banking solutions across the continent. Our mission is to empower businesses, governments, and communities through innovative financial strategies and sustainable growth.
+               Lombard Holdco is a leading financial services group in Africa, with a rich history of providing innovative solutions to meet the evolving needs of our clients. Our commitment to excellence and integrity has established us as a trusted partner in the financial industry.
             </p>
           </motion.div>
         </section>
@@ -150,13 +150,13 @@ const CorporateProfile = () => {
             {[
               {
                 name: "Mr. Anwar Alhassan, CFR",
-                role: "Group Chairman",
+                role: "Group Chairman, Lombard HoldCo Plc",
                 bio: "Former CEO of Lombard Bank and a pioneer in Nigeria's banking sector. He has over 30 years of experience in financial services and corporate governance.",
                 image: anwar
               },
               {
                 name: "Mr. Obi Nnamani, CFA",
-                role: "Non-Executive Director, Lombard Capital",
+                role: "Non-Executive Director, Lombard Capital Limited",
                 bio: "Investment banking veteran with a track record of structuring complex financial transactions across Africa. Former Managing Director at a leading investment bank.  ",
                 image: obi
               },
@@ -168,7 +168,7 @@ const CorporateProfile = () => {
               },
               {
                 name: "Mr. Abdullahi Kurfi, OON",
-                role: "Non-Executive Director, Lombard HoldCo",
+                role: "Non-Executive Director, Lombard HoldCo Plc",
                 bio: "Veteran banker and financial strategist with a deep understanding of the African financial landscape. He has been instrumental in driving Lombard's growth and expansion across the continent.  ",
                 image: kurfi
               }
