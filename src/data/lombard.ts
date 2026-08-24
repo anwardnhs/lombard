@@ -11,8 +11,8 @@ export interface Metric {
 }
 
 export const holdCoMetrics: Metric[] = [
-  { label: "Group Assets", value: 36.5, prefix: "₦", suffix: "T", decimals: 1, subValue: "$25.2 Billion USD", description: "Consolidated asset base across 14 operating jurisdictions" },
-  { label: "Market Capitalization", value: 6.5, prefix: "₦", suffix: "T", decimals: 1, subValue: "$4.48 Billion USD", description: "Dual-listed equity valuation on NGX and LSE" },
+  { label: "Group Assets", value: "$25.2B", decimals: 1, subValue: "Total Assets", description: "Consolidated asset base across 14 operating jurisdictions" },
+  { label: "Market Capitalization", value: "$4.5B", decimals: 1, subValue: "Market Cap", description: "Dual-listed equity valuation on NGX and LSE" },
   { label: "Return on Avg Equity", value: "22.4%", subValue: "FY 2025", description: "Disciplined capital deployment driving industry-leading return" },
   { label: "Capital Adequacy Ratio", value: "21.8%", subValue: "Basel III Compliant", description: "Substantial capital buffer above regulatory requirements" },
   { label: "Cost-to-Income Ratio", value: "42.1%", subValue: "Best-in-class efficiency", description: "Operational discipline across banking and non-banking units" },

@@ -104,20 +104,20 @@ const CorporateProfile = () => {
         </section>
 
         {/* METRICS */}
-        <section className="bg-[#0a0c0a] text-[#F9F9F7] py-24 sm:py-32 mb-32 sm:mb-40">
+        <section className="bg-white text-[#0F120F] py-24 sm:py-32 mb-32 sm:mb-40">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 gap-8">
               <div>
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F9F9F7]/50 block mb-6">02 — Scale</span>
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 — Scale</span>
                 <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-[1.05] tracking-tight">Delivering impact at scale.</h2>
               </div>
-              <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#C7D3BC] transition-colors pb-2 border-b border-white/20 hover:border-[#C7D3BC]">
+              <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#4A5D43] transition-colors pb-2 border-b border-[#0F120F]/20 hover:border-[#4A5D43]">
                 Investor Relations
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12 sm:gap-y-16 pt-12 sm:pt-16 border-t border-white/10">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12 sm:gap-y-16 pt-12 sm:pt-16 border-t border-[#0F120F]/10">
               {holdCoMetrics.map((metric, i) => (
                 <motion.div
                   key={i}
@@ -127,10 +127,10 @@ const CorporateProfile = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                 >
-                  <p className="font-serif text-5xl md:text-6xl tracking-tight text-[#C7D3BC] mb-4 transition-transform duration-300 group-hover:scale-105 origin-left">
+                  <p className="font-sans font-medium text-5xl md:text-6xl tracking-tight text-[#0F120F] mb-4 transition-transform duration-300 group-hover:scale-105 origin-left">
                     <AnimatedMetric value={metric.value} />
                   </p>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-[#F9F9F7]/80 mb-2">{metric.label}</h4>
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-[#0F120F]/80 mb-2">{metric.label}</h4>
                 </motion.div>
               ))}
             </div>
