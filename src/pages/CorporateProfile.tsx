@@ -55,13 +55,13 @@ const CorporateProfile = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-5xl"
+            className="max-w-4xl mx-auto text-center flex flex-col items-center"
           >
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif leading-[0.9] tracking-tight mb-10">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-semibold leading-[1.1] tracking-tight mb-8">
               A legacy of <br />
-              <span className="italic text-[#0F120F]/60">African capital.</span>
+              <span className="text-[#0F120F]/60">African capital.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#0F120F]/70 font-light max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-[#0F120F]/70 font-sans font-light max-w-3xl leading-relaxed">
               Lombard HoldCo Plc is a pan-African financial services group with a legacy of delivering capital, advisory, and banking solutions across the continent. Our mission is to empower businesses, governments, and communities through innovative financial strategies and sustainable growth.
             </p>
           </motion.div>
