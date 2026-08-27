@@ -101,7 +101,7 @@ const GovernanceSection = () => {
                 <img 
                   src={member.image} 
                   alt={member.name}
-                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-top  transition-all duration-500"
                   loading="lazy"
                 />
               </div>
@@ -211,7 +211,7 @@ const GovernanceSection = () => {
                   <img 
                     src={executives[currentExco].image} 
                     alt={executives[currentExco].name} 
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-1000" 
+                    className="w-full h-full object-cover object-top  transition-all duration-1000" 
                     loading="lazy"
                   />
                 </div>
