@@ -154,7 +154,7 @@ const ContactSection = () => {
                   <Breadcrumbs items={[{ label: "Contact" }]} />
                 </div>
                 
-                <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-[#0F120F] tracking-tight mb-8 leading-[1]">
+                <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl text-[#0F120F] tracking-tight mb-8 leading-[1]">
                   Let's Connect
                 </h1>
                 
@@ -234,7 +234,7 @@ const ContactSection = () => {
                         <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-2xl font-serif font-bold text-[#0F120F] mb-3 break-words">
+                        <h3 className="text-2xl font-sans font-bold text-[#0F120F] mb-3 break-words">
                           {contact.title}
                         </h3>
                         <p className="text-base text-[#0F120F]/80 mb-6 leading-relaxed">
@@ -315,7 +315,7 @@ const ContactSection = () => {
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-[#0F120F]/60 mb-4">
                   Get in Touch
                 </span>
-                <h2 className="font-serif text-4xl text-[#0F120F] mb-6 leading-tight">
+                <h2 className="font-sans text-4xl text-[#0F120F] mb-6 leading-tight">
                   We're Here to Help
                 </h2>
                 <p className="text-lg text-[#0F120F]/80 leading-relaxed mb-10">
@@ -373,7 +373,7 @@ const ContactSection = () => {
                         <div className="w-20 h-20 bg-[#C7D3BC] rounded-full flex items-center justify-center mx-auto mb-6">
                           <FaCheck className="text-3xl text-white" />
                         </div>
-                        <h3 className="text-3xl font-serif font-bold text-[#0F120F] mb-4">
+                        <h3 className="text-3xl font-sans font-bold text-[#0F120F] mb-4">
                           Message Sent Successfully!
                         </h3>
                         <p className="text-lg text-[#0F120F]/80 max-w-md mx-auto">
@@ -389,7 +389,7 @@ const ContactSection = () => {
                         className="space-y-6"
                       >
                         <div className="mb-8">
-                          <h3 className="text-2xl font-serif font-bold text-[#0F120F] mb-2">
+                          <h3 className="text-2xl font-sans font-bold text-[#0F120F] mb-2">
                             Contact Form
                           </h3>
                           <p className="text-sm text-[#0F120F]/70">
@@ -568,7 +568,7 @@ const ContactSection = () => {
               <span className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-[#0F120F]/60 mb-4">
                 Visit Us
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl text-[#0F120F] mb-6">
+              <h2 className="font-sans text-4xl md:text-5xl text-[#0F120F] mb-6">
                 Our Locations
               </h2>
               <p className="text-lg text-[#0F120F]/70 max-w-2xl mx-auto">
@@ -608,7 +608,7 @@ const ContactSection = () => {
                   <div className="mb-6 pb-6 border-b-2 border-[#0F120F]/10">
                     <div className="flex items-center gap-3 mb-2">
                       <FaLocationDot className="text-xl text-[#C7D3BC]" />
-                      <h3 className="font-serif text-2xl font-bold text-[#0F120F]">
+                      <h3 className="font-sans text-2xl font-bold text-[#0F120F]">
                         {office.city}
                       </h3>
                     </div>

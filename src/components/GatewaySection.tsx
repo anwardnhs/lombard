@@ -123,7 +123,7 @@ const GatewaySection = () => {
         >
           <h2 
             id="gateway-heading"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[0.95] tracking-tight mb-6 sm:mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans text-white leading-[0.95] tracking-tight mb-6 sm:mb-8"
           >
             Partner with <br className="hidden sm:block" />
             <span className="inline-block">
@@ -243,7 +243,7 @@ const GatewaySection = () => {
                       } : {}}
                       transition={{ duration: 0.6 }}
                     >
-                      <h3 className="text-2xl sm:text-3xl lg:text-[2rem] font-serif text-white mb-3 sm:mb-4 group-hover:text-[#c7d3bc] transition-colors duration-500 leading-tight">
+                      <h3 className="text-2xl sm:text-3xl lg:text-[2rem] font-sans text-white mb-3 sm:mb-4 group-hover:text-[#c7d3bc] transition-colors duration-500 leading-tight">
                         {item.title}
                       </h3>
                       <p className="text-sm sm:text-base text-white/60 group-hover:text-white/80 font-light leading-relaxed max-w-[90%] transition-colors duration-500">

@@ -162,7 +162,7 @@ const CapabilitiesSection = () => {
               id="capabilities-heading"
               className="text-[clamp(2.5rem,5vw,4rem)] font-medium leading-[1.1] tracking-tight"
             >
-              Integrated <span className="text-[#c7d3bc] font-serif italic">Platform</span>
+              Integrated <span className="text-[#c7d3bc] font-sans italic">Platform</span>
             </h2>
           </motion.div>
 

@@ -146,7 +146,7 @@ html.lenis, html.lenis body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[#c7d3bc] text-[#0f120f] text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:bg-white hover:shadow-lg hover:shadow-[#c7d3bc]/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#c7d3bc] focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[#52796F] text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:bg-[#3e5b53] hover:shadow-lg hover:shadow-[#52796F]/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#52796F] focus:ring-offset-2;
   }
 
   .btn-primary-dark {
@@ -154,11 +154,11 @@ html.lenis, html.lenis body {
   }
 
   .btn-secondary-dark {
-    @apply inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:border-[#c7d3bc] hover:text-[#c7d3bc] hover:bg-[#c7d3bc]/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#c7d3bc] focus:ring-offset-2 focus:ring-offset-[#0F120F];
+    @apply inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:border-[#52796F] hover:text-[#52796F] hover:bg-[#52796F]/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#52796F] focus:ring-offset-2 focus:ring-offset-[#0F120F];
   }
 
   .btn-secondary-light {
-    @apply inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 border border-[#0F120F]/20 text-[#0F120F] text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:border-[#0F120F] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#c7d3bc] focus:ring-offset-2 focus:ring-offset-white;
+    @apply inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 border border-[#0F120F]/20 text-[#0F120F] text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:border-[#0F120F] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#52796F] focus:ring-offset-2 focus:ring-offset-white;
   }
 }
 

@@ -1,4 +1,4 @@
-﻿import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { FaBuildingColumns, FaArrowRight, FaGlobe } from "react-icons/fa6";
 
@@ -57,7 +57,7 @@ const markets: Market[] = [
   { 
     id: "ci", 
     city: "Abidjan", 
-    country: "Côte d'Ivoire", 
+    country: "C�te d'Ivoire", 
     coords: { top: 57, left: 48 }, 
     type: "Subsidiary", 
     desc: "Francophone West Africa hub serving regional SME and corporate clients." 
@@ -200,7 +200,7 @@ const FootprintSection = () => {
             </span>
             <h2 
               id="footprint-heading"
-              className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] mb-5 sm:mb-6"
+              className="font-sans text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] mb-5 sm:mb-6"
             >
               {stats.markets} Markets. <br />
               <span className="italic text-[#c7d3bc]">One Ecosystem.</span>
@@ -222,7 +222,7 @@ const FootprintSection = () => {
           >
             <div className="group cursor-default" role="listitem">
               <div 
-                className="text-2xl sm:text-3xl font-serif text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
+                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
                 aria-label={`${stats.markets} African markets`}
               >
                 {stats.markets}
@@ -233,7 +233,7 @@ const FootprintSection = () => {
             </div>
             <div className="group cursor-default" role="listitem">
               <div 
-                className="text-2xl sm:text-3xl font-serif text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
+                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
                 aria-label={`${stats.totalAssets} total assets`}
               >
                 {stats.totalAssets}
@@ -244,7 +244,7 @@ const FootprintSection = () => {
             </div>
             <div className="group cursor-default" role="listitem">
               <div 
-                className="text-2xl sm:text-3xl font-serif text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
+                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
                 aria-label={`${stats.employees} employees`}
               >
                 {stats.employees}
@@ -365,7 +365,7 @@ const FootprintSection = () => {
                       
                       <div className="flex items-start justify-between mb-3">
                         <div>
-                          <h3 className="text-lg sm:text-xl font-serif text-white">
+                          <h3 className="text-lg sm:text-xl font-sans text-white">
                             {market.city}
                           </h3>
                           <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#c7d3bc] font-bold">

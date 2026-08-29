@@ -73,7 +73,7 @@ const CorporateProfile = () => {
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">01 — At a Glance</span>
-                <h2 className="font-serif text-4xl sm:text-5xl mb-10">The Lombard <br/>Tower.</h2>
+                <h2 className="font-sans text-4xl sm:text-5xl mb-10">The Lombard <br/>Tower.</h2>
                 <dl className="space-y-8 max-w-sm">
                   {[
                     { icon: FaFileContract, label: "Incorporation", value: "Nigeria (RC 10442)" },
@@ -96,7 +96,7 @@ const CorporateProfile = () => {
                 <img src={lombardt} alt="The Lombard Tower" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" loading="lazy" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
                   <p className="font-mono text-xs tracking-widest uppercase opacity-80">Global Headquarters</p>
-                  <p className="font-serif text-2xl mt-2">44 Marina, Lagos</p>
+                  <p className="font-sans text-2xl mt-2">44 Marina, Lagos</p>
                 </div>
               </figure>
             </div>
@@ -109,7 +109,7 @@ const CorporateProfile = () => {
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 gap-8">
               <div>
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 — Scale</span>
-                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-[1.05] tracking-tight">Delivering impact at scale.</h2>
+                <h2 className="font-sans text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-[1.05] tracking-tight">Delivering impact at scale.</h2>
               </div>
               <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#4A5D43] transition-colors pb-2 border-b border-[#0F120F]/20 hover:border-[#4A5D43]">
                 Investor Relations
@@ -141,7 +141,7 @@ const CorporateProfile = () => {
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
           <div className="mb-20">
             <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 — Genesis</span>
-            <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl max-w-4xl leading-[1.1] mb-8">
+            <h2 className="font-sans text-5xl sm:text-6xl md:text-7xl max-w-4xl leading-[1.1] mb-8">
               The founding consortium that built the Institution 
             </h2>
           </div>
@@ -183,7 +183,7 @@ const CorporateProfile = () => {
                   />
                 </div>
                 <div className="sm:w-1/2 flex flex-col justify-center">
-                  <h3 className="font-serif text-3xl mb-3 leading-tight">{partner.name}</h3>
+                  <h3 className="font-sans text-3xl mb-3 leading-tight">{partner.name}</h3>
                   <p className="text-sm font-extrabold uppercase tracking-widest text-[#4A5D43]">{partner.role}</p>
                 </div>
               </div>

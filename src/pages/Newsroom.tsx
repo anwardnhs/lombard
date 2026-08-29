@@ -130,7 +130,7 @@ const Newsroom = () => {
               <span className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#0F120F]/50 mb-3">
                 Newsroom
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F120F] mb-3 leading-[1.1]">
+              <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F120F] mb-3 leading-[1.1]">
                 Media Center
               </h1>
               <p className="text-lg md:text-xl text-[#0F120F]/70 font-normal leading-relaxed">
@@ -177,7 +177,7 @@ const Newsroom = () => {
         <section className="py-16 px-6 lg:px-12">
           <div className="container mx-auto max-w-7xl">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0F120F]">Featured Stories</h2>
+              <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0F120F]">Featured Stories</h2>
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#0F120F]/40">
                 Top Stories
               </span>
@@ -211,7 +211,7 @@ const Newsroom = () => {
                     <span>•</span>
                     <span>{featuredStories[0].readTime}</span>
                   </div>
-                  <h3 className="font-serif text-2xl lg:text-3xl xl:text-4xl font-bold text-[#0F120F] mb-5 leading-[1.2] group-hover:text-[#4a5d4a] transition-colors">
+                  <h3 className="font-sans text-2xl lg:text-3xl xl:text-4xl font-bold text-[#0F120F] mb-5 leading-[1.2] group-hover:text-[#4a5d4a] transition-colors">
                     {featuredStories[0].title}
                   </h3>
                   <p className="text-base text-[#0F120F]/75 font-normal leading-relaxed mb-6 max-w-2xl">
@@ -248,7 +248,7 @@ const Newsroom = () => {
                           <span>•</span>
                           <span>{story.date}</span>
                         </div>
-                        <h3 className="font-serif text-lg lg:text-xl font-bold text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors mb-2">
+                        <h3 className="font-sans text-lg lg:text-xl font-bold text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors mb-2">
                           {story.title}
                         </h3>
                         <span className="text-[10px] text-[#0F120F]/50 font-medium">{story.readTime}</span>
@@ -270,7 +270,7 @@ const Newsroom = () => {
       <section className="pb-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0F120F]">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0F120F]">
               {activeFilter === "All" ? "Latest Updates" : activeFilter}
             </h2>
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#0F120F]/50 bg-[#F9F9F7] px-4 py-2 rounded border border-[#0F120F]/10">
@@ -319,7 +319,7 @@ const Newsroom = () => {
                         </span>
                         <span className="text-[#0F120F]/40">{item.readTime}</span>
                       </div>
-                      <h3 className="font-serif text-lg lg:text-xl font-bold mb-3 text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors">
+                      <h3 className="font-sans text-lg lg:text-xl font-bold mb-3 text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-sm text-[#0F120F]/70 font-normal leading-relaxed mb-6 flex-1">
@@ -353,7 +353,7 @@ const Newsroom = () => {
             
             {/* Left: Heading */}
             <div className="lg:col-span-4">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-[#0F120F]">
+              <h2 className="font-sans text-3xl md:text-4xl font-bold mb-4 text-[#0F120F]">
                 Filings & Releases
               </h2>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed mb-8">
@@ -401,7 +401,7 @@ const Newsroom = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[#0F120F]">
+              <h2 className="font-sans text-3xl md:text-4xl font-bold mb-3 text-[#0F120F]">
                 Media Resources
               </h2>
               <p className="text-sm font-normal text-[#0F120F]/60">
@@ -430,7 +430,7 @@ const Newsroom = () => {
                   PDF
                 </span>
               </div>
-              <h3 className="font-serif text-xl text-[#0F120F] mb-2 font-bold">Media Kit</h3>
+              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-bold">Media Kit</h3>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed">
                 Fact sheets, leadership bios, and key corporate details.
               </p>
@@ -449,7 +449,7 @@ const Newsroom = () => {
                   ZIP
                 </span>
               </div>
-              <h3 className="font-serif text-xl text-[#0F120F] mb-2 font-bold">Brand Assets</h3>
+              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-bold">Brand Assets</h3>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed">
                 Official logos, guidelines, and B-roll assets.
               </p>
@@ -468,7 +468,7 @@ const Newsroom = () => {
                   JPG
                 </span>
               </div>
-              <h3 className="font-serif text-xl text-[#0F120F] mb-2 font-bold">Leadership Photos</h3>
+              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-bold">Leadership Photos</h3>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed">
                 High-resolution executive headshots for press use.
               </p>

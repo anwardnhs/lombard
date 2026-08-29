@@ -74,14 +74,14 @@ const GovernanceSection = () => {
             <Breadcrumbs items={[{ label: "Leadership & Governance" }]} />
           </div>
           
-          <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 tracking-tight leading-[0.9]">
+          <h1 className="font-sans text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 tracking-tight leading-[0.9]">
             Architects of <br/>
             <span className="italic text-[#0F120F]/60">our future.</span>
           </h1>
           
           <div className="w-24 h-[2px] bg-[#0F120F] mb-10" />
           
-          <p className="text-xl sm:text-2xl md:text-3xl text-[#0F120F]/80 max-w-4xl leading-relaxed font-serif">
+          <p className="text-xl sm:text-2xl md:text-3xl text-[#0F120F]/80 max-w-4xl leading-relaxed font-sans">
             Our leadership team and board of directors are the architects of Lombard's future, guiding our strategic vision, ensuring robust governance, and driving sustainable growth across Africa. With decades of combined experience in finance, risk management, and corporate governance, they are committed to delivering long-term value for our stakeholders.  
           </p>
         </motion.div>
@@ -91,7 +91,7 @@ const GovernanceSection = () => {
       <section className="py-20 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px] border-t border-[#0F120F]/10">
         <div className="mb-24">
           <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-4">01 Board of Directors</span>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#0F120F]">Board Oversight</h2>
+          <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#0F120F]">Board Oversight</h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-16">
@@ -105,7 +105,7 @@ const GovernanceSection = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-serif text-2xl text-[#0F120F] mb-2">{member.name}</h3>
+              <h3 className="font-sans text-2xl text-[#0F120F] mb-2">{member.name}</h3>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4A5D43] mb-1">{member.role}</p>
               <p className="text-xs text-[#0F120F]/50 uppercase tracking-widest mb-4">{member.subRole}</p>
               
@@ -143,7 +143,7 @@ const GovernanceSection = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-10">
           <div>
             <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F9F9F7]/50 block mb-4">02 Executive Management</span>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F9F9F7]">Group Executive Committee</h2>
+            <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#F9F9F7]">Group Executive Committee</h2>
           </div>
           
           <div className="flex gap-4">
@@ -177,7 +177,7 @@ const GovernanceSection = () => {
               <div className="lg:col-span-6 order-2 lg:order-1">
                 <div className="mb-10">
                   <p className="text-xs font-mono tracking-widest text-[#F9F9F7]/40 mb-4">{currentExco + 1} / {executives.length}</p>
-                  <h3 className="font-serif text-5xl sm:text-6xl md:text-7xl mb-4 leading-tight">{executives[currentExco].name}</h3>
+                  <h3 className="font-sans text-5xl sm:text-6xl md:text-7xl mb-4 leading-tight">{executives[currentExco].name}</h3>
                   <p className="text-sm font-extrabold uppercase tracking-widest text-[#C7D3BC]">{executives[currentExco].role}</p>
                 </div>
                 

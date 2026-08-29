@@ -52,7 +52,7 @@ const TimelineSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-serif text-[#0F120F] leading-[1.05] tracking-tight"
+              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-sans text-[#0F120F] leading-[1.05] tracking-tight"
             >
               A Pan-African Powerhouse with Global Reach.
             </motion.h2>
@@ -95,7 +95,7 @@ const TimelineSection = () => {
               </div>
 
               {/* Text Content */}
-              <h3 className="text-2xl font-serif text-[#0F120F] font-medium mb-3 transition-colors group-hover:text-[#4A5D43]">
+              <h3 className="text-2xl font-sans text-[#0F120F] font-medium mb-3 transition-colors group-hover:text-[#4A5D43]">
                 {card.title}
               </h3>
               <p className="text-[#0F120F]/70 font-light leading-relaxed mb-6">

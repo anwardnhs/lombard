@@ -6,7 +6,7 @@ const InvestorSection = () => {
     <section id="investors" className="py-24 px-6">
       <div className="container mx-auto">
         <p className="font-sans text-xs tracking-[0.3em] uppercase text-primary mb-4">Investor Relations</p>
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-foreground mb-4">
           Financial Performance
         </h2>
         <div className="section-divider w-20 mb-12" />
@@ -19,7 +19,7 @@ const InvestorSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Credit Ratings</h3>
+            <h3 className="font-sans text-xl font-semibold text-foreground mb-6">Credit Ratings</h3>
             <div className="space-y-4">
               <div className="flex justify-between items-center py-3 border-b border-border">
                 <span className="font-sans text-sm text-muted-foreground">Moody's</span>
@@ -40,7 +40,7 @@ const InvestorSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Shareholding Structure</h3>
+            <h3 className="font-sans text-xl font-semibold text-foreground mb-6">Shareholding Structure</h3>
             <div className="space-y-3">
               {[
                 { label: "G4 Founders", value: "28.5%" },
@@ -71,7 +71,7 @@ const InvestorSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Reports & Filings</h3>
+            <h3 className="font-sans text-xl font-semibold text-foreground mb-6">Reports & Filings</h3>
             <div className="space-y-3">
               {["2025 Annual Report", "Q3 2025 Results", "2024 Annual Report", "Sustainability Report 2025"].map((r) => (
                 <a
@@ -98,7 +98,7 @@ const InvestorSection = () => {
           viewport={{ once: true }}
         >
           <div className="p-6 border-b border-border">
-            <h3 className="font-serif text-xl font-semibold text-foreground">Live Market Data</h3>
+            <h3 className="font-sans text-xl font-semibold text-foreground">Live Market Data</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">

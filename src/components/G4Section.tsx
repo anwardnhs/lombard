@@ -62,7 +62,7 @@ const WhatWeDoSection = () => {
             <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#4A5D43] mb-4">
                What We Do 
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#0F120F] tracking-tight leading-[1.05]">
+            <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#0F120F] tracking-tight leading-[1.05]">
               Delivering for Our Clients
             </h2>
           </div>
@@ -117,7 +117,7 @@ const WhatWeDoSection = () => {
 
               {/* Text Content */}
               <div className="flex flex-col flex-grow pr-4">
-                <h3 className="text-2xl font-serif text-[#0F120F] mb-3 leading-snug group-hover:text-[#4A5D43] transition-colors duration-300">
+                <h3 className="text-2xl font-sans text-[#0F120F] mb-3 leading-snug group-hover:text-[#4A5D43] transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-base text-[#0F120F]/70 font-light leading-relaxed mb-6">

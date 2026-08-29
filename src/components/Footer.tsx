@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaXTwitter, FaYoutube, FaArrowRight, FaLocationDot, FaEnvelope } from "react-icons/fa6";
+﻿import { FaLinkedinIn, FaXTwitter, FaYoutube, FaArrowRight, FaLocationDot, FaEnvelope } from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,28 +46,24 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#0a0c0a] text-white overflow-hidden font-poppins relative" role="contentinfo">
-      
-      {/* Decorative Top Border */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#c7d3bc] to-transparent"></div>
-
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
+    <footer className="bg-[#F9F9F7] text-[#0F120F] overflow-hidden font-poppins relative border-t border-[#0F120F]/5" role="contentinfo">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1400px]">
         
-        {/* TOP SECTION: Branding & Newsletter */}
-        <div className="py-20 lg:py-24 flex flex-col lg:flex-row justify-between items-start gap-16 border-b border-white/10">
+        {/* TOP SECTION: Branding & Navigation */}
+        <div className="py-20 flex flex-col lg:flex-row justify-between items-start gap-16 border-b border-[#0F120F]/5">
           
           <div className="w-full lg:w-1/3">
-            <a href="/" className="inline-block mb-8">
-              <h1 className="font-serif font-bold text-3xl sm:text-4xl tracking-tight text-white">
-                Lombard HoldCo<span className="text-[#c7d3bc]">.</span>
+            <a href="/" className="inline-block mb-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52796F]">
+              <h1 className="font-semibold text-3xl tracking-tight text-[#0F120F]">
+                Lombard HoldCo<span className="text-[#52796F]">.</span>
               </h1>
             </a>
-            <p className="text-sm text-white leading-relaxed font-light mb-8 max-w-sm">
+            <p className="text-[13px] text-[#0F120F]/70 leading-relaxed mb-8 max-w-sm">
               Lombard HoldCo Plc is a leading African financial services group, committed to driving sustainable growth and creating value for our stakeholders across banking, capital markets, and insurance.
             </p>
             <a 
               href="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#c7d3bc] text-[#0a0c0a] text-xs font-bold uppercase tracking-[0.15em] rounded-full hover:bg-white hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-[#52796F] text-white text-[11px] font-bold uppercase tracking-[0.15em] rounded-full hover:bg-[#3e5b53] hover:shadow-lg hover:shadow-[#52796F]/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#52796F] focus:ring-offset-2 focus:ring-offset-[#F9F9F7]"
             >
               Contact Our Team
               <FaArrowRight className="w-3 h-3" />
@@ -77,20 +73,20 @@ const Footer = () => {
           {/* Contact Details */}
           <div className="w-full lg:w-1/4 flex flex-col gap-8 pt-2">
             <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white mb-3 flex items-center gap-2">
-                <FaLocationDot className="text-[#c7d3bc]" /> Global Headquarters
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#0F120F]/40 mb-3 flex items-center gap-2">
+                <FaLocationDot className="text-[#52796F]" /> Global Headquarters
               </h4>
-              <address className="not-italic text-sm text-white font-light leading-relaxed">
+              <address className="not-italic text-[13px] text-[#0F120F]/80 leading-relaxed">
                 The Lombard Tower<br />
                 44 Marina, Lagos Island<br />
                 Lagos 101001, Nigeria
               </address>
             </div>
             <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white mb-3 flex items-center gap-2">
-                <FaEnvelope className="text-[#c7d3bc]" /> General Inquiries
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#0F120F]/40 mb-3 flex items-center gap-2">
+                <FaEnvelope className="text-[#52796F]" /> General Inquiries
               </h4>
-              <a href="mailto:info@lombardholdco.com" className="text-sm text-white font-light hover:text-[#c7d3bc] transition-colors">
+              <a href="mailto:info@lombardholdco.com" className="text-[13px] text-[#0F120F]/80 hover:text-[#52796F] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52796F] rounded-sm">
                 info@lombardholdco.com
               </a>
             </div>
@@ -100,15 +96,15 @@ const Footer = () => {
           <div className="w-full lg:w-5/12 grid grid-cols-2 sm:grid-cols-3 gap-8 pt-2">
             {footerColumns.map((column) => (
               <div key={column.title}>
-                <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white mb-6 block">
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#0F120F]/40 mb-5 block">
                   {column.title}
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-xs font-medium tracking-wide text-white hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                        className="text-[13px] font-medium tracking-wide text-[#0F120F]/70 hover:text-[#52796F] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52796F] rounded-sm"
                       >
                         {link.label}
                       </a>
@@ -122,16 +118,16 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM SECTION: Legal & Socials */}
-        <div className="py-8 flex flex-col-reverse md:flex-row items-center justify-between gap-6">
+        <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white">
-              © {currentYear} Lombard HoldCo Plc
+            <p className="text-[10px] font-medium tracking-wider text-[#0F120F]/50 uppercase">
+              &copy; {currentYear} Lombard HoldCo Plc
             </p>
             <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               {legalLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-[10px] font-bold tracking-[0.2em] uppercase text-white hover:text-white transition-colors">
+                  <a href={link.href} className="text-[10px] font-medium tracking-wider text-[#0F120F]/50 hover:text-[#52796F] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52796F] rounded-sm uppercase">
                     {link.label}
                   </a>
                 </li>
@@ -146,7 +142,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-[#0a0c0a] hover:bg-[#c7d3bc] hover:border-[#c7d3bc] transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#0F120F]/5 flex items-center justify-center text-[#0F120F]/60 hover:text-white hover:bg-[#52796F] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#52796F] focus:ring-offset-2 focus:ring-offset-[#F9F9F7]"
                   aria-label={social.label}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -57,7 +57,7 @@ const Businesses = () => {
             <span className="text-[#0F120F]/50 font-mono text-xs uppercase tracking-widest font-bold mb-6 block">
               Operating Subsidiaries
             </span>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#0F120F] leading-[0.9] tracking-tight mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans text-[#0F120F] leading-[0.9] tracking-tight mb-8">
               A diversified engine of growth.
             </h1>
             <p className="text-lg md:text-xl text-[#0F120F]/70 leading-relaxed font-light max-w-2xl">
@@ -92,7 +92,7 @@ const Businesses = () => {
 
                 {/* Content */}
                 <div className="p-10 flex-grow flex flex-col">
-                  <h2 className="text-3xl lg:text-4xl font-serif text-[#0F120F] mb-4">
+                  <h2 className="text-3xl lg:text-4xl font-sans text-[#0F120F] mb-4">
                     {sub.name}.
                   </h2>
                   <p className="text-[#0F120F]/80 text-base leading-relaxed mb-8 max-w-lg">

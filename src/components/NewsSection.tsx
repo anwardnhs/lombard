@@ -45,7 +45,7 @@ const NewsSection = () => {
             <span className="text-[#c7d3bc] tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase mb-6 block">
               Corporate Communications
             </span>
-            <h2 className="text-4xl md:text-6xl font-serif text-white leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-sans text-white leading-[1.1] tracking-tight">
               Media & Market Insights.
             </h2>
           </div>
@@ -94,7 +94,7 @@ const NewsSection = () => {
               </div>
 
               {/* TITLE */}
-              <h3 className="text-2xl font-serif text-white mb-4 leading-snug group-hover:text-[#c7d3bc] transition-colors duration-300">
+              <h3 className="text-2xl font-sans text-white mb-4 leading-snug group-hover:text-[#c7d3bc] transition-colors duration-300">
                 <a href={item.link}>{item.title}</a>
               </h3>
 

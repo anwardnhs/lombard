@@ -136,7 +136,7 @@ const InvestorsSection = () => {
 
                 {/* Quick IR Contact */}
                 <div className="bg-white border-2 border-[#0F120F]/10 p-6 mt-6">
-                  <h4 className="font-serif text-lg mb-2 text-[#0F120F]">IR Contact</h4>
+                  <h4 className="font-sans text-lg mb-2 text-[#0F120F]">IR Contact</h4>
                   <p className="text-xs text-[#0F120F]/60 mb-4">
                     For institutional inquiries:
                   </p>
@@ -202,7 +202,7 @@ const InvestorsSection = () => {
               {/* 2. FINANCIAL RESULTS */}
               <section id="financials" ref={sections.financials} className="scroll-mt-32">
                 <div className="flex items-end justify-between mb-10 border-b border-[#0F120F]/10 pb-6">
-                  <h2 className="font-serif text-3xl md:text-4xl text-[#0F120F]">Financial Results</h2>
+                  <h2 className="font-sans text-3xl md:text-4xl text-[#0F120F]">Financial Results</h2>
                   <span className="hidden md:inline-block text-xs font-bold uppercase tracking-widest text-[#0F120F]/40">
                     Latest Quarter: {latestEarnings.quarter}
                   </span>
@@ -267,7 +267,7 @@ const InvestorsSection = () => {
 
                 {/* Annual Reports (Grid of Cards) */}
                 <div className="mt-12">
-                  <h3 className="font-serif text-2xl mb-6">Annual Reports</h3>
+                  <h3 className="font-sans text-2xl mb-6">Annual Reports</h3>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {annualReports.map((report) => (
                       <div key={report.year} className="group bg-white p-6 border border-[#0F120F]/10 hover:border-[#0F120F] transition-all cursor-pointer">
@@ -288,7 +288,7 @@ const InvestorsSection = () => {
               {/* 3. SHARE PRICE */}
               <section id="stock" ref={sections.stock} className="scroll-mt-32">
                 <div className="flex items-end justify-between mb-10 border-b border-[#0F120F]/10 pb-6">
-                  <h2 className="font-serif text-3xl md:text-4xl text-[#0F120F]">Share Price</h2>
+                  <h2 className="font-sans text-3xl md:text-4xl text-[#0F120F]">Share Price</h2>
                   
                   {/* Fitts Law: Large Toggle Buttons */}
                   <div className="flex bg-white border border-[#0F120F]/10 rounded-sm overflow-hidden">
@@ -342,7 +342,7 @@ const InvestorsSection = () => {
 
               {/* 4. DIVIDENDS */}
               <section id="dividends" ref={sections.dividends} className="scroll-mt-32">
-                <h2 className="font-serif text-3xl md:text-4xl text-[#0F120F] mb-10 pb-6 border-b border-[#0F120F]/10">Dividend History</h2>
+                <h2 className="font-sans text-3xl md:text-4xl text-[#0F120F] mb-10 pb-6 border-b border-[#0F120F]/10">Dividend History</h2>
                 
                 <div className="bg-white border border-[#0F120F]/10 overflow-hidden">
                   <table className="w-full text-sm">
@@ -370,7 +370,7 @@ const InvestorsSection = () => {
 
               {/* 5. ANALYST COVERAGE */}
               <section id="analysts" ref={sections.analysts} className="scroll-mt-32">
-                <h2 className="font-serif text-3xl md:text-4xl text-[#0F120F] mb-10 pb-6 border-b border-[#0F120F]/10">Analyst Coverage</h2>
+                <h2 className="font-sans text-3xl md:text-4xl text-[#0F120F] mb-10 pb-6 border-b border-[#0F120F]/10">Analyst Coverage</h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   {analystCoverage.map((analyst, idx) => (
@@ -396,7 +396,7 @@ const InvestorsSection = () => {
               {/* 6. SHAREHOLDER SERVICES */}
               <section id="services" ref={sections.services} className="scroll-mt-32">
                 <div className="bg-white border-2 border-[#0F120F]/10 p-10 md:p-12">
-                  <h2 className="font-serif text-3xl mb-8 text-[#0F120F]">Shareholder Services</h2>
+                  <h2 className="font-sans text-3xl mb-8 text-[#0F120F]">Shareholder Services</h2>
                   
                   <div className="grid md:grid-cols-2 gap-12">
                     <div>

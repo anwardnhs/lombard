@@ -24,7 +24,7 @@ const NotFound = () => {
           <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-[#c7d3bc] font-bold mb-6">
             Error
           </span>
-          <h1 className="text-[clamp(3rem,10vw,8rem)] font-serif leading-none tracking-tight mb-6">
+          <h1 className="text-[clamp(3rem,10vw,8rem)] font-sans leading-none tracking-tight mb-6">
             404
           </h1>
           <p className="text-xl sm:text-2xl text-white/80 font-semibold mb-4">

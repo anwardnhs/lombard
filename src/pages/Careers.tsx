@@ -71,7 +71,7 @@ const Careers = () => {
             >
               <Breadcrumbs items={[{ label: "Careers" }]} className="mb-8 opacity-60" />
               
-              <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] tracking-tight mb-8 text-[#0F120F]">
+              <h1 className="font-sans text-5xl md:text-7xl leading-[1.05] tracking-tight mb-8 text-[#0F120F]">
                 Shape the Future of <br />
                 <span className="italic text-[#0F120F]/60">African Finance.</span>
               </h1>
@@ -116,7 +116,7 @@ const Careers = () => {
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="container mx-auto max-w-[1280px]">
           <div className="max-w-3xl mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl mb-6">The Lombard Standard</h2>
+            <h2 className="font-sans text-3xl md:text-4xl mb-6">The Lombard Standard</h2>
             <p className="text-lg text-[#0F120F]/60 leading-relaxed">
               We offer more than employment; we provide a platform for meaningful impact. Our culture is anchored in three core pillars designed to support long-term professional growth.
             </p>
@@ -130,7 +130,7 @@ const Careers = () => {
             ].map((item, i) => (
               <div key={i} className="group cursor-default">
                 <div className="w-12 h-[2px] bg-[#C7D3BC] mb-6 group-hover:w-24 group-hover:bg-[#0a0c0a] transition-all duration-300" />
-                <h3 className="font-serif text-2xl mb-4 text-[#0F120F]">{item.title}</h3>
+                <h3 className="font-sans text-2xl mb-4 text-[#0F120F]">{item.title}</h3>
                 <p className="text-base text-[#0F120F]/70 leading-loose">{item.desc}</p>
               </div>
             ))}
@@ -154,7 +154,7 @@ const Careers = () => {
 
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/40 mb-4 block">Our DNA</span>
-              <h2 className="font-serif text-4xl mb-6 text-[#0F120F]">Built on Excellence.</h2>
+              <h2 className="font-sans text-4xl mb-6 text-[#0F120F]">Built on Excellence.</h2>
               <p className="text-lg text-[#0F120F]/70 leading-relaxed mb-8">
                 We attract individuals who possess not just technical expertise, but the character to act as fiduciaries.
               </p>
@@ -281,7 +281,7 @@ const Careers = () => {
               <span className="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-[#5f6b56] mb-4">
                 Career Architecture
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl text-[#0F120F] leading-tight">
+              <h2 className="font-sans text-3xl md:text-4xl text-[#0F120F] leading-tight">
                 Explore Career Paths
               </h2>
             </div>

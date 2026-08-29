@@ -91,7 +91,7 @@ const Impact = () => {
             className="max-w-4xl"
           >
             <Breadcrumbs items={[{ label: "Impact" }]} theme="dark" className="mb-6" />
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-white tracking-tight mb-6 sm:mb-8">
+            <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-white tracking-tight mb-6 sm:mb-8">
               Building a <br />
               <span className="italic text-[#C7D3BC]">Sustainable Future.</span>
             </h1>
@@ -121,7 +121,7 @@ const Impact = () => {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F120F] mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans text-[#0F120F] mb-6 leading-tight">
                 Sustainability at Scale
               </h2>
 
@@ -188,7 +188,7 @@ const Impact = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F120F] mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans text-[#0F120F] mb-6 leading-tight">
               Empowering Communities
             </h2>
 
@@ -263,7 +263,7 @@ const Impact = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#0F120F] mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans text-[#0F120F] mb-6 leading-tight">
               Driving Inclusive Growth
             </h2>
           </motion.div>
@@ -395,7 +395,7 @@ const Impact = () => {
               <span className="inline-block text-[10px] uppercase tracking-[0.3em] font-bold text-[#0F120F]/60 mb-4">
                 Impact Report 2025
               </span>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#0F120F] mb-6">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-sans text-[#0F120F] mb-6">
                 ESG, Foundation & Community Outcomes
               </h3>
                 <p className="text-base text-[#0F120F]/80 leading-relaxed mb-8 max-w-2xl font-semibold">
