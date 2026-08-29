@@ -77,7 +77,7 @@ const Businesses = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group flex flex-col bg-white border-2 border-[#0F120F]/10 hover:border-[#C7D3BC] hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group flex flex-col bg-white border-2 border-[#0F120F]/10 hover:border-[#52796F] hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#E5E5E5] border-b-2 border-[#0F120F]/10">
@@ -109,9 +109,9 @@ const Businesses = () => {
                   </ul>
                   
                   {/* Action */}
-                  <a href={`/businesses/${sub.id}`} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#0F120F] hover:text-[#C7D3BC] transition-colors mt-auto group/link">
+                  <a href={`/businesses/${sub.id}`} className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#0F120F] hover:text-[#52796F] transition-colors mt-auto group/link">
                     Explore {sub.name}
-                    <div className="w-8 h-8 rounded-full border border-[#0F120F]/20 flex items-center justify-center group-hover/link:border-[#C7D3BC] transition-colors">
+                    <div className="w-8 h-8 rounded-full border border-[#0F120F]/20 flex items-center justify-center group-hover/link:border-[#52796F] transition-colors">
                       <FaArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
                     </div>
                   </a>

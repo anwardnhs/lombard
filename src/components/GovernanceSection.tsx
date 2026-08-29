@@ -106,13 +106,13 @@ const GovernanceSection = () => {
                 />
               </div>
               <h3 className="font-sans text-2xl text-[#0F120F] mb-2">{member.name}</h3>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4A5D43] mb-1">{member.role}</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#52796F] mb-1">{member.role}</p>
               <p className="text-xs text-[#0F120F]/50 uppercase tracking-widest mb-4">{member.subRole}</p>
               
               <div className="border-t border-[#0F120F]/10 pt-4 mt-auto">
                 <button 
                   onClick={() => setExpandedBoardBio(expandedBoardBio === idx ? null : idx)}
-                  className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/70 hover:text-[#4A5D43] transition-colors"
+                  className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/70 hover:text-[#52796F] transition-colors"
                 >
                   {expandedBoardBio === idx ? <FaMinus /> : <FaPlus />}
                   {expandedBoardBio === idx ? "Hide Biography" : "Read Biography"}
@@ -178,13 +178,13 @@ const GovernanceSection = () => {
                 <div className="mb-10">
                   <p className="text-xs font-mono tracking-widest text-[#F9F9F7]/40 mb-4">{currentExco + 1} / {executives.length}</p>
                   <h3 className="font-sans text-5xl sm:text-6xl md:text-7xl mb-4 leading-tight">{executives[currentExco].name}</h3>
-                  <p className="text-sm font-extrabold uppercase tracking-widest text-[#C7D3BC]">{executives[currentExco].role}</p>
+                  <p className="text-sm font-extrabold uppercase tracking-widest text-[#52796F]">{executives[currentExco].role}</p>
                 </div>
                 
                 <div className="border-t border-white/10 pt-6">
                   <button 
                     onClick={() => setShowBio(!showBio)}
-                    className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest hover:text-[#C7D3BC] transition-colors"
+                    className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors"
                   >
                     {showBio ? <FaMinus /> : <FaPlus />}
                     {showBio ? "Hide Biography" : "Read Biography"}

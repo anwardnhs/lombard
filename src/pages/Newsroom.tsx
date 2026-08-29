@@ -326,7 +326,7 @@ const Newsroom = () => {
                         {item.excerpt}
                       </p>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-[#0F120F] flex items-center gap-2 group-hover:gap-3 transition-all">
-                        Read Article <FaArrowRight className="text-[#C7D3BC] text-xs" />
+                        Read Article <FaArrowRight className="text-[#52796F] text-xs" />
                       </span>
                     </div>
                   </motion.article>

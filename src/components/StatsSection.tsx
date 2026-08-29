@@ -36,7 +36,7 @@ const AnimatedNumber = ({
 
   return (
     <div ref={ref}>
-      <span className="text-[#c7d3bc] font-light">
+      <span className="text-[#52796F] font-light">
         {prefix}{formatted}{suffix}
       </span>
     </div>
@@ -52,7 +52,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#1a1f1a] py-24 px-6 border-y border-[#c7d3bc]/10">
+    <section className="relative bg-[#1a1f1a] py-24 px-6 border-y border-[#52796F]/10">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
@@ -86,7 +86,7 @@ const StatsSection = () => {
                 className="relative group"
               >
                 {/* Hover accent line */}
-                <div className="absolute -left-4 top-0 bottom-0 w-[1px] bg-[#c7d3bc] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
+                <div className="absolute -left-4 top-0 bottom-0 w-[1px] bg-[#52796F] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
                 
                 <div className="text-left">
                   <div className="text-[clamp(2.5rem,5vw,4rem)] leading-none mb-3">
@@ -94,10 +94,10 @@ const StatsSection = () => {
                   </div>
                   
                   <div className="space-y-1">
-                    <p className="text-[11px] tracking-[0.2em] uppercase text-[#c7d3bc]/60 font-medium">
+                    <p className="text-[11px] tracking-[0.2em] uppercase text-[#52796F]/60 font-medium">
                       {stat.label}
                     </p>
-                    <p className="text-[10px] text-[#c7d3bc]/40">
+                    <p className="text-[10px] text-[#52796F]/40">
                       {stat.sublabel}
                     </p>
                   </div>
@@ -109,19 +109,19 @@ const StatsSection = () => {
 
         {/* Bottom accent */}
         <motion.div 
-          className="mt-16 pt-8 border-t border-[#c7d3bc]/10"
+          className="mt-16 pt-8 border-t border-[#52796F]/10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <div className="flex flex-wrap items-center justify-between gap-6 text-[10px] tracking-[0.15em] uppercase text-[#c7d3bc]/40">
+          <div className="flex flex-wrap items-center justify-between gap-6 text-[10px] tracking-[0.15em] uppercase text-[#52796F]/40">
             <span>FY 2025 Performance</span>
             <div className="flex items-center gap-6">
               <span>Net Profit: ₦460B</span>
-              <span className="w-px h-3 bg-[#c7d3bc]/20" />
+              <span className="w-px h-3 bg-[#52796F]/20" />
               <span>ROE: 12.8%</span>
-              <span className="w-px h-3 bg-[#c7d3bc]/20" />
+              <span className="w-px h-3 bg-[#52796F]/20" />
               <span>NPL Ratio: 4.2%</span>
             </div>
           </div>

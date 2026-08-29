@@ -182,7 +182,7 @@ const FootprintSection = () => {
       aria-labelledby="footprint-heading"
     >
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c7d3bc]/20 to-transparent" aria-hidden="true" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#52796F]/20 to-transparent" aria-hidden="true" />
       
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 max-w-[1800px]">
         
@@ -195,7 +195,7 @@ const FootprintSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={animationVariants}
           >
-            <span className="text-[#c7d3bc] tracking-[0.2em] text-[10px] sm:text-xs font-bold uppercase mb-4 block">
+            <span className="text-[#52796F] tracking-[0.2em] text-[10px] sm:text-xs font-bold uppercase mb-4 block">
               Geographic Presence
             </span>
             <h2 
@@ -203,7 +203,7 @@ const FootprintSection = () => {
               className="font-sans text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] mb-5 sm:mb-6"
             >
               {stats.markets} Markets. <br />
-              <span className="italic text-[#c7d3bc]">One Ecosystem.</span>
+              <span className="italic text-[#52796F]">One Ecosystem.</span>
             </h2>
             <p className="text-white/60 font-light text-base sm:text-lg leading-relaxed">
               From Lagos to Johannesburg, we connect Africa's largest economies through integrated financial infrastructure and local market expertise.
@@ -222,34 +222,34 @@ const FootprintSection = () => {
           >
             <div className="group cursor-default" role="listitem">
               <div 
-                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
+                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#52796F] transition-colors tabular-nums"
                 aria-label={`${stats.markets} African markets`}
               >
                 {stats.markets}
               </div>
-              <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/40 group-hover:text-[#c7d3bc]/70 transition-colors">
+              <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/40 group-hover:text-[#52796F]/70 transition-colors">
                 Markets
               </div>
             </div>
             <div className="group cursor-default" role="listitem">
               <div 
-                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
+                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#52796F] transition-colors tabular-nums"
                 aria-label={`${stats.totalAssets} total assets`}
               >
                 {stats.totalAssets}
               </div>
-              <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/40 group-hover:text-[#c7d3bc]/70 transition-colors">
+              <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/40 group-hover:text-[#52796F]/70 transition-colors">
                 Total Assets
               </div>
             </div>
             <div className="group cursor-default" role="listitem">
               <div 
-                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#c7d3bc] transition-colors tabular-nums"
+                className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#52796F] transition-colors tabular-nums"
                 aria-label={`${stats.employees} employees`}
               >
                 {stats.employees}
               </div>
-              <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/40 group-hover:text-[#c7d3bc]/70 transition-colors">
+              <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/40 group-hover:text-[#52796F]/70 transition-colors">
                 Employees
               </div>
             </div>
@@ -306,7 +306,7 @@ const FootprintSection = () => {
                   <motion.div 
                     className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full z-10 transition-transform duration-300 ${
                       market.type === 'Group HQ' 
-                        ? 'bg-[#c7d3bc] shadow-[0_0_15px_#c7d3bc]' 
+                        ? 'bg-[#52796F] shadow-[0_0_15px_#52796F]' 
                         : 'bg-white shadow-[0_0_10px_white]'
                     } ${hoveredMarket === market.id ? 'scale-125' : 'scale-100'}`}
                     whileHover={{ scale: 1.3 }}
@@ -317,7 +317,7 @@ const FootprintSection = () => {
                   {!prefersReducedMotion && (
                     <motion.div 
                       className={`absolute inset-0 rounded-full border ${
-                        market.type === 'Group HQ' ? 'border-[#c7d3bc]' : 'border-white/40'
+                        market.type === 'Group HQ' ? 'border-[#52796F]' : 'border-white/40'
                       }`}
                       animate={{ scale: [1, 2.5], opacity: [0.8, 0] }}
                       transition={{ 
@@ -333,7 +333,7 @@ const FootprintSection = () => {
                   <div 
                     className={`absolute inset-0 rounded-full transition-all ${
                       activeMarket === market.id 
-                        ? 'ring-2 ring-[#c7d3bc] ring-offset-2 ring-offset-[#151815]' 
+                        ? 'ring-2 ring-[#52796F] ring-offset-2 ring-offset-[#151815]' 
                         : ''
                     }`}
                   />
@@ -361,19 +361,19 @@ const FootprintSection = () => {
                   return (
                     <div className="bg-[#0F120F]/95 backdrop-blur-xl border border-white/10 p-5 sm:p-6 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden">
                       {/* Gold Accent Line */}
-                      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#c7d3bc] to-transparent" aria-hidden="true" />
+                      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#52796F] to-transparent" aria-hidden="true" />
                       
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h3 className="text-lg sm:text-xl font-sans text-white">
                             {market.city}
                           </h3>
-                          <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#c7d3bc] font-bold">
+                          <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#52796F] font-bold">
                             {market.country}
                           </span>
                         </div>
                         {market.type === 'Group HQ' ? (
-                          <FaBuildingColumns className="text-[#c7d3bc] w-5 h-5 flex-shrink-0" aria-label="Group headquarters" />
+                          <FaBuildingColumns className="text-[#52796F] w-5 h-5 flex-shrink-0" aria-label="Group headquarters" />
                         ) : (
                           <FaGlobe className="text-white/20 w-5 h-5 flex-shrink-0" aria-label="Market location" />
                         )}

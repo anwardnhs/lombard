@@ -74,7 +74,7 @@ const ContactSection = () => {
       description: "Financial reports, earnings calls, and shareholder services",
       email: "investor.relations@lombardholdco.com",
       phone: "+234 1 448 0100",
-      color: "#4A5D43",
+      color: "#52796F",
       isPrimary: true
     },
     {
@@ -83,7 +83,7 @@ const ContactSection = () => {
       description: "Customer support, partnerships, and general questions",
       email: "info@lombardholdco.com",
       phone: "+234 1 448 0000",
-      color: "#C7D3BC",
+      color: "#52796F",
       isPrimary: true
     }
   ];
@@ -167,7 +167,7 @@ const ContactSection = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <a 
                     href="#contact-form"
-                    className="group flex sm:inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#4A5D43] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC] shadow-lg w-full sm:w-auto"
+                    className="group flex sm:inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#52796F] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#52796F] shadow-lg w-full sm:w-auto"
                   >
                     <FaEnvelope className="text-base flex-shrink-0" />
                     <span className="whitespace-nowrap">Send a Message</span>
@@ -175,7 +175,7 @@ const ContactSection = () => {
                   </a>
                   <a 
                     href="tel:+2341448000"
-                    className="group flex sm:inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 border-2 border-[#0F120F] text-[#0F120F] text-sm font-bold uppercase tracking-wider hover:bg-[#0F120F] hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC] w-full sm:w-auto"
+                    className="group flex sm:inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 border-2 border-[#0F120F] text-[#0F120F] text-sm font-bold uppercase tracking-wider hover:bg-[#0F120F] hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#52796F] w-full sm:w-auto"
                   >
                     <FaPhone className="text-base flex-shrink-0" />
                     <span className="whitespace-nowrap">Call Us Now</span>
@@ -226,11 +226,11 @@ const ContactSection = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     variants={fadeInVariants}
                     custom={idx * 0.1}
-                    className="group bg-[#F9F9F7] border-2 border-[#0F120F]/10 p-6 sm:p-10 hover:border-[#C7D3BC] hover:shadow-2xl transition-all duration-300"
+                    className="group bg-[#F9F9F7] border-2 border-[#0F120F]/10 p-6 sm:p-10 hover:border-[#52796F] hover:shadow-2xl transition-all duration-300"
                     whileHover={{ y: -8 }}
                   >
                     <div className="flex flex-col sm:flex-row items-start gap-5 sm:gap-6">
-                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#0F120F] flex items-center justify-center flex-shrink-0 group-hover:bg-[#4A5D43] transition-colors">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#0F120F] flex items-center justify-center flex-shrink-0 group-hover:bg-[#52796F] transition-colors">
                         <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -245,9 +245,9 @@ const ContactSection = () => {
                         <div className="space-y-4">
                           <a 
                             href={`mailto:${contact.email}`}
-                            className="flex items-center gap-3 text-base font-bold text-[#0F120F] hover:text-[#4A5D43] transition-colors group/link py-2 w-full"
+                            className="flex items-center gap-3 text-base font-bold text-[#0F120F] hover:text-[#52796F] transition-colors group/link py-2 w-full"
                           >
-                            <FaEnvelope className="text-sm text-[#C7D3BC] flex-shrink-0" />
+                            <FaEnvelope className="text-sm text-[#52796F] flex-shrink-0" />
                             <span className="group-hover/link:underline truncate">{contact.email}</span>
                             <FaArrowRight className="text-xs opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all flex-shrink-0 hidden sm:block" />
                           </a>
@@ -255,7 +255,7 @@ const ContactSection = () => {
                             href={`tel:${contact.phone.replace(/\s/g, '')}`}
                             className="flex items-center gap-3 text-base font-semibold text-[#0F120F]/80 hover:text-[#0F120F] transition-colors py-2"
                           >
-                            <FaPhone className="text-sm text-[#C7D3BC]" />
+                            <FaPhone className="text-sm text-[#52796F]" />
                             <span className="font-mono">{contact.phone}</span>
                           </a>
                         </div>
@@ -269,7 +269,7 @@ const ContactSection = () => {
             {/* Secondary Contact */}
             <div className="bg-[#0F120F] text-white p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div className="flex items-center gap-4">
-                <FaNewspaper className="text-2xl text-[#C7D3BC]" />
+                <FaNewspaper className="text-2xl text-[#52796F]" />
                 <div>
                   <h4 className="text-lg font-bold mb-1">Media & Press</h4>
                   <p className="text-sm text-white/70">Press releases and interview requests</p>
@@ -278,7 +278,7 @@ const ContactSection = () => {
               <div className="flex flex-col sm:items-end gap-2">
                 <a 
                   href="mailto:media@lombardholdco.com"
-                  className="text-sm font-bold hover:text-[#C7D3BC] transition-colors"
+                  className="text-sm font-bold hover:text-[#52796F] transition-colors"
                 >
                   media@lombardholdco.com
                 </a>
@@ -330,7 +330,7 @@ const ContactSection = () => {
                     { icon: FaGlobe, text: "Support in multiple languages" }
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-[#C7D3BC]/20 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#52796F]/20 flex items-center justify-center flex-shrink-0">
                         <item.icon className="text-[#0F120F] text-sm" />
                       </div>
                       <p className="text-base text-[#0F120F]/80 leading-relaxed pt-2">
@@ -341,13 +341,13 @@ const ContactSection = () => {
                 </div>
 
                 {/* Alternative Contact */}
-                <div className="bg-[#F9F9F7] border-l-4 border-[#C7D3BC] p-6">
+                <div className="bg-[#F9F9F7] border-l-4 border-[#52796F] p-6">
                   <h4 className="text-sm font-bold uppercase tracking-wider text-[#0F120F]/70 mb-3">
                     Prefer to Call?
                   </h4>
                   <a 
                     href="tel:+2341448000"
-                    className="text-2xl font-bold text-[#0F120F] hover:text-[#4A5D43] transition-colors block mb-2"
+                    className="text-2xl font-bold text-[#0F120F] hover:text-[#52796F] transition-colors block mb-2"
                   >
                     +234 1 448 0000
                   </a>
@@ -370,7 +370,7 @@ const ContactSection = () => {
                         exit={{ opacity: 0, scale: 0.9 }}
                         className="text-center py-20"
                       >
-                        <div className="w-20 h-20 bg-[#C7D3BC] rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div className="w-20 h-20 bg-[#52796F] rounded-full flex items-center justify-center mx-auto mb-6">
                           <FaCheck className="text-3xl text-white" />
                         </div>
                         <h3 className="text-3xl font-sans font-bold text-[#0F120F] mb-4">
@@ -393,7 +393,7 @@ const ContactSection = () => {
                             Contact Form
                           </h3>
                           <p className="text-sm text-[#0F120F]/70">
-                            Fields marked with <span className="text-[#C7D3BC]">*</span> are required
+                            Fields marked with <span className="text-[#52796F]">*</span> are required
                           </p>
                         </div>
 
@@ -401,7 +401,7 @@ const ContactSection = () => {
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#0F120F]/80 mb-3">
-                              Full Name <span className="text-[#C7D3BC]">*</span>
+                              Full Name <span className="text-[#52796F]">*</span>
                             </label>
                             <input
                               type="text"
@@ -410,7 +410,7 @@ const ContactSection = () => {
                               value={formData.name}
                               onChange={handleChange}
                               required
-                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]/30 focus:border-[#C7D3BC] transition-all"
+                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#52796F]/30 focus:border-[#52796F] transition-all"
                               placeholder="John Doe"
                             />
                           </div>
@@ -425,7 +425,7 @@ const ContactSection = () => {
                               name="company"
                               value={formData.company}
                               onChange={handleChange}
-                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]/30 focus:border-[#C7D3BC] transition-all"
+                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#52796F]/30 focus:border-[#52796F] transition-all"
                               placeholder="Acme Corporation"
                             />
                           </div>
@@ -435,7 +435,7 @@ const ContactSection = () => {
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#0F120F]/80 mb-3">
-                              Email Address <span className="text-[#C7D3BC]">*</span>
+                              Email Address <span className="text-[#52796F]">*</span>
                             </label>
                             <input
                               type="email"
@@ -444,7 +444,7 @@ const ContactSection = () => {
                               value={formData.email}
                               onChange={handleChange}
                               required
-                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]/30 focus:border-[#C7D3BC] transition-all"
+                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#52796F]/30 focus:border-[#52796F] transition-all"
                               placeholder="john.doe@example.com"
                             />
                           </div>
@@ -459,7 +459,7 @@ const ContactSection = () => {
                               name="phone"
                               value={formData.phone}
                               onChange={handleChange}
-                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]/30 focus:border-[#C7D3BC] transition-all"
+                              className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#52796F]/30 focus:border-[#52796F] transition-all"
                               placeholder="+234 800 000 0000"
                             />
                           </div>
@@ -468,7 +468,7 @@ const ContactSection = () => {
                         {/* Subject - Simplified options (Hick's Law) */}
                         <div>
                           <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-[#0F120F]/80 mb-3">
-                            Inquiry Type <span className="text-[#C7D3BC]">*</span>
+                            Inquiry Type <span className="text-[#52796F]">*</span>
                           </label>
                           <select
                             id="subject"
@@ -476,7 +476,7 @@ const ContactSection = () => {
                             value={formData.subject}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]/30 focus:border-[#C7D3BC] transition-all appearance-none bg-white"
+                            className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] focus:outline-none focus:ring-4 focus:ring-[#52796F]/30 focus:border-[#52796F] transition-all appearance-none bg-white"
                             style={{
                               backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%230F120F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")`,
                               backgroundRepeat: 'no-repeat',
@@ -495,7 +495,7 @@ const ContactSection = () => {
                         {/* Message */}
                         <div>
                           <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#0F120F]/80 mb-3">
-                            Your Message <span className="text-[#C7D3BC]">*</span>
+                            Your Message <span className="text-[#52796F]">*</span>
                           </label>
                           <textarea
                             id="message"
@@ -504,7 +504,7 @@ const ContactSection = () => {
                             onChange={handleChange}
                             required
                             rows={6}
-                            className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC]/30 focus:border-[#C7D3BC] transition-all resize-none"
+                            className="w-full px-5 py-4 border-2 border-[#0F120F]/20 text-base text-[#0F120F] placeholder:text-[#0F120F]/40 focus:outline-none focus:ring-4 focus:ring-[#52796F]/30 focus:border-[#52796F] transition-all resize-none"
                             placeholder="Please provide details about your inquiry..."
                           />
                           <p className="mt-2 text-xs text-[#0F120F]/60">
@@ -513,10 +513,10 @@ const ContactSection = () => {
                         </div>
 
                         {/* Privacy Notice */}
-                        <div className="bg-white border-l-4 border-[#C7D3BC] p-5">
+                        <div className="bg-white border-l-4 border-[#52796F] p-5">
                           <p className="text-sm text-[#0F120F]/80 leading-relaxed">
                             By submitting this form, you acknowledge that your information will be processed in accordance with our{' '}
-                            <a href="/privacy-policy" className="font-bold text-[#0F120F] underline hover:text-[#4A5D43] transition-colors">
+                            <a href="/privacy-policy" className="font-bold text-[#0F120F] underline hover:text-[#52796F] transition-colors">
                               Privacy Policy
                             </a>.
                           </p>
@@ -526,7 +526,7 @@ const ContactSection = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full inline-flex items-center justify-center gap-4 px-8 py-6 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#4A5D43] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#C7D3BC] disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                          className="w-full inline-flex items-center justify-center gap-4 px-8 py-6 bg-[#0F120F] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#52796F] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#52796F] disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                         >
                           {isSubmitting ? (
                             <>
@@ -599,7 +599,7 @@ const ContactSection = () => {
                     </div>
                   )}
                   {!office.isPrimary && (
-                    <div className="inline-block px-4 py-2 bg-[#C7D3BC]/20 text-[#0F120F] text-xs font-bold uppercase tracking-wider mb-6">
+                    <div className="inline-block px-4 py-2 bg-[#52796F]/20 text-[#0F120F] text-xs font-bold uppercase tracking-wider mb-6">
                       {office.label}
                     </div>
                   )}
@@ -607,7 +607,7 @@ const ContactSection = () => {
                   {/* City Header */}
                   <div className="mb-6 pb-6 border-b-2 border-[#0F120F]/10">
                     <div className="flex items-center gap-3 mb-2">
-                      <FaLocationDot className="text-xl text-[#C7D3BC]" />
+                      <FaLocationDot className="text-xl text-[#52796F]" />
                       <h3 className="font-sans text-2xl font-bold text-[#0F120F]">
                         {office.city}
                       </h3>
@@ -632,16 +632,16 @@ const ContactSection = () => {
                   <div className="space-y-4 mb-6">
                     <a 
                       href={`tel:${office.phone.replace(/\s/g, '')}`}
-                      className="flex items-center gap-3 text-base font-semibold text-[#0F120F] hover:text-[#4A5D43] transition-colors py-2"
+                      className="flex items-center gap-3 text-base font-semibold text-[#0F120F] hover:text-[#52796F] transition-colors py-2"
                     >
-                      <FaPhone className="text-sm text-[#C7D3BC]" />
+                      <FaPhone className="text-sm text-[#52796F]" />
                       <span className="font-mono">{office.phone}</span>
                     </a>
                     <a 
                       href={`mailto:${office.email}`}
-                      className="flex items-center gap-3 text-base font-semibold text-[#0F120F] hover:text-[#4A5D43] transition-colors py-2"
+                      className="flex items-center gap-3 text-base font-semibold text-[#0F120F] hover:text-[#52796F] transition-colors py-2"
                     >
-                      <FaEnvelope className="text-sm text-[#C7D3BC]" />
+                      <FaEnvelope className="text-sm text-[#52796F]" />
                       <span>{office.email}</span>
                     </a>
                   </div>
@@ -649,7 +649,7 @@ const ContactSection = () => {
                   {/* Hours */}
                   <div className="pt-6 border-t border-[#0F120F]/10">
                     <div className="flex items-start gap-3">
-                      <FaClock className="text-sm text-[#C7D3BC] mt-1" />
+                      <FaClock className="text-sm text-[#52796F] mt-1" />
                       <div>
                         <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F120F]/60 mb-1">
                           Office Hours
@@ -668,7 +668,7 @@ const ContactSection = () => {
             <div className="mt-16 text-center">
               <a 
                 href="/locations"
-                className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wider text-[#0F120F] border-b-2 border-[#0F120F] pb-2 hover:text-[#4A5D43] hover:border-[#4A5D43] transition-all group"
+                className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wider text-[#0F120F] border-b-2 border-[#0F120F] pb-2 hover:text-[#52796F] hover:border-[#52796F] transition-all group"
               >
                 View All 14 Locations
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

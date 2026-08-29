@@ -111,7 +111,7 @@ const CorporateProfile = () => {
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 — Scale</span>
                 <h2 className="font-sans text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-[1.05] tracking-tight">Delivering impact at scale.</h2>
               </div>
-              <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#4A5D43] transition-colors pb-2 border-b border-[#0F120F]/20 hover:border-[#4A5D43]">
+              <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors pb-2 border-b border-[#0F120F]/20 hover:border-[#52796F]">
                 Investor Relations
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -184,7 +184,7 @@ const CorporateProfile = () => {
                 </div>
                 <div className="sm:w-1/2 flex flex-col justify-center">
                   <h3 className="font-sans text-3xl mb-3 leading-tight">{partner.name}</h3>
-                  <p className="text-sm font-extrabold uppercase tracking-widest text-[#4A5D43]">{partner.role}</p>
+                  <p className="text-sm font-extrabold uppercase tracking-widest text-[#52796F]">{partner.role}</p>
                 </div>
               </div>
             ))}

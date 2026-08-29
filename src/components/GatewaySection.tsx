@@ -86,7 +86,7 @@ const GatewaySection = () => {
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         {/* Gradient orbs with subtle animation */}
         <motion.div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-[#c7d3bc] opacity-[0.025] blur-[120px] rounded-full"
+          className="absolute top-0 left-1/4 w-96 h-96 bg-[#52796F] opacity-[0.025] blur-[120px] rounded-full"
           animate={!prefersReducedMotion ? {
             x: [0, 30, 0],
             y: [0, -20, 0],
@@ -98,7 +98,7 @@ const GatewaySection = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c7d3bc] opacity-[0.02] blur-[100px] rounded-full"
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#52796F] opacity-[0.02] blur-[100px] rounded-full"
           animate={!prefersReducedMotion ? {
             x: [0, -40, 0],
             y: [0, 30, 0],
@@ -127,7 +127,7 @@ const GatewaySection = () => {
           >
             Partner with <br className="hidden sm:block" />
             <span className="inline-block">
-              Lombard HoldCo<span className="text-[#c7d3bc]">.</span>
+              Lombard HoldCo<span className="text-[#52796F]">.</span>
             </span>
           </h2>
           <p className="text-white/40 text-base sm:text-lg lg:text-xl max-w-xl mx-auto leading-relaxed font-light">
@@ -160,10 +160,10 @@ const GatewaySection = () => {
                 <a 
                   href={item.link}
                   onClick={(e) => handleCardClick(e, item.link)}
-                  className={`group relative block h-[420px] sm:h-[470px] lg:h-[520px] w-full bg-[#151815] overflow-hidden border transition-all duration-500 focus:outline-none focus:ring-4 focus:ring-[#c7d3bc] focus:ring-offset-4 focus:ring-offset-[#0F120F] ${
+                  className={`group relative block h-[420px] sm:h-[470px] lg:h-[520px] w-full bg-[#151815] overflow-hidden border transition-all duration-500 focus:outline-none focus:ring-4 focus:ring-[#52796F] focus:ring-offset-4 focus:ring-offset-[#0F120F] ${
                     isOtherHovered 
                       ? 'border-white/5 opacity-60 scale-[0.98]' 
-                      : 'border-white/10 hover:border-[#c7d3bc]/20 opacity-100 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 scale-100'
+                      : 'border-white/10 hover:border-[#52796F]/20 opacity-100 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 scale-100'
                   }`}
                   aria-label={item.ariaLabel}
                   style={{ 
@@ -200,7 +200,7 @@ const GatewaySection = () => {
                   
                   {/* Hover glow effect */}
                   <div 
-                    className="absolute inset-0 bg-gradient-to-br from-[#c7d3bc]/0 via-[#c7d3bc]/0 to-[#c7d3bc]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    className="absolute inset-0 bg-gradient-to-br from-[#52796F]/0 via-[#52796F]/0 to-[#52796F]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                     aria-hidden="true"
                   />
 
@@ -211,19 +211,19 @@ const GatewaySection = () => {
                     <div className="flex justify-between items-start">
                       {/* Animated number badge */}
                       <motion.div
-                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#c7d3bc]/20 flex items-center justify-center backdrop-blur-sm bg-black/10 group-hover:border-[#c7d3bc]/60 group-hover:bg-[#c7d3bc]/10 transition-all duration-500"
+                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#52796F]/20 flex items-center justify-center backdrop-blur-sm bg-black/10 group-hover:border-[#52796F]/60 group-hover:bg-[#52796F]/10 transition-all duration-500"
                         whileHover={!prefersReducedMotion ? { scale: 1.1, rotate: 360 } : {}}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         aria-hidden="true"
                       >
-                        <span className="text-[#c7d3bc] font-bold text-base sm:text-lg tabular-nums">
+                        <span className="text-[#52796F] font-bold text-base sm:text-lg tabular-nums">
                           {item.number}
                         </span>
                       </motion.div>
 
                       {/* Arrow with rotation */}
                       <motion.div 
-                        className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/5 group-hover:bg-[#c7d3bc] rounded-full transition-all duration-500 backdrop-blur-sm"
+                        className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/5 group-hover:bg-[#52796F] rounded-full transition-all duration-500 backdrop-blur-sm"
                         whileHover={!prefersReducedMotion ? { scale: 1.1 } : {}}
                         aria-hidden="true"
                       >
@@ -243,7 +243,7 @@ const GatewaySection = () => {
                       } : {}}
                       transition={{ duration: 0.6 }}
                     >
-                      <h3 className="text-2xl sm:text-3xl lg:text-[2rem] font-sans text-white mb-3 sm:mb-4 group-hover:text-[#c7d3bc] transition-colors duration-500 leading-tight">
+                      <h3 className="text-2xl sm:text-3xl lg:text-[2rem] font-sans text-white mb-3 sm:mb-4 group-hover:text-[#52796F] transition-colors duration-500 leading-tight">
                         {item.title}
                       </h3>
                       <p className="text-sm sm:text-base text-white/60 group-hover:text-white/80 font-light leading-relaxed max-w-[90%] transition-colors duration-500">
@@ -255,7 +255,7 @@ const GatewaySection = () => {
 
                   {/* Bottom accent line with animation */}
                   <div 
-                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#c7d3bc] via-[#c7d3bc]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#52796F] via-[#52796F]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
                     aria-hidden="true"
                   />
 

@@ -129,7 +129,7 @@ const Careers = () => {
               { title: "Institutional Impact", desc: "Structure landmark sovereign bonds, underwrite renewable infrastructure, and build financial platforms shaping African economies." }
             ].map((item, i) => (
               <div key={i} className="group cursor-default">
-                <div className="w-12 h-[2px] bg-[#C7D3BC] mb-6 group-hover:w-24 group-hover:bg-[#0a0c0a] transition-all duration-300" />
+                <div className="w-12 h-[2px] bg-[#52796F] mb-6 group-hover:w-24 group-hover:bg-[#0a0c0a] transition-all duration-300" />
                 <h3 className="font-sans text-2xl mb-4 text-[#0F120F]">{item.title}</h3>
                 <p className="text-base text-[#0F120F]/70 leading-loose">{item.desc}</p>
               </div>
@@ -166,7 +166,7 @@ const Careers = () => {
                   "Wellness: Comprehensive health coverage and mental wellness support."
                 ].map((point, i) => (
                   <li key={i} className="flex items-start gap-4">
-                    <div className="w-6 h-6 rounded-full bg-[#C7D3BC]/30 flex items-center justify-center flex-shrink-0 mt-0.5 text-[#4A5D4A]">
+                    <div className="w-6 h-6 rounded-full bg-[#52796F]/30 flex items-center justify-center flex-shrink-0 mt-0.5 text-[#4A5D4A]">
                       <FaCheck className="text-xs" />
                     </div>
                     <span className="text-base text-[#0F120F]/80">{point}</span>
@@ -297,7 +297,7 @@ const Careers = () => {
                 className="group bg-white border border-[#0F120F]/10 p-6 sm:p-7 rounded-sm hover:border-[#6E7E66]/40 hover:shadow-[0_12px_28px_rgba(15,18,15,0.08)] transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-11 h-11 rounded-full bg-[#EEF1EB] text-[#4A5D4A] flex items-center justify-center text-lg group-hover:bg-[#C7D3BC]/35 transition-colors">
+                  <div className="w-11 h-11 rounded-full bg-[#EEF1EB] text-[#4A5D4A] flex items-center justify-center text-lg group-hover:bg-[#52796F]/35 transition-colors">
                     {track.icon}
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#0F120F]/55">

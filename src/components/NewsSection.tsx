@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import kenya from "@/assets/kenya.jpg";
 import infra from "@/assets/mainland.jpg";
@@ -36,23 +36,23 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="bg-[#0a0c0a] py-32 font-poppins relative overflow-hidden" id="news">
+    <section className="bg-[#F9F9F7] py-32 font-poppins relative overflow-hidden" id="news">
       <div className="container mx-auto px-6 lg:px-12 relative z-10 max-w-[1600px]">
         
         {/* --- SECTION HEADER --- */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 border-b border-white/10 pb-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 border-b border-[#0F120F]/10 pb-12">
           <div className="max-w-3xl">
-            <span className="text-[#c7d3bc] tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase mb-6 block">
+            <span className="text-[#52796F] tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase mb-6 block">
               Corporate Communications
             </span>
-            <h2 className="text-4xl md:text-6xl font-sans text-white leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-sans font-semibold text-[#0F120F] leading-[1.1] tracking-tight">
               Media & Market Insights.
             </h2>
           </div>
           
-          <a href="/newsroom" className="hidden md:inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-white hover:text-[#c7d3bc] transition-colors group">
+          <a href="/newsroom" className="hidden md:inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#0F120F] hover:text-[#52796F] transition-colors group">
             Newsroom Archive
-            <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#c7d3bc] transition-colors">
+            <div className="w-8 h-8 rounded-full border border-[#0F120F]/20 flex items-center justify-center group-hover:border-[#52796F] transition-colors">
               <FaArrowRight className="w-3 h-3" />
             </div>
           </a>
@@ -68,56 +68,59 @@ const NewsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col h-full"
+              className="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#52796F]/5 transition-all duration-500 border border-[#0F120F]/5"
             >
               {/* IMAGE */}
-              <a href={item.link} className="block relative aspect-[4/3] overflow-hidden mb-8 bg-[#1a1d1a]">
+              <a href={item.link} className="block relative aspect-[4/3] overflow-hidden bg-[#E5E5E5]">
                 <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700 ease-out">
                     <img 
                       src={item.image} 
                       alt={item.title} 
-                      className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" 
+                      className="w-full h-full object-cover transition-all duration-700" 
                       loading="lazy"
                     />
                 </div>
               </a>
 
-              {/* META DATA */}
-              <div className="flex items-center gap-4 mb-5">
-                <span className="text-[#c7d3bc] text-[9px] uppercase tracking-widest font-bold">
-                  {item.category}
-                </span>
-                <span className="w-1 h-1 rounded-full bg-white/20" />
-                <span className="text-white/40 text-[9px] uppercase tracking-widest font-mono">
-                  {item.date}
-                </span>
+              {/* CONTENT WRAPPER */}
+              <div className="flex flex-col flex-grow p-8 sm:p-10">
+                {/* META DATA */}
+                <div className="flex items-center gap-4 mb-5">
+                  <span className="text-[#52796F] text-[9px] uppercase tracking-widest font-bold">
+                    {item.category}
+                  </span>
+                  <span className="w-1 h-1 rounded-full bg-[#0F120F]/20" />
+                  <span className="text-[#0F120F]/40 text-[9px] uppercase tracking-widest font-mono">
+                    {item.date}
+                  </span>
+                </div>
+
+                {/* TITLE */}
+                <h3 className="text-2xl font-sans font-semibold text-[#0F120F] mb-4 leading-snug group-hover:text-[#52796F] transition-colors duration-300">
+                  <a href={item.link}>{item.title}</a>
+                </h3>
+
+                {/* EXCERPT */}
+                <p className="text-[#0F120F]/60 text-sm leading-relaxed mb-8 flex-grow">
+                  {item.excerpt}
+                </p>
+
+                {/* TEXT LINK */}
+                <a href={item.link} className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em] text-[#0F120F] group-hover:text-[#52796F] transition-colors mt-auto w-fit">
+                  Read Full Story
+                  <FaArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                </a>
               </div>
-
-              {/* TITLE */}
-              <h3 className="text-2xl font-sans text-white mb-4 leading-snug group-hover:text-[#c7d3bc] transition-colors duration-300">
-                <a href={item.link}>{item.title}</a>
-              </h3>
-
-              {/* EXCERPT */}
-              <p className="text-white/60 text-sm leading-relaxed mb-8 flex-grow">
-                {item.excerpt}
-              </p>
-
-              {/* TEXT LINK (Replaces massive green button) */}
-              <a href={item.link} className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white group-hover:text-[#c7d3bc] transition-colors mt-auto w-fit">
-                Read Full Story
-                <FaArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
-              </a>
             </motion.article>
           ))}
 
         </div>
 
         {/* MOBILE FOOTER LINK */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex md:hidden justify-center">
-          <a href="/newsroom" className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-white hover:text-[#c7d3bc] transition-colors group">
+        <div className="mt-16 pt-8 border-t border-[#0F120F]/10 flex md:hidden justify-center">
+          <a href="/newsroom" className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-[#0F120F] hover:text-[#52796F] transition-colors group">
             Newsroom Archive
-            <FaArrowRight className="w-3 h-3" />
+            <FaArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
 

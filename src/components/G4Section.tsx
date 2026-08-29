@@ -59,7 +59,7 @@ const WhatWeDoSection = () => {
         {/* Section Header with Navigation Arrows */}
         <div className="pr-6 lg:pr-12 mb-12 lg:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#4A5D43] mb-4">
+            <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#52796F] mb-4">
                What We Do 
             </span>
             <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#0F120F] tracking-tight leading-[1.05]">
@@ -103,7 +103,7 @@ const WhatWeDoSection = () => {
               className="group flex flex-col bg-transparent outline-none flex-shrink-0 w-[85vw] sm:w-[45vw] lg:w-[28vw] snap-start"
             >
               {/* Image Container with overflow hidden for zoom effect */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 border-b-[3px] border-transparent group-hover:border-[#4A5D43] transition-colors duration-300">
+              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 border-b-[3px] border-transparent group-hover:border-[#52796F] transition-colors duration-300">
                 <img 
                   src={service.image} 
                   alt={service.title} 
@@ -112,12 +112,12 @@ const WhatWeDoSection = () => {
                   crossOrigin="anonymous"
                 />
                 {/* Subtle overlay on hover */}
-                <div className="absolute inset-0 bg-[#4A5D43]/0 group-hover:bg-[#4A5D43]/10 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#52796F]/0 group-hover:bg-[#52796F]/10 transition-colors duration-500" />
               </div>
 
               {/* Text Content */}
               <div className="flex flex-col flex-grow pr-4">
-                <h3 className="text-2xl font-sans text-[#0F120F] mb-3 leading-snug group-hover:text-[#4A5D43] transition-colors duration-300">
+                <h3 className="text-2xl font-sans text-[#0F120F] mb-3 leading-snug group-hover:text-[#52796F] transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-base text-[#0F120F]/70 font-light leading-relaxed mb-6">
@@ -125,7 +125,7 @@ const WhatWeDoSection = () => {
                 </p>
                 
                 {/* Minimalist Link */}
-                <div className="mt-auto flex items-center text-xs font-bold uppercase tracking-widest text-[#4A5D43]">
+                <div className="mt-auto flex items-center text-xs font-bold uppercase tracking-widest text-[#52796F]">
                   <span className="mr-2">Explore</span>
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </div>

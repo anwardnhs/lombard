@@ -36,7 +36,7 @@ const RouteProgress = () => {
       aria-hidden="true"
     >
       <div
-        className="h-full bg-[#c7d3bc] transition-all duration-300 ease-out"
+        className="h-full bg-[#52796F] transition-all duration-300 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>

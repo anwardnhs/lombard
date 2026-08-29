@@ -140,7 +140,7 @@ const InvestorsSection = () => {
                   <p className="text-xs text-[#0F120F]/60 mb-4">
                     For institutional inquiries:
                   </p>
-                  <a href="mailto:ir@lombardholdco.com" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-[#C7D3BC] transition-colors">
+                  <a href="mailto:ir@lombardholdco.com" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors">
                     <FaEnvelope /> ir@lombardholdco.com
                   </a>
                 </div>
@@ -154,7 +154,7 @@ const InvestorsSection = () => {
               <section id="overview" ref={sections.overview} className="scroll-mt-32">
                 <div className="grid md:grid-cols-2 gap-6 mb-12">
                   {[tickers.ngx, tickers.lse].map((ticker, idx) => (
-                    <div key={idx} className="bg-white border-2 border-[#0F120F]/10 p-8 hover:shadow-xl hover:border-[#C7D3BC] transition-all duration-300 group">
+                    <div key={idx} className="bg-white border-2 border-[#0F120F]/10 p-8 hover:shadow-xl hover:border-[#52796F] transition-all duration-300 group">
                       <div className="flex justify-between items-start mb-6">
                         <div>
                           <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 mb-1">
@@ -232,7 +232,7 @@ const InvestorsSection = () => {
                     </div>
 
                     <div className="flex flex-wrap gap-3 pt-6 border-t border-[#0F120F]/5">
-                      <a href={latestEarnings.deckUrl} className="flex items-center gap-2 px-4 py-3 bg-[#0a0c0a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#C7D3BC] hover:text-[#0F120F] transition-colors">
+                      <a href={latestEarnings.deckUrl} className="flex items-center gap-2 px-4 py-3 bg-[#0a0c0a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#52796F] hover:text-[#0F120F] transition-colors">
                         <FaDownload /> Presentation
                       </a>
                       <a href={latestEarnings.transcriptUrl} className="flex items-center gap-2 px-4 py-3 border border-[#0F120F]/20 text-[#0F120F] text-xs font-bold uppercase tracking-widest hover:border-[#0F120F] transition-colors">
@@ -276,7 +276,7 @@ const InvestorsSection = () => {
                           <FaFilePdf className="text-[#0F120F]/20 group-hover:text-[#0F120F] transition-colors text-2xl" />
                         </div>
                         <p className="text-sm font-medium text-[#0F120F]/70 mb-6 line-clamp-2">{report.title}</p>
-                        <a href={report.pdfUrl} className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0F120F] group-hover:text-[#C7D3BC] transition-colors">
+                        <a href={report.pdfUrl} className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0F120F] group-hover:text-[#52796F] transition-colors">
                           <FaDownload /> Download PDF
                         </a>
                       </div>
@@ -316,7 +316,7 @@ const InvestorsSection = () => {
                         <XAxis dataKey="date" tick={{fontSize: 11}} axisLine={false} tickLine={false} />
                         <YAxis tick={{fontSize: 11}} axisLine={false} tickLine={false} domain={['auto', 'auto']} />
                         <Tooltip contentStyle={{backgroundColor: '#fff', border: '1px solid #eee', fontSize: '12px'}} />
-                        <Line type="monotone" dataKey="price" stroke="#0F120F" strokeWidth={2} dot={false} activeDot={{r: 6, fill: '#C7D3BC'}} />
+                        <Line type="monotone" dataKey="price" stroke="#0F120F" strokeWidth={2} dot={false} activeDot={{r: 6, fill: '#52796F'}} />
                       </LineChart>
                     </ResponsiveContainer>
                   </div>

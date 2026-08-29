@@ -93,7 +93,7 @@ const Impact = () => {
             <Breadcrumbs items={[{ label: "Impact" }]} theme="dark" className="mb-6" />
             <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-white tracking-tight mb-6 sm:mb-8">
               Building a <br />
-              <span className="italic text-[#C7D3BC]">Sustainable Future.</span>
+              <span className="italic text-[#52796F]">Sustainable Future.</span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-white leading-relaxed max-w-2xl">
               Our commitment to environmental stewardship, social impact, and transparent governance drives sustainable value creation across Africa.
@@ -115,7 +115,7 @@ const Impact = () => {
               variants={fadeInVariants}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-[2px] bg-[#C7D3BC]" />
+                <div className="w-8 h-[2px] bg-[#52796F]" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/60">
                   Environmental, Social & Governance
                 </span>
@@ -182,7 +182,7 @@ const Impact = () => {
             className="max-w-3xl mb-12 lg:mb-16"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#C7D3BC]" />
+              <div className="w-8 h-[2px] bg-[#52796F]" />
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/60">
                 Lombard Foundation
               </span>
@@ -223,7 +223,7 @@ const Impact = () => {
                   {/* Content */}
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-[#C7D3BC]/10 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-full bg-[#52796F]/10 flex items-center justify-center">
                         <Icon className="w-5 h-5 text-[#0F120F]" />
                       </div>
                       <h3 className="text-xl font-semibold text-[#0F120F]">
@@ -257,7 +257,7 @@ const Impact = () => {
             className="max-w-3xl mb-12 lg:mb-16"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-[2px] bg-[#C7D3BC]" />
+              <div className="w-8 h-[2px] bg-[#52796F]" />
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/60">
                 Community Impact
               </span>
@@ -427,23 +427,23 @@ const Impact = () => {
                 </h4>
                 <ul className="space-y-3 text-sm text-[#0F120F]/80 font-semibold">
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C7D3BC]" aria-hidden="true" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#52796F]" aria-hidden="true" />
                   ESG Governance & Risk
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C7D3BC]" aria-hidden="true" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#52796F]" aria-hidden="true" />
                   Climate Finance & Green Lending
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C7D3BC]" aria-hidden="true" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#52796F]" aria-hidden="true" />
                   Lombard Foundation Programs
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C7D3BC]" aria-hidden="true" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#52796F]" aria-hidden="true" />
                   Community Impact Metrics
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C7D3BC]" aria-hidden="true" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#52796F]" aria-hidden="true" />
                   Assurance & Reporting Standards
                 </li>
               </ul>

@@ -10,7 +10,7 @@ import retailImg from "../assets/retail.jpg";
 import paymentsImg from "../assets/payments.jpg";
 
 // --- Reusable Placeholder Component ---
-const ImagePlaceholder = ({ color = "#c7d3bc" }) => (
+const ImagePlaceholder = ({ color = "#52796F" }) => (
   <div className="absolute inset-0 bg-[#1a1f1a] flex items-center justify-center overflow-hidden">
     <svg className="w-[150%] h-[150%] opacity-10" viewBox="0 0 100 100" fill="none" aria-hidden="true">
       <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -155,14 +155,14 @@ const CapabilitiesSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={headerVariants}
           >
-            <span className="block text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#c7d3bc] mb-4 font-semibold">
+            <span className="block text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#52796F] mb-4 font-semibold">
               Core Capabilities
             </span>
             <h2 
               id="capabilities-heading"
               className="text-[clamp(2.5rem,5vw,4rem)] font-medium leading-[1.1] tracking-tight"
             >
-              Integrated <span className="text-[#c7d3bc] font-sans italic">Platform</span>
+              Integrated <span className="text-[#52796F] font-sans italic">Platform</span>
             </h2>
           </motion.div>
 
@@ -193,7 +193,7 @@ const CapabilitiesSection = () => {
               variants={animationVariants}
               custom={index * 0.1}
               role="listitem"
-              className="group flex flex-col h-full bg-white/[0.02] border border-white/5 hover:border-[#c7d3bc]/30 transition-all duration-500 overflow-hidden rounded-sm focus-within:ring-2 focus-within:ring-[#c7d3bc] focus-within:ring-offset-2 focus-within:ring-offset-[#0F120F]"
+              className="group flex flex-col h-full bg-white/[0.02] border border-white/5 hover:border-[#52796F]/30 transition-all duration-500 overflow-hidden rounded-sm focus-within:ring-2 focus-within:ring-[#52796F] focus-within:ring-offset-2 focus-within:ring-offset-[#0F120F]"
             >
               {/* Image Area */}
               <div className="relative h-56 sm:h-64 w-full overflow-hidden border-b border-white/5 bg-[#1a1f1a]">
@@ -221,7 +221,7 @@ const CapabilitiesSection = () => {
 
                 {/* Metric Badge */}
                 <div className="absolute bottom-0 left-0 bg-[#0F120F]/95 px-4 sm:px-5 py-2.5 sm:py-3 border-t border-r border-white/10 z-20 backdrop-blur-md">
-                  <span className="block text-base sm:text-lg font-light text-[#c7d3bc] tracking-tight tabular-nums" aria-label={`${item.metric} ${item.metricLabel}`}>
+                  <span className="block text-base sm:text-lg font-light text-[#52796F] tracking-tight tabular-nums" aria-label={`${item.metric} ${item.metricLabel}`}>
                     {item.metric}
                   </span>
                   <span className="text-[9px] tracking-[0.1em] uppercase text-white/50">
@@ -233,17 +233,17 @@ const CapabilitiesSection = () => {
               {/* Text Content Area */}
               <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between relative bg-gradient-to-b from-[#0F120F] to-[#151815]">
                 {/* Hover Glow Effect */}
-                <div className="absolute top-0 right-0 w-[150px] h-[150px] bg-[#c7d3bc]/5 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
+                <div className="absolute top-0 right-0 w-[150px] h-[150px] bg-[#52796F]/5 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="w-1 h-1 bg-[#c7d3bc] rounded-full flex-shrink-0" aria-hidden="true" />
+                    <div className="w-1 h-1 bg-[#52796F] rounded-full flex-shrink-0" aria-hidden="true" />
                     <span className="text-[10px] tracking-[0.2em] uppercase text-white/40 group-hover:text-white/80 transition-colors font-medium">
                       {item.subtitle}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4 group-hover:text-[#c7d3bc] transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4 group-hover:text-[#52796F] transition-colors">
                     {item.title}
                   </h3>
                   
@@ -272,13 +272,13 @@ const CapabilitiesSection = () => {
                 {/* Interactive Footer Link */}
                 <a
                   href={item.href}
-                  className="relative z-10 pt-5 sm:pt-6 border-t border-white/5 flex items-center justify-between group/link focus:outline-none focus:ring-2 focus:ring-[#c7d3bc] focus:ring-offset-2 focus:ring-offset-[#151815] rounded-sm -mx-2 px-2"
+                  className="relative z-10 pt-5 sm:pt-6 border-t border-white/5 flex items-center justify-between group/link focus:outline-none focus:ring-2 focus:ring-[#52796F] focus:ring-offset-2 focus:ring-offset-[#151815] rounded-sm -mx-2 px-2"
                   aria-label={`Learn more about ${item.title}`}
                 >
-                  <span className="text-xs sm:text-sm font-medium text-white group-hover/link:text-[#c7d3bc] transition-colors">
+                  <span className="text-xs sm:text-sm font-medium text-white group-hover/link:text-[#52796F] transition-colors">
                     Learn More
                   </span>
-                  <div className="w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-white/30 group-hover/link:border-[#c7d3bc] group-hover/link:text-[#c7d3bc] transition-all flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-white/30 group-hover/link:border-[#52796F] group-hover/link:text-[#52796F] transition-all flex-shrink-0">
                     <svg 
                       className="w-3 h-3 -rotate-45 group-hover/link:rotate-0 transition-transform duration-300" 
                       fill="none" 
@@ -305,7 +305,7 @@ const CapabilitiesSection = () => {
         >
           <a
             href="/businesses"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium tracking-[0.12em] uppercase text-white border border-white/20 px-5 py-3 hover:border-[#c7d3bc] hover:text-[#c7d3bc] transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#c7d3bc] focus:ring-offset-2 focus:ring-offset-[#0F120F]"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium tracking-[0.12em] uppercase text-white border border-white/20 px-5 py-3 hover:border-[#52796F] hover:text-[#52796F] transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#52796F] focus:ring-offset-2 focus:ring-offset-[#0F120F]"
             aria-label="View more business lines"
           >
             View More
@@ -355,12 +355,12 @@ const CapabilitiesSection = () => {
                   role="listitem"
                 >
                   <span 
-                    className="text-white font-medium text-base sm:text-lg mb-1 tabular-nums group-hover:text-[#c7d3bc] transition-colors"
+                    className="text-white font-medium text-base sm:text-lg mb-1 tabular-nums group-hover:text-[#52796F] transition-colors"
                     aria-label={stat.ariaLabel}
                   >
                     {stat.val}
                   </span>
-                  <span className="text-[9px] text-[#c7d3bc]/70 uppercase tracking-wider group-hover:text-[#c7d3bc] transition-colors">
+                  <span className="text-[9px] text-[#52796F]/70 uppercase tracking-wider group-hover:text-[#52796F] transition-colors">
                     {stat.label}
                   </span>
                 </div>

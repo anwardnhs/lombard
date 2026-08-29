@@ -64,7 +64,7 @@ const TimelineSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="text-lg sm:text-xl text-[#0F120F]/80 font-light leading-relaxed border-l-2 border-[#4A5D43]/30 pl-6"
+              className="text-lg sm:text-xl text-[#0F120F]/80 font-light leading-relaxed border-l-2 border-[#52796F]/30 pl-6"
             >
               Empowering clients and communities through unmatched scale. We are uniquely positioned to drive sustainable growth and long-term value.
             </motion.p>
@@ -95,7 +95,7 @@ const TimelineSection = () => {
               </div>
 
               {/* Text Content */}
-              <h3 className="text-2xl font-sans text-[#0F120F] font-medium mb-3 transition-colors group-hover:text-[#4A5D43]">
+              <h3 className="text-2xl font-sans text-[#0F120F] font-medium mb-3 transition-colors group-hover:text-[#52796F]">
                 {card.title}
               </h3>
               <p className="text-[#0F120F]/70 font-light leading-relaxed mb-6">
@@ -103,7 +103,7 @@ const TimelineSection = () => {
               </p>
               
               {/* Underline Link */}
-              <div className="mt-auto text-sm font-semibold text-[#0F120F] group-hover:text-[#4A5D43] transition-colors border-b border-[#0F120F]/20 group-hover:border-[#4A5D43]/50 pb-1 w-fit">
+              <div className="mt-auto text-sm font-semibold text-[#0F120F] group-hover:text-[#52796F] transition-colors border-b border-[#0F120F]/20 group-hover:border-[#52796F]/50 pb-1 w-fit">
                 {card.linkText}
               </div>
             </motion.a>
