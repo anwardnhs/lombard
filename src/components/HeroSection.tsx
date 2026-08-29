@@ -59,7 +59,7 @@ const HeroSection = () => {
             className="mb-6 sm:mb-8 flex justify-center"
           >
             <span 
-              className="inline-block text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-white font-semibold border-b border-[#c7d3bc]/30 hover:border-[#c7d3bc] transition-all duration-300 cursor-default pb-0.5"
+              className="inline-block text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-white font-semibold border-b border-[#52796F]/30 hover:border-[#52796F] transition-all duration-300 cursor-default pb-0.5"
               role="text"
             >
               Established 1954 — Lagos, Nigeria
