@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaXmark, FaEnvelopeOpenText } from "react-icons/fa6";
 import chide from "@/assets/chide.png";
@@ -9,13 +9,11 @@ const CEOLetterWidget = () => {
   const [hasDismissed, setHasDismissed] = useState(false);
 
   useEffect(() => {
-    // Show widget after 3 seconds if not dismissed
+    // Show widget after 1 second
     const timer = setTimeout(() => {
-      const dismissed = sessionStorage.getItem("lombard_ceo_letter_dismissed");
-      if (!dismissed) {
-        setIsWidgetVisible(true);
-      }
-    }, 3000);
+      // Temporarily ignoring sessionStorage so you can easily see it during testing
+      setIsWidgetVisible(true);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
