@@ -55,9 +55,7 @@ const Businesses = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <span className="text-[#0F120F]/50 font-mono text-xs uppercase tracking-widest font-bold mb-6 block">
-              Operating Subsidiaries
-            </span>
+            
             <Breadcrumbs items={[{ label: "Operating Subsidiaries" }]} className="mb-6 opacity-80" />
 <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans text-[#0F120F] leading-[0.9] tracking-tight mb-8">
               A diversified engine of growth.

@@ -24,6 +24,7 @@ const GovernanceSection = () => {
   const [currentExco, setCurrentExco] = useState(0);
   const [showBio, setShowBio] = useState(false);
   const [expandedBoardBio, setExpandedBoardBio] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<"board" | "executive">("board");
 
   const executives = [
     { name: "Dr. Chide Okonkwo", role: "Group Chief Executive Officer", image: chide, bio: "Dr. Chide Okonkwo leads Lombard HoldCo's strategic expansion across Africa, bringing over 25 years of global investment banking experience. Previously a Partner at Goldman Sachs (London), he holds a Ph.D. in Financial Engineering from MIT and champions the 'Lombard 4.0' digital transformation strategy." },
@@ -74,21 +75,47 @@ const GovernanceSection = () => {
             <Breadcrumbs items={[{ label: "Leadership & Governance" }]} />
           </div>
           
-          <h1 className="font-sans text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 tracking-tight leading-[0.9]">
+          <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-8 tracking-tight leading-tight">
             Architects of <br/>
             <span className="italic text-[#0F120F]/60">our future.</span>
           </h1>
           
           <div className="w-24 h-[2px] bg-[#0F120F] mb-10" />
           
-          <p className="text-xl sm:text-2xl md:text-3xl text-[#0F120F]/80 max-w-4xl leading-relaxed font-sans">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#0F120F]/80 max-w-4xl leading-relaxed font-sans">
             Our leadership team and board of directors are the architects of Lombard's future, guiding our strategic vision, ensuring robust governance, and driving sustainable growth across Africa. With decades of combined experience in finance, risk management, and corporate governance, they are committed to delivering long-term value for our stakeholders.  
           </p>
         </motion.div>
+        
+        {/* TAB SELECTOR */}
+        <div className="flex gap-4 sm:gap-8 mt-16 border-b border-[#0F120F]/10">
+          <button 
+            onClick={() => setActiveTab("board")}
+            className={`pb-4 text-xs sm:text-sm font-bold uppercase tracking-widest transition-all ${activeTab === "board" ? "text-[#0F120F] border-b-2 border-[#0F120F]" : "text-[#0F120F]/40 hover:text-[#0F120F]/70"}`}
+          >
+            Board of Directors
+          </button>
+          <button 
+            onClick={() => setActiveTab("executive")}
+            className={`pb-4 text-xs sm:text-sm font-bold uppercase tracking-widest transition-all ${activeTab === "executive" ? "text-[#0F120F] border-b-2 border-[#0F120F]" : "text-[#0F120F]/40 hover:text-[#0F120F]/70"}`}
+          >
+            Executive Management
+          </button>
+        </div>
       </section>
 
-      {/* BOARD OF DIRECTORS (Moved to top) */}
-      <section className="py-20 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px] border-t border-[#0F120F]/10">
+      {/* RENDER CONTENT BASED ON TAB */}
+      <AnimatePresence mode="wait">
+        {activeTab === "board" ? (
+          <motion.div
+            key="board"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* BOARD OF DIRECTORS */}
+            <section className="py-20 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px]">
         <div className="mb-24">
           <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-4">01 Board of Directors</span>
           <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#0F120F]">Board Oversight</h2>
@@ -137,7 +164,15 @@ const GovernanceSection = () => {
           ))}
         </div>
       </section>
-
+          </motion.div>
+        ) : (
+          <motion.div
+            key="executive"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
       {/* EXECUTIVE COMMITTEE (Carousel) */}
       <section className="py-32 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px] bg-[#0F120F] text-[#F9F9F7]">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-10">
@@ -220,6 +255,9 @@ const GovernanceSection = () => {
           </AnimatePresence>
         </div>
       </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </div>
   );
