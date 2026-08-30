@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaXmark, FaEnvelopeOpenText } from "react-icons/fa6";
 import chide from "@/assets/chide.png";
@@ -9,9 +9,7 @@ const CEOLetterWidget = () => {
   const [hasDismissed, setHasDismissed] = useState(false);
 
   useEffect(() => {
-    // Show widget after 1 second
     const timer = setTimeout(() => {
-      // Temporarily ignoring sessionStorage so you can easily see it during testing
       setIsWidgetVisible(true);
     }, 1000);
     return () => clearTimeout(timer);
@@ -37,7 +35,7 @@ const CEOLetterWidget = () => {
 
   return (
     <>
-      {/* Floating Action Button / Toast */}
+      {/* Floating Action Button */}
       <AnimatePresence>
         {isWidgetVisible && !isModalOpen && !hasDismissed && (
           <motion.div
@@ -70,40 +68,41 @@ const CEOLetterWidget = () => {
       {/* Full Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-12">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={closeLetter}
-              className="absolute inset-0 bg-[#0a0c0a]/80 backdrop-blur-sm"
+              className="absolute inset-0 bg-[#0a0c0a]/80 backdrop-blur-md"
             />
             
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              className="relative w-full max-w-3xl bg-[#F9F9F7] rounded-none sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh]"
+              className="relative w-full max-w-5xl bg-[#F9F9F7] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row h-auto max-h-full"
             >
+              {/* Close Button - positioned absolutely to the modal */}
               <button 
                 onClick={closeLetter}
-                className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 text-black transition-colors"
+                className="absolute top-6 right-6 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 text-black transition-colors"
               >
                 <FaXmark />
               </button>
 
-              {/* Image side */}
-              <div className="w-full md:w-1/3 bg-[#111311] relative min-h-[200px] md:min-h-0 hidden md:block">
-                <img src={chide} alt="Dr. Chide Okonkwo" className="absolute inset-0 w-full h-full object-cover object-top opacity-80" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white font-sans text-xl mb-1">Dr. Chide Okonkwo</h3>
-                  <p className="text-[#52796F] text-xs font-bold uppercase tracking-wider">Group CEO</p>
+              {/* Image side - taking up 40% on desktop */}
+              <div className="w-full md:w-2/5 bg-[#111311] relative min-h-[250px] md:min-h-0 hidden md:block">
+                <img src={chide} alt="Dr. Chide Okonkwo" className="absolute inset-0 w-full h-full object-cover object-top opacity-85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute bottom-8 left-8 right-8">
+                  <h3 className="text-white font-sans text-2xl mb-1">Dr. Chide Okonkwo</h3>
+                  <p className="text-[#52796F] text-xs font-bold uppercase tracking-widest">Group CEO</p>
                 </div>
               </div>
 
-              {/* Text side */}
-              <div className="w-full md:w-2/3 p-8 sm:p-12 overflow-y-auto font-poppins text-[#0F120F] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {/* Text side - taking up 60% on desktop, styled scrollbar */}
+              <div className="w-full md:w-3/5 p-8 sm:p-10 lg:p-14 overflow-y-auto font-poppins text-[#0F120F] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-black/10 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-black/20">
                 <div className="md:hidden flex items-center gap-4 mb-8">
                   <img src={chide} alt="Dr. Chide" className="w-16 h-16 rounded-full object-cover border border-[#0F120F]/10" />
                   <div>
@@ -114,9 +113,9 @@ const CEOLetterWidget = () => {
 
                 <FaEnvelopeOpenText className="text-[#52796F] text-3xl mb-8" />
                 
-                <h2 className="font-sans text-3xl sm:text-4xl mb-6">Building the Future of African Finance</h2>
+                <h2 className="font-sans text-3xl sm:text-4xl mb-6 leading-tight pr-8">Building the Future of African Finance</h2>
                 
-                <div className="space-y-6 text-sm text-[#0F120F]/80 leading-relaxed">
+                <div className="space-y-6 text-base text-[#0F120F]/80 leading-relaxed">
                   <p>
                     Dear Partners, Clients, and Shareholders,
                   </p>
@@ -132,7 +131,7 @@ const CEOLetterWidget = () => {
                   <p>
                     I am incredibly proud of what our team has achieved, but our ambition dictates that this is merely the beginning. Thank you for your continued trust as we build an institution that Africa can be unequivocally proud of.
                   </p>
-                  <p className="pt-4 font-medium italic text-[#0F120F]">
+                  <p className="pt-6 font-medium italic text-[#0F120F]">
                     — Dr. Chide Okonkwo
                   </p>
                 </div>
