@@ -165,7 +165,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#111311]/98 backdrop-blur-xl pt-28 px-6 overflow-y-auto"
+            className="fixed inset-0 z-40 bg-[#0a0c0a]/95 backdrop-blur-xl pt-28 px-6 overflow-y-auto"
           >
             {/* Mobile Utility */}
             <div className="flex gap-4 mb-8 pb-6 border-b border-white/10">
