@@ -1,4 +1,4 @@
-﻿import { FaLinkedinIn, FaXTwitter, FaYoutube, FaArrowRight, FaLocationDot, FaEnvelope } from "react-icons/fa6";
+import { FaLinkedinIn, FaXTwitter, FaYoutube, FaArrowRight, FaLocationDot, FaEnvelope } from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,7 +41,6 @@ const Footer = () => {
     { label: "Terms of Service", href: "/terms" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Cookie Policy", href: "/cookies" },
-    { label: "Accessibility", href: "/accessibility" },
     { label: "Sitemap", href: "/sitemap" },
   ];
 

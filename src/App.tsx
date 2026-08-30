@@ -15,22 +15,24 @@ import Careers from "./pages/Careers";
 import Newsroom from "./pages/Newsroom";
 import NotFound from "./pages/NotFound";
 import RouteProgress from "./components/RouteProgress";
+import CookieBanner from "./components/CookieBanner";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+import Sitemap from "./pages/Sitemap";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      {/* 2. Wrap content with ReactLenis */}
-      {/* root: tells Lenis to control the main html/body scroll */}
-      {/* duration: 1.2 gives it that heavy, "luxury car" feel */}
       <ReactLenis root options={{ duration: 1.2, smoothWheel: true }}>
-        
         <Toaster />
         <Sonner />
         
         <BrowserRouter>
           <RouteProgress />
+          <CookieBanner />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<CorporateProfile />} />
@@ -41,11 +43,14 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/newsroom" element={<Newsroom />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-
       </ReactLenis>
     </TooltipProvider>
   </QueryClientProvider>
