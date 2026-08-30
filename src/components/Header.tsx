@@ -80,7 +80,7 @@ const Header = () => {
           
           {/* Logo */}
           <a href="/" className="relative z-50 group flex items-center focus:outline-none">
-            <h1 className="font-sans font-bold text-3xl sm:text-4xl tracking-tight text-white transition-colors duration-300">
+            <h1 className="font-sans font-bold text-2xl sm:text-3xl tracking-tight text-white transition-colors duration-300">
               Lombard HoldCo<span className="text-[#52796F]">.</span>
             </h1>
           </a>
