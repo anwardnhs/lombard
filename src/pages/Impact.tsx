@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+﻿import { motion, useReducedMotion } from "framer-motion";
 import { FaLeaf, FaShieldHalved, FaScaleBalanced, FaGraduationCap, FaHeartPulse, FaChartLine, FaDownload } from "react-icons/fa6";
 
 import Header from "@/components/Header";
@@ -59,7 +59,7 @@ const Impact = () => {
 
   const impactHighlights = [
     { value: "22%", label: "Carbon Reduction" },
-    { value: "₦18B", label: "Green Financing" },
+    { value: "â‚¦18B", label: "Green Financing" },
     { value: "A+", label: "ESG Rating" },
     { value: "48K+", label: "Agent Locations" }
   ];
@@ -116,7 +116,7 @@ const Impact = () => {
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-[2px] bg-[#52796F]" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/60">
+                <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#0F120F]/60">
                   Environmental, Social & Governance
                 </span>
               </div>
@@ -183,7 +183,7 @@ const Impact = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-[2px] bg-[#52796F]" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/60">
+              <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#0F120F]/60">
                 Lombard Foundation
               </span>
             </div>
@@ -258,7 +258,7 @@ const Impact = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-[2px] bg-[#52796F]" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/60">
+              <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#0F120F]/60">
                 Community Impact
               </span>
             </div>
@@ -301,11 +301,11 @@ const Impact = () => {
                 </p>
                 <div className="flex gap-8">
                   <div>
-                    <div className="text-3xl font-bold text-[#0F120F] mb-1 tabular-nums">10.2M</div>
+                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">10.2M</div>
                     <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Active Customers</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-[#0F120F] mb-1 tabular-nums">48K+</div>
+                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">48K+</div>
                     <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Agent Locations</div>
                   </div>
                 </div>
@@ -345,11 +345,11 @@ const Impact = () => {
                 </p>
                 <div className="flex gap-8">
                   <div>
-                    <div className="text-3xl font-bold text-[#0F120F] mb-1 tabular-nums">2,400</div>
+                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">2,400</div>
                     <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Annual Graduates</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-[#0F120F] mb-1 tabular-nums">82%</div>
+                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">82%</div>
                     <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Employment Rate</div>
                   </div>
                 </div>
@@ -366,13 +366,13 @@ const Impact = () => {
             variants={fadeInVariants}
             className="pt-12 border-t border-[#0F120F]/10"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#0F120F]/50 mb-8 text-center">
+            <p className="text-xs font-medium uppercase tracking-[0.15em] text-[#0F120F]/50 mb-8 text-center">
               2025 Impact Highlights
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {impactHighlights.map((highlight, idx) => (
                 <div key={idx} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-[#0F120F] mb-2 tabular-nums">
+                  <div className="text-3xl sm:text-4xl font-medium text-[#0F120F] mb-2 tabular-nums">
                     {highlight.value}
                   </div>
                   <div className="text-xs uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">
@@ -392,7 +392,7 @@ const Impact = () => {
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
             {/* Left: Summary */}
             <div>
-              <span className="inline-block text-[10px] uppercase tracking-[0.3em] font-bold text-[#0F120F]/60 mb-4">
+              <span className="inline-block text-[10px] uppercase tracking-[0.3em] font-medium text-[#0F120F]/60 mb-4">
                 Impact Report 2025
               </span>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-sans text-[#0F120F] mb-6">
@@ -400,7 +400,7 @@ const Impact = () => {
               </h3>
                 <p className="text-base text-[#0F120F]/80 leading-relaxed mb-8 max-w-2xl font-semibold">
                   A consolidated view of our ESG governance, foundation investments, and community outcomes across Africa.
-                  The report details key metrics, priority initiatives, and long‑term commitments.
+                  The report details key metrics, priority initiatives, and longâ€‘term commitments.
                 </p>
 
               <div className="flex flex-wrap gap-4">
@@ -422,7 +422,7 @@ const Impact = () => {
 
             {/* Right: Contents */}
               <div className="bg-white border border-[#0F120F]/10 p-6 sm:p-8 rounded-sm">
-                <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/60 mb-5">
+                <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-[#0F120F]/60 mb-5">
                   Report Contents
                 </h4>
                 <ul className="space-y-3 text-sm text-[#0F120F]/80 font-semibold">
@@ -459,3 +459,4 @@ const Impact = () => {
 };
 
 export default Impact;
+
