@@ -103,7 +103,7 @@ const CEOLetterWidget = () => {
               </div>
 
               {/* Text side */}
-              <div className="w-full md:w-2/3 p-8 sm:p-12 overflow-y-auto font-poppins text-[#0F120F]">
+              <div className="w-full md:w-2/3 p-8 sm:p-12 overflow-y-auto font-poppins text-[#0F120F] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <div className="md:hidden flex items-center gap-4 mb-8">
                   <img src={chide} alt="Dr. Chide" className="w-16 h-16 rounded-full object-cover border border-[#0F120F]/10" />
                   <div>
