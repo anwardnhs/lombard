@@ -59,7 +59,7 @@ const Impact = () => {
 
   const impactHighlights = [
     { value: "22%", label: "Carbon Reduction" },
-    { value: "â‚¦18B", label: "Green Financing" },
+    { value: "₦18B", label: "Green Financing" },
     { value: "A+", label: "ESG Rating" },
     { value: "48K+", label: "Agent Locations" }
   ];
@@ -400,7 +400,7 @@ const Impact = () => {
               </h3>
                 <p className="text-base text-[#0F120F]/80 leading-relaxed mb-8 max-w-2xl font-semibold">
                   A consolidated view of our ESG governance, foundation investments, and community outcomes across Africa.
-                  The report details key metrics, priority initiatives, and longâ€‘term commitments.
+                  The report details key metrics, priority initiatives, and long-term commitments.
                 </p>
 
               <div className="flex flex-wrap gap-4">
@@ -459,4 +459,5 @@ const Impact = () => {
 };
 
 export default Impact;
+
 
