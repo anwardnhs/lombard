@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaLandmark, FaBriefcase, FaShieldHalved, FaFileContract, FaArrowRight } from "react-icons/fa6";
+import { FaLandmark, FaBriefcase, FaShieldHalved, FaFileContract, FaArrowRight, FaPlus, FaMinus } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -44,6 +44,8 @@ const AnimatedMetric = ({ value }: { value: string | number }) => {
 };
 
 const CorporateProfile = () => {
+  const [expandedFounder, setExpandedFounder] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-[#F9F9F7] font-poppins text-[#0F120F] selection:bg-[#0a0c0a] selection:text-[#F9F9F7]">
       <Header />
@@ -73,7 +75,7 @@ const CorporateProfile = () => {
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px] mb-40">
           <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div>
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#52796F] block mb-4">01 — At a Glance</span>
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#52796F] block mb-4">01 ï¿½ At a Glance</span>
               <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl tracking-tight">The Lombard Tower.</h2>
             </div>
           </div>
@@ -106,7 +108,7 @@ const CorporateProfile = () => {
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 gap-8">
               <div>
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 — Scale</span>
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 ï¿½ Scale</span>
                 <h2 className="font-sans text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-[1.05] tracking-tight">Delivering impact at scale.</h2>
               </div>
               <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors pb-2 border-b border-[#0F120F]/20 hover:border-[#52796F]">
@@ -138,7 +140,7 @@ const CorporateProfile = () => {
         {/* FOUNDERS GRID */}
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
           <div className="mb-20">
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 — Genesis</span>
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 ï¿½ Genesis</span>
             <h2 className="font-sans text-5xl sm:text-6xl md:text-7xl max-w-4xl leading-[1.1] mb-8">
               The founding consortium that built the Institution 
             </h2>
@@ -182,7 +184,32 @@ const CorporateProfile = () => {
                 </div>
                 <div className="sm:w-1/2 flex flex-col justify-center">
                   <h3 className="font-sans text-3xl mb-3 leading-tight">{partner.name}</h3>
-                  <p className="text-sm font-extrabold uppercase tracking-widest text-[#52796F]">{partner.role}</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#52796F] mb-6">{partner.role}</p>
+
+                  <div className="border-t border-[#0F120F]/10 pt-4 mt-auto">
+                    <button 
+                      onClick={() => setExpandedFounder(expandedFounder === i ? null : i)}
+                      className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/70 hover:text-[#52796F] transition-colors"
+                    >
+                      {expandedFounder === i ? <FaMinus /> : <FaPlus />}
+                      {expandedFounder === i ? "Hide Biography" : "Read Biography"}
+                    </button>
+                    
+                    <AnimatePresence>
+                      {expandedFounder === i && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <p className="pt-4 text-sm text-[#0F120F]/70 leading-relaxed font-light">
+                            {partner.bio}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </div>
               </div>
             ))}

@@ -127,10 +127,10 @@ const Newsroom = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-10">
             <div className="max-w-2xl">
               <Breadcrumbs items={[{ label: "Newsroom" }]} className="mb-4" />
-              <span className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-[#0F120F]/50 mb-3">
+              <span className="inline-block text-[10px] font-medium uppercase tracking-[0.25em] text-[#0F120F]/50 mb-3">
                 Newsroom
               </span>
-              <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F120F] mb-3 leading-[1.1]">
+              <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-medium text-[#0F120F] mb-3 leading-[1.1]">
                 Media Center
               </h1>
               <p className="text-lg md:text-xl text-[#0F120F]/70 font-normal leading-relaxed">
@@ -158,7 +158,7 @@ const Newsroom = () => {
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-5 py-2.5 text-[11px] font-bold uppercase tracking-wider border-2 transition-all rounded ${
+                className={`px-5 py-2.5 text-[11px] font-medium uppercase tracking-wider border-2 transition-all rounded ${
                   activeFilter === filter
                     ? "bg-[#0F120F] text-white border-[#0F120F] shadow-sm"
                     : "bg-white text-[#0F120F]/70 border-[#0F120F]/10 hover:border-[#0F120F]/30 hover:text-[#0F120F]"
@@ -177,8 +177,8 @@ const Newsroom = () => {
         <section className="py-16 px-6 lg:px-12">
           <div className="container mx-auto max-w-7xl">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0F120F]">Featured Stories</h2>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#0F120F]/40">
+              <h2 className="font-sans text-3xl md:text-4xl font-medium text-[#0F120F]">Featured Stories</h2>
+              <span className="text-[10px] font-medium uppercase tracking-wider text-[#0F120F]/40">
                 Top Stories
               </span>
             </div>
@@ -193,7 +193,7 @@ const Newsroom = () => {
                     alt={featuredStories[0].title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-5 left-5 bg-[#0F120F] text-white text-[9px] font-bold uppercase tracking-[0.2em] px-4 py-2 shadow-lg">
+                  <div className="absolute top-5 left-5 bg-[#0F120F] text-white text-[9px] font-medium uppercase tracking-[0.2em] px-4 py-2 shadow-lg">
                     Featured
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const Newsroom = () => {
                     <span>•</span>
                     <span>{featuredStories[0].readTime}</span>
                   </div>
-                  <h3 className="font-sans text-2xl lg:text-3xl xl:text-4xl font-bold text-[#0F120F] mb-5 leading-[1.2] group-hover:text-[#4a5d4a] transition-colors">
+                  <h3 className="font-sans text-2xl lg:text-3xl xl:text-4xl font-medium text-[#0F120F] mb-5 leading-[1.2] group-hover:text-[#4a5d4a] transition-colors">
                     {featuredStories[0].title}
                   </h3>
                   <p className="text-base text-[#0F120F]/75 font-normal leading-relaxed mb-6 max-w-2xl">
@@ -219,7 +219,7 @@ const Newsroom = () => {
                   </p>
                   <a 
                     href="#" 
-                    className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-[#0F120F] border-b-2 border-[#0F120F]/20 pb-1 hover:border-[#0F120F] hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-[#0F120F] border-b-2 border-[#0F120F]/20 pb-1 hover:border-[#0F120F] hover:gap-3 transition-all"
                     aria-label={`Read more about ${featuredStories[0].title}`}
                   >
                     Read Full Release <FaArrowRight className="text-xs" />
@@ -248,7 +248,7 @@ const Newsroom = () => {
                           <span>•</span>
                           <span>{story.date}</span>
                         </div>
-                        <h3 className="font-sans text-lg lg:text-xl font-bold text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors mb-2">
+                        <h3 className="font-sans text-lg lg:text-xl font-medium text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors mb-2">
                           {story.title}
                         </h3>
                         <span className="text-[10px] text-[#0F120F]/50 font-medium">{story.readTime}</span>
@@ -270,10 +270,10 @@ const Newsroom = () => {
       <section className="pb-20 px-6 lg:px-12">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
-            <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#0F120F]">
+            <h2 className="font-sans text-3xl md:text-4xl font-medium text-[#0F120F]">
               {activeFilter === "All" ? "Latest Updates" : activeFilter}
             </h2>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#0F120F]/50 bg-[#F9F9F7] px-4 py-2 rounded border border-[#0F120F]/10">
+            <span className="text-[11px] font-medium uppercase tracking-wider text-[#0F120F]/50 bg-[#F9F9F7] px-4 py-2 rounded border border-[#0F120F]/10">
               {filteredNews.length} {filteredNews.length === 1 ? 'Result' : 'Results'}
             </span>
           </div>
@@ -304,7 +304,7 @@ const Newsroom = () => {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
-                        <span className="inline-block bg-white px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-[#0F120F]">
+                        <span className="inline-block bg-white px-3 py-1 text-[9px] font-medium uppercase tracking-wider text-[#0F120F]">
                           {item.category}
                         </span>
                       </div>
@@ -319,13 +319,13 @@ const Newsroom = () => {
                         </span>
                         <span className="text-[#0F120F]/40">{item.readTime}</span>
                       </div>
-                      <h3 className="font-sans text-lg lg:text-xl font-bold mb-3 text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors">
+                      <h3 className="font-sans text-lg lg:text-xl font-medium mb-3 text-[#0F120F] leading-snug group-hover:text-[#4a5d4a] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-sm text-[#0F120F]/70 font-normal leading-relaxed mb-6 flex-1">
                         {item.excerpt}
                       </p>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#0F120F] flex items-center gap-2 group-hover:gap-3 transition-all">
+                      <span className="text-[10px] font-medium uppercase tracking-wider text-[#0F120F] flex items-center gap-2 group-hover:gap-3 transition-all">
                         Read Article <FaArrowRight className="text-[#52796F] text-xs" />
                       </span>
                     </div>
@@ -353,13 +353,13 @@ const Newsroom = () => {
             
             {/* Left: Heading */}
             <div className="lg:col-span-4">
-              <h2 className="font-sans text-3xl md:text-4xl font-bold mb-4 text-[#0F120F]">
+              <h2 className="font-sans text-3xl md:text-4xl font-medium mb-4 text-[#0F120F]">
                 Filings & Releases
               </h2>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed mb-8">
                 Official statements, regulatory filings, and corporate announcements for investors and media partners.
               </p>
-              <button className="px-6 py-3 border-2 border-[#0F120F] text-[#0F120F] text-[11px] font-bold uppercase tracking-wider hover:bg-[#0F120F] hover:text-white transition-all rounded">
+              <button className="px-6 py-3 border-2 border-[#0F120F] text-[#0F120F] text-[11px] font-medium uppercase tracking-wider hover:bg-[#0F120F] hover:text-white transition-all rounded">
                 View Full Archive
               </button>
             </div>
@@ -375,7 +375,7 @@ const Newsroom = () => {
                     aria-label={`Download ${release.title}`}
                   >
                     <div className="flex flex-col gap-2 flex-1">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#0F120F]/40">
+                      <span className="text-[10px] font-medium uppercase tracking-wider text-[#0F120F]/40">
                         {release.date} • {release.category}
                       </span>
                       <h4 className="font-semibold text-[#0F120F] text-base lg:text-lg group-hover:text-[#4a5d4a] transition-colors leading-snug">
@@ -401,7 +401,7 @@ const Newsroom = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
             <div>
-              <h2 className="font-sans text-3xl md:text-4xl font-bold mb-3 text-[#0F120F]">
+              <h2 className="font-sans text-3xl md:text-4xl font-medium mb-3 text-[#0F120F]">
                 Media Resources
               </h2>
               <p className="text-sm font-normal text-[#0F120F]/60">
@@ -410,7 +410,7 @@ const Newsroom = () => {
             </div>
             <a
               href="#"
-              className="text-[11px] font-bold uppercase tracking-wider text-[#0F120F] border-b-2 border-[#0F120F]/30 pb-1 hover:border-[#0F120F] transition-all inline-flex items-center gap-2"
+              className="text-[11px] font-medium uppercase tracking-wider text-[#0F120F] border-b-2 border-[#0F120F]/30 pb-1 hover:border-[#0F120F] transition-all inline-flex items-center gap-2"
             >
               View Media Archive <FaArrowRight className="text-xs" />
             </a>
@@ -426,11 +426,11 @@ const Newsroom = () => {
                 <div className="w-14 h-14 bg-[#F9F9F7] flex items-center justify-center text-[#0F120F] border-2 border-[#0F120F]/10 rounded group-hover:bg-[#0F120F] group-hover:text-white group-hover:border-[#0F120F] transition-all">
                   <FaNewspaper className="text-xl" />
                 </div>
-                <span className="text-[9px] font-bold uppercase tracking-wider text-[#0F120F]/30 bg-[#F9F9F7] px-3 py-1 rounded">
+                <span className="text-[9px] font-medium uppercase tracking-wider text-[#0F120F]/30 bg-[#F9F9F7] px-3 py-1 rounded">
                   PDF
                 </span>
               </div>
-              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-bold">Media Kit</h3>
+              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-medium">Media Kit</h3>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed">
                 Fact sheets, leadership bios, and key corporate details.
               </p>
@@ -445,11 +445,11 @@ const Newsroom = () => {
                 <div className="w-14 h-14 bg-[#F9F9F7] flex items-center justify-center text-[#0F120F] border-2 border-[#0F120F]/10 rounded group-hover:bg-[#0F120F] group-hover:text-white group-hover:border-[#0F120F] transition-all">
                   <FaImage className="text-xl" />
                 </div>
-                <span className="text-[9px] font-bold uppercase tracking-wider text-[#0F120F]/30 bg-[#F9F9F7] px-3 py-1 rounded">
+                <span className="text-[9px] font-medium uppercase tracking-wider text-[#0F120F]/30 bg-[#F9F9F7] px-3 py-1 rounded">
                   ZIP
                 </span>
               </div>
-              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-bold">Brand Assets</h3>
+              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-medium">Brand Assets</h3>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed">
                 Official logos, guidelines, and B-roll assets.
               </p>
@@ -464,11 +464,11 @@ const Newsroom = () => {
                 <div className="w-14 h-14 bg-[#F9F9F7] flex items-center justify-center text-[#0F120F] border-2 border-[#0F120F]/10 rounded group-hover:bg-[#0F120F] group-hover:text-white group-hover:border-[#0F120F] transition-all">
                   <FaVideo className="text-xl" />
                 </div>
-                <span className="text-[9px] font-bold uppercase tracking-wider text-[#0F120F]/30 bg-[#F9F9F7] px-3 py-1 rounded">
+                <span className="text-[9px] font-medium uppercase tracking-wider text-[#0F120F]/30 bg-[#F9F9F7] px-3 py-1 rounded">
                   JPG
                 </span>
               </div>
-              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-bold">Leadership Photos</h3>
+              <h3 className="font-sans text-xl text-[#0F120F] mb-2 font-medium">Leadership Photos</h3>
               <p className="text-sm font-normal text-[#0F120F]/70 leading-relaxed">
                 High-resolution executive headshots for press use.
               </p>

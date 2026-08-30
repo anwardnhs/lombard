@@ -164,7 +164,7 @@ const GovernanceSection = () => {
           </div>
         </div>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden flex justify-center pb-12">
           <AnimatePresence mode="wait">
             <motion.div 
               key={currentExco}
@@ -172,19 +172,29 @@ const GovernanceSection = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center group"
+              className="flex flex-col md:flex-row gap-8 md:gap-16 items-center w-full max-w-5xl bg-white/5 p-8 md:p-12 rounded-xl border border-white/10"
             >
-              <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
-                <div className="mb-8">
-                  <p className="text-xs font-mono tracking-widest text-[#F9F9F7]/40 mb-4">{currentExco + 1} / {executives.length}</p>
-                  <h3 className="font-sans text-4xl sm:text-5xl mb-4 leading-tight">{executives[currentExco].name}</h3>
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#52796F]">{executives[currentExco].role}</p>
+              <div className="w-full md:w-1/3 shrink-0">
+                <div className="aspect-[3/4] overflow-hidden rounded-lg bg-black/20">
+                  <img 
+                    src={executives[currentExco].image} 
+                    alt={executives[currentExco].name} 
+                    className="w-full h-full object-cover object-top transition-all duration-1000" 
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="w-full md:w-2/3 flex flex-col justify-center">
+                <div className="mb-6">
+                  <p className="text-[10px] font-mono tracking-widest text-[#F9F9F7]/40 mb-3">{currentExco + 1} / {executives.length}</p>
+                  <h3 className="font-sans text-3xl sm:text-4xl mb-2 leading-tight text-white">{executives[currentExco].name}</h3>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#52796F]">{executives[currentExco].role}</p>
                 </div>
                 
                 <div className="border-t border-white/10 pt-6">
                   <button 
                     onClick={() => setShowBio(!showBio)}
-                    className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors"
+                    className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-white/50 hover:text-[#52796F] transition-colors"
                   >
                     {showBio ? <FaMinus /> : <FaPlus />}
                     {showBio ? "Hide Biography" : "Read Biography"}
@@ -198,22 +208,12 @@ const GovernanceSection = () => {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden"
                       >
-                        <p className="pt-6 text-sm text-[#F9F9F7]/70 leading-relaxed font-light">
+                        <p className="pt-4 text-sm text-[#F9F9F7]/70 leading-relaxed font-light">
                           {executives[currentExco].bio}
                         </p>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
-              </div>
-              <div className="lg:col-span-7 order-1 lg:order-2 flex justify-center lg:justify-end">
-                <div className="w-full max-w-sm aspect-square overflow-hidden bg-white/5 rounded-full lg:rounded-none lg:aspect-[3/4] lg:max-w-md">
-                  <img 
-                    src={executives[currentExco].image} 
-                    alt={executives[currentExco].name} 
-                    className="w-full h-full object-cover object-top transition-all duration-1000" 
-                    loading="lazy"
-                  />
                 </div>
               </div>
             </motion.div>
