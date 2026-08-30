@@ -59,13 +59,13 @@ const Header = () => {
       <header
         className={"fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins " +
           (isScrolled || activeDropdown || !isTransparentHero
-            ? "bg-[#0a0c0a] shadow-lg border-b border-white/5"
+            ? "bg-[#111311]/90 backdrop-blur-md shadow-lg border-b border-white/5"
             : "bg-transparent"
         )}
         onMouseLeave={() => setActiveDropdown(null)}
       >
         {/* Minimalist Utility Bar */}
-        <div className={"hidden sm:block transition-all duration-300 " + (isScrolled || activeDropdown || !isTransparentHero ? "border-b border-white/5 bg-[#111311]" : "border-b border-white/10")}>
+        <div className={"hidden sm:block transition-all duration-300 " + (isScrolled || activeDropdown || !isTransparentHero ? "border-b border-white/5 bg-[#0a0c0a]/40" : "border-b border-white/10")}>
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-[1400px] flex justify-end items-center h-9">
             <nav className="flex items-center gap-6 text-[11px] font-medium tracking-wide text-white/50">
               <a href="#" className="hover:text-white transition-colors">Personal</a>
@@ -165,7 +165,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#0a0c0a] pt-28 px-6 overflow-y-auto"
+            className="fixed inset-0 z-40 bg-[#111311]/98 backdrop-blur-xl pt-28 px-6 overflow-y-auto"
           >
             {/* Mobile Utility */}
             <div className="flex gap-4 mb-8 pb-6 border-b border-white/10">
