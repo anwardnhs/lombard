@@ -82,7 +82,7 @@ const Impact = () => {
         </div>
 
         {/* Content */}
-        <div className="container mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12 xl:px-16 pb-16 sm:pb-20 lg:pb-24 relative z-10">
+        <div className="container mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12 xl:px-16 pt-40 pb-16 sm:pb-20 lg:pb-24 relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
