@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaArrowLeft, FaArrowRight, FaPlus, FaMinus } from "react-icons/fa6";
+import { FaPlus, FaMinus } from "react-icons/fa6";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Asset imports
@@ -21,9 +21,8 @@ import ayomide from "@/assets/ayomide.png";
 import sade from "@/assets/sade.png";
 
 const GovernanceSection = () => {
-  const [currentExco, setCurrentExco] = useState(0);
-  const [showBio, setShowBio] = useState(false);
   const [expandedBoardBio, setExpandedBoardBio] = useState<number | null>(null);
+  const [expandedExcoBio, setExpandedExcoBio] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<"board" | "executive">("board");
 
   const executives = [
@@ -51,16 +50,6 @@ const GovernanceSection = () => {
     { name: "Mrs. Naida Diop", role: "Independent Non-Executive Director", subRole: "Member", image: naida, bio: "Mrs. Diop brings over 20 years of pan-African retail banking experience to her role as an independent director." },
     { name: "Dr. Adewale Olanwale", role: "Independent Non-Executive Director", subRole: "Member", image: adewale, bio: "Dr. Olawanle is a seasoned economist providing critical insights into macroeconomic trends and strategic planning." }
   ];
-
-  const nextExco = () => {
-    setShowBio(false);
-    setCurrentExco((prev) => (prev + 1) % executives.length);
-  };
-
-  const prevExco = () => {
-    setShowBio(false);
-    setCurrentExco((prev) => (prev - 1 + executives.length) % executives.length);
-  };
 
   return (
     <div className="bg-[#F9F9F7] min-h-screen text-[#0F120F] font-poppins selection:bg-[#0F120F] selection:text-[#F9F9F7]">
@@ -173,86 +162,53 @@ const GovernanceSection = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-      {/* EXECUTIVE COMMITTEE (Carousel) */}
-      <section className="py-32 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px] bg-[#0F120F] text-[#F9F9F7]">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-10">
-          <div>
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F9F9F7]/50 block mb-4">02 Executive Management</span>
-            <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#F9F9F7]">Group Executive Committee</h2>
-          </div>
-          
-          <div className="flex gap-4">
-            <button 
-              onClick={prevExco}
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-              aria-label="Previous executive"
-            >
-              <FaArrowLeft />
-            </button>
-            <button 
-              onClick={nextExco}
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-              aria-label="Next executive"
-            >
-              <FaArrowRight />
-            </button>
-          </div>
+      {/* EXECUTIVE COMMITTEE (Grid) */}
+      <section className="py-20 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px]">
+        <div className="mb-24">
+          <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-4">02 Executive Management</span>
+          <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-[#0F120F]">Group Executive Committee</h2>
         </div>
 
-        <div className="relative overflow-hidden flex justify-center pb-12">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={currentExco}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="flex flex-col md:flex-row gap-8 md:gap-16 items-center w-full max-w-5xl bg-white/5 p-8 md:p-12 rounded-xl border border-white/10"
-            >
-              <div className="w-full md:w-1/3 shrink-0">
-                <div className="aspect-[3/4] overflow-hidden rounded-lg bg-black/20">
-                  <img 
-                    src={executives[currentExco].image} 
-                    alt={executives[currentExco].name} 
-                    className="w-full h-full object-cover object-top transition-all duration-1000" 
-                    loading="lazy"
-                  />
-                </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-16">
+          {executives.map((member, idx) => (
+            <div key={idx} className="group flex flex-col">
+              <div className="aspect-[3/4] overflow-hidden bg-black/5 mb-6">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top transition-all duration-500"
+                  loading="lazy"
+                />
               </div>
-              <div className="w-full md:w-2/3 flex flex-col justify-center">
-                <div className="mb-6">
-                  <p className="text-[10px] font-mono tracking-widest text-[#F9F9F7]/40 mb-3">{currentExco + 1} / {executives.length}</p>
-                  <h3 className="font-sans text-3xl sm:text-4xl mb-2 leading-tight text-white">{executives[currentExco].name}</h3>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-[#52796F]">{executives[currentExco].role}</p>
-                </div>
+              <h3 className="font-sans text-2xl text-[#0F120F] mb-2">{member.name}</h3>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#52796F] mb-4">{member.role}</p>
+              
+              <div className="border-t border-[#0F120F]/10 pt-4 mt-auto">
+                <button 
+                  onClick={() => setExpandedExcoBio(expandedExcoBio === idx ? null : idx)}
+                  className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/70 hover:text-[#52796F] transition-colors"
+                >
+                  {expandedExcoBio === idx ? <FaMinus /> : <FaPlus />}
+                  {expandedExcoBio === idx ? "Hide Biography" : "Read Biography"}
+                </button>
                 
-                <div className="border-t border-white/10 pt-6">
-                  <button 
-                    onClick={() => setShowBio(!showBio)}
-                    className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-white/50 hover:text-[#52796F] transition-colors"
-                  >
-                    {showBio ? <FaMinus /> : <FaPlus />}
-                    {showBio ? "Hide Biography" : "Read Biography"}
-                  </button>
-                  
-                  <AnimatePresence>
-                    {showBio && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="pt-4 text-sm text-[#F9F9F7]/70 leading-relaxed font-light">
-                          {executives[currentExco].bio}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                <AnimatePresence>
+                  {expandedExcoBio === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="pt-4 text-sm text-[#0F120F]/70 leading-relaxed font-light">
+                        {member.bio}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          ))}
         </div>
       </section>
           </motion.div>
