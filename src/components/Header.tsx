@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaXmark, FaChevronDown, FaLock, FaMagnifyingGlass } from "react-icons/fa6";
 
@@ -7,7 +7,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const isHome = typeof window !== 'undefined' ? window.location.pathname === '/' : true;
+  const isTransparentHero = typeof window !== 'undefined' ? (window.location.pathname === '/' || window.location.pathname === '/impact') : true;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,14 +58,14 @@ const Header = () => {
     <>
       <header
         className={"fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins " +
-          (isScrolled || activeDropdown || !isHome
+          (isScrolled || activeDropdown || !isTransparentHero
             ? "bg-[#0a0c0a] shadow-lg border-b border-white/5"
             : "bg-transparent"
         )}
         onMouseLeave={() => setActiveDropdown(null)}
       >
         {/* Minimalist Utility Bar */}
-        <div className={"hidden sm:block transition-all duration-300 " + (isScrolled || activeDropdown || !isHome ? "border-b border-white/5 bg-[#111311]" : "border-b border-white/10")}>
+        <div className={"hidden sm:block transition-all duration-300 " + (isScrolled || activeDropdown || !isTransparentHero ? "border-b border-white/5 bg-[#111311]" : "border-b border-white/10")}>
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-[1400px] flex justify-end items-center h-9">
             <nav className="flex items-center gap-6 text-[11px] font-medium tracking-wide text-white/50">
               <a href="#" className="hover:text-white transition-colors">Personal</a>
@@ -76,7 +76,7 @@ const Header = () => {
         </div>
 
         {/* Main Navigation */}
-        <div className={"container mx-auto px-6 sm:px-8 lg:px-12 max-w-[1400px] flex items-center justify-between transition-all duration-300 " + (isScrolled || activeDropdown || !isHome ? "h-16" : "h-20")}>
+        <div className={"container mx-auto px-6 sm:px-8 lg:px-12 max-w-[1400px] flex items-center justify-between transition-all duration-300 " + (isScrolled || activeDropdown || !isTransparentHero ? "h-16" : "h-20")}>
           
           {/* Logo */}
           <a href="/" className="relative z-50 group flex items-center focus:outline-none">
