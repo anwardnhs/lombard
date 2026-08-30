@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -57,7 +58,8 @@ const Businesses = () => {
             <span className="text-[#0F120F]/50 font-mono text-xs uppercase tracking-widest font-bold mb-6 block">
               Operating Subsidiaries
             </span>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans text-[#0F120F] leading-[0.9] tracking-tight mb-8">
+            <Breadcrumbs items={[{ label: "Operating Subsidiaries" }]} className="mb-6 opacity-80" />
+<h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans text-[#0F120F] leading-[0.9] tracking-tight mb-8">
               A diversified engine of growth.
             </h1>
             <p className="text-lg md:text-xl text-[#0F120F]/70 leading-relaxed font-light max-w-2xl">

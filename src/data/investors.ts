@@ -24,10 +24,10 @@ export const tickers = {
 export const keyMetrics = [
   { label: "Market Cap", value: "₦6.5T", subValue: "$4.48B" },
   { label: "Total Assets", value: "₦36.5T", subValue: "$25.2B" },
-  { label: "ROE", value: "18.4%", subValue: "FY 2024" },
+  { label: "ROE", value: "22.4%", subValue: "FY 2024" },
   { label: "NPL Ratio", value: "3.1%", subValue: "Q4 2024" },
-  { label: "CAR", value: "22.4%", subValue: "Tier 1: 19.2%" },
-  { label: "Cost-to-Income", value: "52.3%", subValue: "Industry: 58%" }
+  { label: "CAR", value: "21.8%", subValue: "Tier 1: 19.2%" },
+  { label: "Cost-to-Income", value: "42.1%", subValue: "Industry: 58%" }
 ];
 
 export const quarterlyEarnings = [
@@ -46,7 +46,7 @@ export const latestEarnings = {
   date: "2026-01-28",
   revenue: "₦518B",
   netIncome: "₦96B",
-  roe: "19.8%",
+  roe: "22.4%",
   npl: "2.7%",
   deckUrl: "/investors/earnings/q4-2025-deck.pdf",
   webcastUrl: "/investors/earnings/q4-2025-webcast.mp4",

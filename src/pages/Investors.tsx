@@ -84,7 +84,7 @@ const InvestorsSection = () => {
   const NavItem = ({ id, label, icon: Icon }: any) => (
     <button
       onClick={() => scrollTo(id)}
-      className={`group flex items-center w-full text-left py-3 pl-4 border-l-[3px] text-xs font-bold uppercase tracking-widest transition-all duration-300 ${
+      className={`group flex items-center w-full text-left py-3 pl-4 border-l-[3px] text-xs font-medium uppercase tracking-widest transition-all duration-300 ${
         activeSection === id
           ? "border-[#0F120F] text-[#0F120F] bg-[#0a0c0a]/5"
           : "border-transparent text-[#0F120F]/50 hover:text-[#0F120F] hover:bg-[#0a0c0a]/[0.02]"
@@ -124,7 +124,7 @@ const InvestorsSection = () => {
             {/* --- STICKY SIDEBAR (Hick's Law) --- */}
             <aside className="hidden lg:block lg:col-span-3">
               <div className="sticky top-32">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/40 mb-4 pl-4">On this page</p>
+                <p className="text-[10px] font-medium uppercase tracking-widest text-[#0F120F]/40 mb-4 pl-4">On this page</p>
                 <nav className="flex flex-col mb-8 border-l border-[#0F120F]/10">
                   <NavItem id="overview" label="Market Snapshot" icon={FaChartLine} />
                   <NavItem id="financials" label="Financial Results" icon={FaFileContract} />
@@ -140,7 +140,7 @@ const InvestorsSection = () => {
                   <p className="text-xs text-[#0F120F]/60 mb-4">
                     For institutional inquiries:
                   </p>
-                  <a href="mailto:ir@lombardholdco.com" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors">
+                  <a href="mailto:ir@lombardholdco.com" className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest hover:text-[#52796F] transition-colors">
                     <FaEnvelope /> ir@lombardholdco.com
                   </a>
                 </div>
@@ -157,12 +157,12 @@ const InvestorsSection = () => {
                     <div key={idx} className="bg-white border-2 border-[#0F120F]/10 p-8 hover:shadow-xl hover:border-[#52796F] transition-all duration-300 group">
                       <div className="flex justify-between items-start mb-6">
                         <div>
-                          <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 mb-1">
+                          <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-[#0F120F]/50 mb-1">
                             {ticker.exchange} Ticker
                           </span>
-                          <span className="text-2xl font-mono font-bold text-[#0F120F]">{ticker.symbol}</span>
+                          <span className="text-2xl font-mono font-medium text-[#0F120F]">{ticker.symbol}</span>
                         </div>
-                        <span className={`px-2 py-1 text-xs font-bold font-mono rounded ${
+                        <span className={`px-2 py-1 text-xs font-medium font-mono rounded ${
                           ticker.change.toString().startsWith('+') ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                         }`}>
                           {ticker.change.toString().startsWith('+') ? <FaArrowUp className="inline text-[10px] mr-1" /> : <FaArrowDown className="inline text-[10px] mr-1" />}
@@ -173,7 +173,7 @@ const InvestorsSection = () => {
                       <div className="flex justify-between items-end border-t border-[#0F120F]/10 pt-4">
                         <div>
                           <p className="text-[10px] uppercase tracking-widest text-[#0F120F]/50 mb-1">Current Price</p>
-                          <p className="font-mono text-2xl font-bold text-[#0F120F]">
+                          <p className="font-mono text-2xl font-medium text-[#0F120F]">
                             {ticker.currency === "GBP" ? "£" : "₦"}{ticker.price}
                           </p>
                         </div>
@@ -189,10 +189,10 @@ const InvestorsSection = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#0a0c0a]/10 border border-[#0F120F]/10 overflow-hidden rounded-sm">
                   {keyMetrics.map((metric, idx) => (
                     <div key={idx} className="bg-white p-6 hover:bg-[#F9F9F7] transition-colors">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#0F120F]/50 mb-2">
+                      <p className="text-[10px] font-medium uppercase tracking-[0.15em] text-[#0F120F]/50 mb-2">
                         {metric.label}
                       </p>
-                      <p className="text-2xl font-bold text-[#0F120F] mb-1">{metric.value}</p>
+                      <p className="text-2xl font-medium text-[#0F120F] mb-1">{metric.value}</p>
                       <p className="text-xs font-medium text-[#0F120F]/70">{metric.subValue}</p>
                     </div>
                   ))}
@@ -203,7 +203,7 @@ const InvestorsSection = () => {
               <section id="financials" ref={sections.financials} className="scroll-mt-32">
                 <div className="flex items-end justify-between mb-10 border-b border-[#0F120F]/10 pb-6">
                   <h2 className="font-sans text-3xl md:text-4xl text-[#0F120F]">Financial Results</h2>
-                  <span className="hidden md:inline-block text-xs font-bold uppercase tracking-widest text-[#0F120F]/40">
+                  <span className="hidden md:inline-block text-xs font-medium uppercase tracking-widest text-[#0F120F]/40">
                     Latest Quarter: {latestEarnings.quarter}
                   </span>
                 </div>
@@ -211,7 +211,7 @@ const InvestorsSection = () => {
                 <div className="grid md:grid-cols-12 gap-10">
                   {/* Latest Earnings Card */}
                   <div className="md:col-span-7 bg-white p-8 border border-[#0F120F]/10 shadow-sm">
-                    <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/40 mb-6">Highlights</h3>
+                    <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-[#0F120F]/40 mb-6">Highlights</h3>
                     <div className="grid grid-cols-2 gap-8 mb-8">
                       <div>
                         <p className="text-sm text-[#0F120F]/60 mb-1">Revenue</p>
@@ -223,19 +223,19 @@ const InvestorsSection = () => {
                       </div>
                       <div>
                         <p className="text-sm text-[#0F120F]/60 mb-1">ROE</p>
-                        <p className="text-xl font-bold text-[#0F120F]">{latestEarnings.roe}</p>
+                        <p className="text-xl font-medium text-[#0F120F]">{latestEarnings.roe}</p>
                       </div>
                       <div>
                         <p className="text-sm text-[#0F120F]/60 mb-1">NPL Ratio</p>
-                        <p className="text-xl font-bold text-[#0F120F]">{latestEarnings.npl}</p>
+                        <p className="text-xl font-medium text-[#0F120F]">{latestEarnings.npl}</p>
                       </div>
                     </div>
 
                     <div className="flex flex-wrap gap-3 pt-6 border-t border-[#0F120F]/5">
-                      <a href={latestEarnings.deckUrl} className="flex items-center gap-2 px-4 py-3 bg-[#0a0c0a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#52796F] hover:text-[#0F120F] transition-colors">
+                      <a href={latestEarnings.deckUrl} className="flex items-center gap-2 px-4 py-3 bg-[#0a0c0a] text-white text-xs font-medium uppercase tracking-widest hover:bg-[#52796F] hover:text-[#0F120F] transition-colors">
                         <FaDownload /> Presentation
                       </a>
-                      <a href={latestEarnings.transcriptUrl} className="flex items-center gap-2 px-4 py-3 border border-[#0F120F]/20 text-[#0F120F] text-xs font-bold uppercase tracking-widest hover:border-[#0F120F] transition-colors">
+                      <a href={latestEarnings.transcriptUrl} className="flex items-center gap-2 px-4 py-3 border border-[#0F120F]/20 text-[#0F120F] text-xs font-medium uppercase tracking-widest hover:border-[#0F120F] transition-colors">
                         Transcript
                       </a>
                     </div>
@@ -244,7 +244,7 @@ const InvestorsSection = () => {
                   {/* Revenue Chart */}
                   <div className="md:col-span-5">
                     <div className="bg-white p-6 border border-[#0F120F]/10 h-full">
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/40 mb-6">Revenue Trend (8 Qtrs)</p>
+                      <p className="text-[10px] font-medium uppercase tracking-widest text-[#0F120F]/40 mb-6">Revenue Trend (8 Qtrs)</p>
                       <div className="h-48 w-full">
                         <ResponsiveContainer>
                           <AreaChart data={quarterlyEarnings}>
@@ -272,11 +272,11 @@ const InvestorsSection = () => {
                     {annualReports.map((report) => (
                       <div key={report.year} className="group bg-white p-6 border border-[#0F120F]/10 hover:border-[#0F120F] transition-all cursor-pointer">
                         <div className="flex justify-between items-start mb-4">
-                          <span className="text-3xl font-bold text-[#0F120F]">{report.year}</span>
+                          <span className="text-3xl font-medium text-[#0F120F]">{report.year}</span>
                           <FaFilePdf className="text-[#0F120F]/20 group-hover:text-[#0F120F] transition-colors text-2xl" />
                         </div>
                         <p className="text-sm font-medium text-[#0F120F]/70 mb-6 line-clamp-2">{report.title}</p>
-                        <a href={report.pdfUrl} className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0F120F] group-hover:text-[#52796F] transition-colors">
+                        <a href={report.pdfUrl} className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-[#0F120F] group-hover:text-[#52796F] transition-colors">
                           <FaDownload /> Download PDF
                         </a>
                       </div>
@@ -296,7 +296,7 @@ const InvestorsSection = () => {
                       <button
                         key={view}
                         onClick={() => setPriceView(view as any)}
-                        className={`px-6 py-2 text-xs font-bold transition-colors ${
+                        className={`px-6 py-2 text-xs font-medium transition-colors ${
                           priceView === view 
                             ? 'bg-[#0a0c0a] text-white' 
                             : 'bg-white text-[#0F120F]/50 hover:text-[#0F120F]'
@@ -333,8 +333,8 @@ const InvestorsSection = () => {
                     { label: "P/E", val: priceStats.peRatio }
                   ].map((stat, i) => (
                     <div key={i} className="bg-white p-4 border border-[#0F120F]/5 text-center">
-                      <span className="block text-[9px] font-bold uppercase tracking-widest text-[#0F120F]/40 mb-1">{stat.label}</span>
-                      <span className="block font-bold text-[#0F120F]">{stat.val}</span>
+                      <span className="block text-[9px] font-medium uppercase tracking-widest text-[#0F120F]/40 mb-1">{stat.label}</span>
+                      <span className="block font-medium text-[#0F120F]">{stat.val}</span>
                     </div>
                   ))}
                 </div>
@@ -348,19 +348,19 @@ const InvestorsSection = () => {
                   <table className="w-full text-sm">
                     <thead className="bg-[#F9F9F7] border-b border-[#0F120F]/10">
                       <tr>
-                        <th className="py-4 px-6 text-left font-bold text-[#0F120F] uppercase tracking-wider text-xs">Fiscal Year</th>
-                        <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs">Interim</th>
-                        <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs">Final</th>
-                        <th className="py-4 px-6 text-right font-bold text-[#0F120F] uppercase tracking-wider text-xs bg-[#0a0c0a]/5">Total</th>
+                        <th className="py-4 px-6 text-left font-medium text-[#0F120F] uppercase tracking-wider text-xs">Fiscal Year</th>
+                        <th className="py-4 px-6 text-right font-medium text-[#0F120F] uppercase tracking-wider text-xs">Interim</th>
+                        <th className="py-4 px-6 text-right font-medium text-[#0F120F] uppercase tracking-wider text-xs">Final</th>
+                        <th className="py-4 px-6 text-right font-medium text-[#0F120F] uppercase tracking-wider text-xs bg-[#0a0c0a]/5">Total</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-[#0F120F]/5">
                       {dividendHistory.map((div) => (
                         <tr key={div.year} className="hover:bg-[#F9F9F7] transition-colors">
-                          <td className="py-4 px-6 font-bold">{div.year}</td>
+                          <td className="py-4 px-6 font-medium">{div.year}</td>
                           <td className="py-4 px-6 text-right tabular-nums text-[#0F120F]/70">₦{div.interim}</td>
                           <td className="py-4 px-6 text-right tabular-nums text-[#0F120F]/70">₦{div.final}</td>
-                          <td className="py-4 px-6 text-right tabular-nums font-bold bg-[#0a0c0a]/5">₦{div.total}</td>
+                          <td className="py-4 px-6 text-right tabular-nums font-medium bg-[#0a0c0a]/5">₦{div.total}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -376,17 +376,17 @@ const InvestorsSection = () => {
                   {analystCoverage.map((analyst, idx) => (
                     <div key={idx} className="bg-white p-6 border border-[#0F120F]/10 flex justify-between items-center">
                       <div>
-                        <h4 className="font-bold text-[#0F120F] text-lg">{analyst.firm}</h4>
+                        <h4 className="font-medium text-[#0F120F] text-lg">{analyst.firm}</h4>
                         <p className="text-xs text-[#0F120F]/60 uppercase tracking-wider">{analyst.analyst}</p>
                       </div>
                       <div className="text-right">
-                        <span className={`inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded mb-1 ${
+                        <span className={`inline-block px-3 py-1 text-[10px] font-medium uppercase tracking-widest rounded mb-1 ${
                           analyst.rating.includes('Buy') ? 'bg-green-100 text-green-800' : 
                           analyst.rating.includes('Hold') ? 'bg-gray-100 text-gray-800' : 'bg-red-100 text-red-800'
                         }`}>
                           {analyst.rating}
                         </span>
-                        <p className="text-sm font-mono font-bold">TP: ₦{analyst.targetPrice}</p>
+                        <p className="text-sm font-mono font-medium">TP: ₦{analyst.targetPrice}</p>
                       </div>
                     </div>
                   ))}
@@ -400,8 +400,8 @@ const InvestorsSection = () => {
                   
                   <div className="grid md:grid-cols-2 gap-12">
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#0F120F]/50 mb-4">Registrar Contact</h4>
-                      <p className="text-lg font-bold mb-2 text-[#0F120F]">{shareholderServices.registrar.name}</p>
+                      <h4 className="text-xs font-medium uppercase tracking-widest text-[#0F120F]/50 mb-4">Registrar Contact</h4>
+                      <p className="text-lg font-medium mb-2 text-[#0F120F]">{shareholderServices.registrar.name}</p>
                       <address className="not-italic text-[#0F120F]/70 text-sm leading-relaxed mb-6">
                         {shareholderServices.registrar.address}<br />
                         <span className="block mt-2 text-[#0F120F]">T: {shareholderServices.registrar.phone}</span>
@@ -410,7 +410,7 @@ const InvestorsSection = () => {
                     </div>
 
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#0F120F]/50 mb-4">Downloads</h4>
+                      <h4 className="text-xs font-medium uppercase tracking-widest text-[#0F120F]/50 mb-4">Downloads</h4>
                       <div className="grid gap-3">
                         {shareholderServices.forms.map((form, idx) => (
                           <a key={idx} href={form.url} className="flex items-center justify-between p-4 bg-[#0a0c0a]/5 hover:bg-[#0a0c0a]/10 border border-[#0F120F]/10 transition-colors group">

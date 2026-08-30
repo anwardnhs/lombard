@@ -48,7 +48,7 @@ const GovernanceSection = () => {
     { name: "Dr. Elena Volkov", role: "Independent Non-Executive Director", subRole: "Chair, Audit Committee", image: elena, bio: "Dr. Volkov chairs the Audit Committee. She brings deep international expertise in financial reporting, corporate governance, and audit." },
     { name: "Mr. Chidi Eze", role: "Independent Non-Executive Director", subRole: "Member", image: chidi, bio: "Mr. Eze is an independent director bringing rich experience in digital transformation and technology integration." },
     { name: "Mrs. Naida Diop", role: "Independent Non-Executive Director", subRole: "Member", image: naida, bio: "Mrs. Diop brings over 20 years of pan-African retail banking experience to her role as an independent director." },
-    { name: "Dr. Adewale Osinbajo", role: "Independent Non-Executive Director", subRole: "Member", image: adewale, bio: "Dr. Osinbajo is a seasoned economist providing critical insights into macroeconomic trends and strategic planning." }
+    { name: "Dr. Adewale Olanwale", role: "Independent Non-Executive Director", subRole: "Member", image: adewale, bio: "Dr. Olawanle is a seasoned economist providing critical insights into macroeconomic trends and strategic planning." }
   ];
 
   const nextExco = () => {

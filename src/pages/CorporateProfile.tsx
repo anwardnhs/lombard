@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FaLandmark, FaBriefcase, FaShieldHalved, FaFileContract, FaArrowRight } from "react-icons/fa6";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { holdCoMetrics } from "@/data/lombard";
 
 import lombardt from "@/assets/hq11.jpg";
@@ -31,7 +32,7 @@ const AnimatedMetric = ({ value }: { value: string | number }) => {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals,
       });
-      setShown(`${prefix}${current}${suffix}`);
+      setShown(prefix + current + suffix);
       if (progress < 1) frame = requestAnimationFrame(animate);
     };
 
@@ -57,6 +58,7 @@ const CorporateProfile = () => {
             transition={{ duration: 1 }}
             className="max-w-4xl mx-auto text-center flex flex-col items-center"
           >
+            <Breadcrumbs items={[{ label: "Corporate Profile" }]} theme="light" className="mb-8" />
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-semibold leading-[1.1] tracking-tight mb-8">
               A legacy of <br />
               <span className="text-[#0F120F]/60">African capital.</span>
@@ -67,39 +69,35 @@ const CorporateProfile = () => {
           </motion.div>
         </section>
 
-        {/* AT A GLANCE (EDITORIAL ASYMMETRY) */}
+        {/* AT A GLANCE (REDESIGNED) */}
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px] mb-40">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
-            <div className="lg:col-span-5 flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">01 â€” At a Glance</span>
-                <h2 className="font-sans text-4xl sm:text-5xl mb-10">The Lombard <br/>Tower.</h2>
-                <dl className="space-y-8 max-w-sm">
-                  {[
-                    { icon: FaFileContract, label: "Incorporation", value: "Nigeria (RC 10442)" },
-                    { icon: FaLandmark, label: "Headquarters", value: "The Lombard Tower, 44 Marina, Lagos Island, Lagos" },
-                    { icon: FaShieldHalved, label: "Credit Ratings", value: "Moody's: B2 (Stable) | Fitch: B+ (Stable)" },
-                  ].map((item, i) => (
-                    <div key={i} className="pb-6 border-b border-[#0F120F]/10 last:border-0">
-                      <dt className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 mb-2">
-                        <item.icon className="text-[#0F120F]/40 text-sm" />
-                        {item.label}
-                      </dt>
-                      <dd className="text-base font-medium">{item.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
+          <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#52796F] block mb-4">01 — At a Glance</span>
+              <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl tracking-tight">The Lombard Tower.</h2>
             </div>
-            <div className="lg:col-span-7">
-              <figure className="aspect-[4/5] lg:aspect-square overflow-hidden bg-[#E5E5E5] relative">
-                <img src={lombardt} alt="The Lombard Tower" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" loading="lazy" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
-                  <p className="font-mono text-xs tracking-widest uppercase opacity-80">Global Headquarters</p>
-                  <p className="font-sans text-2xl mt-2">44 Marina, Lagos</p>
+          </div>
+          
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-12">
+            <img src={lombardt} alt="The Lombard Tower" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" loading="lazy" />
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 border-t border-[#0F120F]/10 pt-10">
+            {[
+              { icon: FaFileContract, label: "Incorporation", value: "Nigeria (RC 10442)" },
+              { icon: FaLandmark, label: "Headquarters", value: "44 Marina, Lagos Island, Lagos" },
+              { icon: FaShieldHalved, label: "Credit Ratings", value: "AAA Institutional Rating" },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4">
+                <div className="w-10 h-10 shrink-0 rounded-full bg-[#0a0c0a]/5 flex items-center justify-center text-[#52796F]">
+                  <item.icon className="text-lg" />
                 </div>
-              </figure>
-            </div>
+                <div>
+                  <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 mb-1">{item.label}</h4>
+                  <p className="text-lg font-medium text-[#0F120F]">{item.value}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -108,7 +106,7 @@ const CorporateProfile = () => {
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20 gap-8">
               <div>
-                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 â€” Scale</span>
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">02 — Scale</span>
                 <h2 className="font-sans text-4xl sm:text-5xl md:text-6xl max-w-2xl leading-[1.05] tracking-tight">Delivering impact at scale.</h2>
               </div>
               <a href="/investors" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:text-[#52796F] transition-colors pb-2 border-b border-[#0F120F]/20 hover:border-[#52796F]">
@@ -140,7 +138,7 @@ const CorporateProfile = () => {
         {/* FOUNDERS GRID */}
         <section className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px]">
           <div className="mb-20">
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 â€” Genesis</span>
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#0F120F]/50 block mb-6">03 — Genesis</span>
             <h2 className="font-sans text-5xl sm:text-6xl md:text-7xl max-w-4xl leading-[1.1] mb-8">
               The founding consortium that built the Institution 
             </h2>
@@ -178,7 +176,7 @@ const CorporateProfile = () => {
                   <img 
                     src={partner.image} 
                     alt={partner.name}
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover object-top transition-all duration-700"
                     loading="lazy"
                   />
                 </div>
@@ -199,5 +197,3 @@ const CorporateProfile = () => {
 };
 
 export default CorporateProfile;
-
-

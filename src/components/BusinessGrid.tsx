@@ -206,7 +206,7 @@ const CapabilitiesSection = () => {
                     role="presentation"
                     loading="lazy"
                     onLoad={() => handleImageLoad(item.id)}
-                    className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 grayscale-[40%] group-hover:grayscale-0 contrast-110 ${
+                    className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 -[40%] group-hover:-0 contrast-110 ${
                       imageLoaded[item.id] ? 'opacity-100' : 'opacity-0'
                     }`}
                   />

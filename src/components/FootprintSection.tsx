@@ -279,7 +279,7 @@ const FootprintSection = () => {
                 width="100%" 
                 height="100%" 
                 className="opacity-40 filter drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]"
-                style={{ filter: 'invert(1) grayscale(1) brightness(1.2)' }} 
+                style={{ filter: 'invert(1) (1) brightness(1.2)' }} 
                 alt=""
               />
             </svg>
