@@ -61,7 +61,7 @@ const Impact = () => {
     { value: "22%", label: "Carbon Reduction" },
     { value: "₦18B", label: "Green Financing" },
     { value: "A+", label: "ESG Rating" },
-    { value: "48K+", label: "Agent Locations" }
+    { value: "1.2M+", label: "People Reached" }
   ];
 
   return (
@@ -297,18 +297,9 @@ const Impact = () => {
                   Financial Inclusion
                 </h3>
                 <p className="text-base font-semibold text-[#0F120F]/80 leading-relaxed mb-6">
-                  Our agent banking network brings financial services to rural and underserved communities. With 48,000+ touchpoints, we're expanding access to credit, savings, and digital payments for millions.
+                  We expand access to responsible financial services for individuals, entrepreneurs, and small businesses through affordable lending, digital onboarding, and tailored support models. Our approach helps bridge everyday banking gaps and unlock opportunity in underserved communities.
                 </p>
-                <div className="flex gap-8">
-                  <div>
-                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">10.2M</div>
-                    <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Active Customers</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">48K+</div>
-                    <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Agent Locations</div>
-                  </div>
-                </div>
+               
               </motion.div>
             </div>
 
@@ -343,16 +334,7 @@ const Impact = () => {
                 <p className="text-base font-semibold text-[#0F120F]/80 leading-relaxed mb-6">
                   The Lombard Academy trains young professionals in banking, technology, and entrepreneurship. Our internship and graduate programs create pathways to meaningful careers across Africa.
                 </p>
-                <div className="flex gap-8">
-                  <div>
-                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">2,400</div>
-                    <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Annual Graduates</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-medium text-[#0F120F] mb-1 tabular-nums">82%</div>
-                    <div className="text-[10px] uppercase tracking-[0.15em] text-[#0F120F]/60 font-semibold">Employment Rate</div>
-                  </div>
-                </div>
+                
               </motion.div>
             </div>
 
