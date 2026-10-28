@@ -1,3 +1,4 @@
+import PageIntro from "@/components/PageIntro";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa6";
@@ -54,37 +55,17 @@ const GovernanceSection = () => {
   return (
     <div className="bg-[#F9F9F7] min-h-screen text-[#0F120F] font-poppins selection:bg-[#0F120F] selection:text-[#F9F9F7]">
       {/* HERO SECTION */}
-      <section className="pt-40 pb-20 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px]">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="mb-16">
-            <Breadcrumbs items={[{ label: "Leadership & Governance" }]} />
-          </div>
-          
-          <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-8 tracking-tight leading-tight">
-            Architects of <br/>
-            <span className="italic text-[#0F120F]/60">our future.</span>
-          </h1>
-          
-          <div className="w-24 h-[2px] bg-[#0F120F] mb-10" />
-          
-          <p className="text-lg sm:text-xl md:text-2xl text-[#0F120F]/80 max-w-4xl leading-relaxed font-sans">
-            Our leadership team and board of directors are the architects of Lombard's future, guiding our strategic vision, ensuring robust governance, and driving sustainable growth across Africa. With decades of combined experience in finance, risk management, and corporate governance, they are committed to delivering long-term value for our stakeholders.  
-          </p>
-        </motion.div>
-        
+      <section className="pt-20 pb-12 px-6 sm:px-8 lg:px-12 xl:px-16 container mx-auto max-w-[1800px]">
+        <PageIntro label="Leadership & governance" title="Independent thinking." emphasis="Collective responsibility." description="Meet the board and leadership team guiding our strategy, overseeing risk and stewarding the long-term interests of the group and its shareholders." />
         {/* TAB SELECTOR */}
         <div className="flex gap-4 sm:gap-8 mt-16 border-b border-[#0F120F]/10">
-          <button 
+          <button
             onClick={() => setActiveTab("board")}
             className={`pb-4 text-xs sm:text-sm font-bold uppercase tracking-widest transition-all ${activeTab === "board" ? "text-[#0F120F] border-b-2 border-[#0F120F]" : "text-[#0F120F]/40 hover:text-[#0F120F]/70"}`}
           >
             Board of Directors
           </button>
-          <button 
+          <button
             onClick={() => setActiveTab("executive")}
             className={`pb-4 text-xs sm:text-sm font-bold uppercase tracking-widest transition-all ${activeTab === "executive" ? "text-[#0F120F] border-b-2 border-[#0F120F]" : "text-[#0F120F]/40 hover:text-[#0F120F]/70"}`}
           >
@@ -114,8 +95,8 @@ const GovernanceSection = () => {
           {board.map((member, idx) => (
             <div key={idx} className="group flex flex-col">
               <div className="aspect-[3/4] overflow-hidden bg-black/5 mb-6">
-                <img 
-                  src={member.image} 
+                <img
+                  src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover object-top  transition-all duration-500"
                   loading="lazy"
@@ -124,16 +105,16 @@ const GovernanceSection = () => {
               <h3 className="font-sans text-2xl text-[#0F120F] mb-2">{member.name}</h3>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#52796F] mb-1">{member.role}</p>
               <p className="text-xs text-[#0F120F]/50 uppercase tracking-widest mb-4">{member.subRole}</p>
-              
+
               <div className="border-t border-[#0F120F]/10 pt-4 mt-auto">
-                <button 
+                <button
                   onClick={() => setExpandedBoardBio(expandedBoardBio === idx ? null : idx)}
                   className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/70 hover:text-[#52796F] transition-colors"
                 >
                   {expandedBoardBio === idx ? <FaMinus /> : <FaPlus />}
                   {expandedBoardBio === idx ? "Hide Biography" : "Read Biography"}
                 </button>
-                
+
                 <AnimatePresence>
                   {expandedBoardBio === idx && (
                     <motion.div
@@ -173,8 +154,8 @@ const GovernanceSection = () => {
           {executives.map((member, idx) => (
             <div key={idx} className="group flex flex-col">
               <div className="aspect-[3/4] overflow-hidden bg-black/5 mb-6">
-                <img 
-                  src={member.image} 
+                <img
+                  src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover object-top transition-all duration-500"
                   loading="lazy"
@@ -182,16 +163,16 @@ const GovernanceSection = () => {
               </div>
               <h3 className="font-sans text-2xl text-[#0F120F] mb-2">{member.name}</h3>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#52796F] mb-4">{member.role}</p>
-              
+
               <div className="border-t border-[#0F120F]/10 pt-4 mt-auto">
-                <button 
+                <button
                   onClick={() => setExpandedExcoBio(expandedExcoBio === idx ? null : idx)}
                   className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-[#0F120F]/70 hover:text-[#52796F] transition-colors"
                 >
                   {expandedExcoBio === idx ? <FaMinus /> : <FaPlus />}
                   {expandedExcoBio === idx ? "Hide Biography" : "Read Biography"}
                 </button>
-                
+
                 <AnimatePresence>
                   {expandedExcoBio === idx && (
                     <motion.div
@@ -220,4 +201,3 @@ const GovernanceSection = () => {
 };
 
 export default GovernanceSection;
-

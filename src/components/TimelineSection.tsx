@@ -43,27 +43,27 @@ const TimelineSection = () => {
   return (
     <section className="bg-[#F9F9F7] py-24 lg:py-32 px-6 lg:px-12 font-poppins">
       <div className="max-w-[1400px] mx-auto">
-        
+
         {/* Top Split Header - JP Morgan / Goldman Sachs style */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20 lg:mb-28">
           <div className="lg:w-3/5">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-sans text-[#0F120F] leading-[1.05] tracking-tight"
             >
               A Pan-African Powerhouse with Global Reach.
             </motion.h2>
           </div>
-          
+
           <div className="lg:w-2/5 flex flex-col justify-end pb-2">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] as const }}
               className="text-lg sm:text-xl text-[#0F120F]/80 font-light leading-relaxed border-l-2 border-[#52796F]/30 pl-6"
             >
               Empowering clients and communities through unmatched scale. We are uniquely positioned to drive sustainable growth and long-term value.
@@ -74,19 +74,19 @@ const TimelineSection = () => {
         {/* 3-Column Card Grid - Goldman Sachs style */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {profileCards.map((card, index) => (
-            <motion.a 
+            <motion.a
               key={index}
               href="/about"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] as const }}
               className="flex flex-col group cursor-pointer outline-none"
             >
               {/* Image Container */}
               <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 bg-black/5">
-                <img 
-                  src={card.image} 
+                <img
+                  src={card.image}
                   alt={card.title}
                   loading="lazy"
                   crossOrigin="anonymous"
@@ -101,7 +101,7 @@ const TimelineSection = () => {
               <p className="text-[#0F120F]/70 font-light leading-relaxed mb-6">
                 {card.description}
               </p>
-              
+
               {/* Underline Link */}
               <div className="mt-auto text-sm font-semibold text-[#0F120F] group-hover:text-[#52796F] transition-colors border-b border-[#0F120F]/20 group-hover:border-[#52796F]/50 pb-1 w-fit">
                 {card.linkText}

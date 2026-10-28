@@ -11,6 +11,27 @@ const RouteProgress = () => {
     timers.current.forEach((t) => window.clearTimeout(t));
     timers.current = [];
 
+    if (!location.hash) window.scrollTo({ top: 0, behavior: "instant" });
+    const prepareContent = () => {
+      const content =
+        document.getElementById("page-content") ??
+        document.querySelector("main");
+      if (content && !content.id) content.id = "page-content";
+      const anchor = location.hash
+        ? document.getElementById(decodeURIComponent(location.hash.slice(1)))
+        : null;
+      if (anchor) anchor.scrollIntoView({ behavior: "instant" });
+      return location.hash ? Boolean(anchor) : Boolean(content);
+    };
+    const observer = new MutationObserver(() => {
+      if (prepareContent()) observer.disconnect();
+    });
+    if (!prepareContent())
+      observer.observe(document.getElementById("root")!, {
+        childList: true,
+        subtree: true,
+      });
+    timers.current.push(window.setTimeout(() => observer.disconnect(), 5000));
     setVisible(true);
     setProgress(15);
 
@@ -19,10 +40,11 @@ const RouteProgress = () => {
       window.setTimeout(() => setProgress(85), 240),
       window.setTimeout(() => setProgress(100), 360),
       window.setTimeout(() => setVisible(false), 520),
-      window.setTimeout(() => setProgress(0), 560)
+      window.setTimeout(() => setProgress(0), 560),
     );
 
     return () => {
+      observer.disconnect();
       timers.current.forEach((t) => window.clearTimeout(t));
       timers.current = [];
     };

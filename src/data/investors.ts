@@ -4,6 +4,7 @@
 export const tickers = {
   ngx: {
     symbol: "LOMBARD",
+    currency: "NGN",
     exchange: "Nigerian Exchange (NGX)",
     price: 425.60,
     change: 9.80,
@@ -48,16 +49,16 @@ export const latestEarnings = {
   netIncome: "₦96B",
   roe: "22.4%",
   npl: "2.7%",
-  deckUrl: "/investors/earnings/q4-2025-deck.pdf",
+  deckUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20q4%202025%20deck",
   webcastUrl: "/investors/earnings/q4-2025-webcast.mp4",
-  transcriptUrl: "/investors/earnings/q4-2025-transcript.pdf"
+  transcriptUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20q4%202025%20transcript"
 };
 
 export const annualReports = [
   {
     year: 2025,
     title: "Annual Report & Accounts 2025",
-    pdfUrl: "/investors/reports/annual-report-2024.pdf",
+    pdfUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20annual%20report%202024",
     highlights: [
       "Revenue grew 12% to ₦1.73T ($1.19B)",
       "ROE improved to 18.4% from 17.2%",
@@ -67,7 +68,7 @@ export const annualReports = [
   {
     year: 2024,
     title: "Annual Report & Accounts 2024",
-    pdfUrl: "/investors/reports/annual-report-2023.pdf",
+    pdfUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20annual%20report%202023",
     highlights: [
       "Total assets reached ₦34.2T",
       "Expanded to 14 African markets",
@@ -77,7 +78,7 @@ export const annualReports = [
   {
     year: 2023,
     title: "Annual Report & Accounts 2023",
-    pdfUrl: "/investors/reports/annual-report-2022.pdf",
+    pdfUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20annual%20report%202022",
     highlights: [
       "Net income grew 15% to ₦285B",
       "Launched digital banking platform",
@@ -87,7 +88,7 @@ export const annualReports = [
   {
     year: 2022,
     title: "Annual Report & Accounts 2022",
-    pdfUrl: "/investors/reports/annual-report-2021.pdf",
+    pdfUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20annual%20report%202021",
     highlights: [
       "Completed $320M BIA acquisition",
       "ROE reached 16.8%",
@@ -97,7 +98,7 @@ export const annualReports = [
   {
     year: 2021,
     title: "Annual Report & Accounts 2021",
-    pdfUrl: "/investors/reports/annual-report-2020.pdf",
+    pdfUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20annual%20report%202020",
     highlights: [
       "Resilient performance amid pandemic",
       "Cost-to-income ratio at 54%",
@@ -155,8 +156,8 @@ export const agmInfo = {
   time: "10:00 AM WAT",
   venue: "The Lombard Tower, 44 Marina, Lagos Island",
   virtual: "https://agm.lombardholdco.com",
-  agendaUrl: "/investors/agm/2026-agenda.pdf",
-  proxyUrl: "/investors/agm/2026-proxy-form.pdf",
+  agendaUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%202026%20agenda",
+  proxyUrl: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%202026%20proxy%20form",
   registrationUrl: "https://agm.lombardholdco.com/register"
 };
 
@@ -220,10 +221,10 @@ export const shareholderServices = {
     }
   ],
   forms: [
-    { title: "Dividend Mandate Form", url: "/investors/forms/dividend-mandate.pdf" },
-    { title: "Change of Address Form", url: "/investors/forms/change-of-address.pdf" },
-    { title: "Transfer Form", url: "/investors/forms/transfer-form.pdf" },
-    { title: "E-Dividend Registration", url: "/investors/forms/e-dividend.pdf" }
+    { title: "Dividend Mandate Form", url: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20dividend%20mandate" },
+    { title: "Change of Address Form", url: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20change%20of%20address" },
+    { title: "Transfer Form", url: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20transfer%20form" },
+    { title: "E-Dividend Registration", url: "mailto:investor.relations@lombardholdco.com?subject=Document%20request%3A%20e%20dividend" }
   ]
 };
 

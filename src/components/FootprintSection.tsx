@@ -14,117 +14,117 @@ type Market = {
 
 // --- Data: Calibrated for Standard World Map SVG ---
 const markets: Market[] = [
-  { 
-    id: "ng", 
-    city: "Lagos", 
-    country: "Nigeria", 
-    coords: { top: 56, left: 51.5 }, 
-    type: "Group HQ", 
-    desc: "The Lombard Tower, Marina. Full-service commercial banking, capital markets, and insurance operations." 
+  {
+    id: "ng",
+    city: "Lagos",
+    country: "Nigeria",
+    coords: { top: 56, left: 51.5 },
+    type: "Group HQ",
+    desc: "The Lombard Tower, Marina. Full-service commercial banking, capital markets, and insurance operations."
   },
-  { 
-    id: "gh", 
-    city: "Accra", 
-    country: "Ghana", 
-    coords: { top: 56.5, left: 49.5 }, 
-    type: "Subsidiary", 
-    desc: "Lombard Bank Ghana - Corporate & retail banking hub for Anglophone West Africa." 
+  {
+    id: "gh",
+    city: "Accra",
+    country: "Ghana",
+    coords: { top: 56.5, left: 49.5 },
+    type: "Subsidiary",
+    desc: "Lombard Bank Ghana - Corporate & retail banking hub for Anglophone West Africa."
   },
-  { 
-    id: "ke", 
-    city: "Nairobi", 
-    country: "Kenya", 
-    coords: { top: 61, left: 60 }, 
-    type: "Subsidiary", 
-    desc: "East Africa regional headquarters serving Kenya, Tanzania, and Uganda markets." 
+  {
+    id: "ke",
+    city: "Nairobi",
+    country: "Kenya",
+    coords: { top: 61, left: 60 },
+    type: "Subsidiary",
+    desc: "East Africa regional headquarters serving Kenya, Tanzania, and Uganda markets."
   },
-  { 
-    id: "rw", 
-    city: "Kigali", 
-    country: "Rwanda", 
-    coords: { top: 62, left: 58 }, 
-    type: "Subsidiary", 
-    desc: "Digital banking innovation center and wealth management services." 
+  {
+    id: "rw",
+    city: "Kigali",
+    country: "Rwanda",
+    coords: { top: 62, left: 58 },
+    type: "Subsidiary",
+    desc: "Digital banking innovation center and wealth management services."
   },
-  { 
-    id: "za", 
-    city: "Johannesburg", 
-    country: "South Africa", 
-    coords: { top: 80, left: 56 }, 
-    type: "Key Market", 
-    desc: "Investment banking, M&A advisory, and institutional capital markets." 
+  {
+    id: "za",
+    city: "Johannesburg",
+    country: "South Africa",
+    coords: { top: 80, left: 56 },
+    type: "Key Market",
+    desc: "Investment banking, M&A advisory, and institutional capital markets."
   },
-  { 
-    id: "ci", 
-    city: "Abidjan", 
-    country: "Côte d'Ivoire", 
-    coords: { top: 57, left: 48 }, 
-    type: "Subsidiary", 
-    desc: "Francophone West Africa hub serving regional SME and corporate clients." 
+  {
+    id: "ci",
+    city: "Abidjan",
+    country: "CÃ´te d'Ivoire",
+    coords: { top: 57, left: 48 },
+    type: "Subsidiary",
+    desc: "Francophone West Africa hub serving regional SME and corporate clients."
   },
-  { 
-    id: "sn", 
-    city: "Dakar", 
-    country: "Senegal", 
-    coords: { top: 51, left: 43.5 }, 
-    type: "Subsidiary", 
-    desc: "Trade finance center supporting cross-border commerce and SME banking." 
+  {
+    id: "sn",
+    city: "Dakar",
+    country: "Senegal",
+    coords: { top: 51, left: 43.5 },
+    type: "Subsidiary",
+    desc: "Trade finance center supporting cross-border commerce and SME banking."
   },
-  { 
-    id: "cd", 
-    city: "Kinshasa", 
-    country: "DR Congo", 
-    coords: { top: 65, left: 54 }, 
-    type: "Subsidiary", 
-    desc: "Mining sector finance and infrastructure project funding." 
+  {
+    id: "cd",
+    city: "Kinshasa",
+    country: "DR Congo",
+    coords: { top: 65, left: 54 },
+    type: "Subsidiary",
+    desc: "Mining sector finance and infrastructure project funding."
   },
-  { 
-    id: "mz", 
-    city: "Maputo", 
-    country: "Mozambique", 
-    coords: { top: 78, left: 61 }, 
-    type: "Subsidiary", 
-    desc: "Energy, natural resources, and commodities financing." 
+  {
+    id: "mz",
+    city: "Maputo",
+    country: "Mozambique",
+    coords: { top: 78, left: 61 },
+    type: "Subsidiary",
+    desc: "Energy, natural resources, and commodities financing."
   },
-  { 
-    id: "eg", 
-    city: "Cairo", 
-    country: "Egypt", 
-    coords: { top: 48, left: 58 }, 
-    type: "Key Market", 
-    desc: "North Africa gateway and institutional banking services." 
+  {
+    id: "eg",
+    city: "Cairo",
+    country: "Egypt",
+    coords: { top: 48, left: 58 },
+    type: "Key Market",
+    desc: "North Africa gateway and institutional banking services."
   },
-  { 
-    id: "et", 
-    city: "Addis Ababa", 
-    country: "Ethiopia", 
-    coords: { top: 58, left: 62 }, 
-    type: "Subsidiary", 
-    desc: "Agricultural finance and regional trade corridor banking." 
+  {
+    id: "et",
+    city: "Addis Ababa",
+    country: "Ethiopia",
+    coords: { top: 58, left: 62 },
+    type: "Subsidiary",
+    desc: "Agricultural finance and regional trade corridor banking."
   },
-  { 
-    id: "zm", 
-    city: "Lusaka", 
-    country: "Zambia", 
-    coords: { top: 71, left: 56 }, 
-    type: "Subsidiary", 
-    desc: "Corporate banking and copper sector financing." 
+  {
+    id: "zm",
+    city: "Lusaka",
+    country: "Zambia",
+    coords: { top: 71, left: 56 },
+    type: "Subsidiary",
+    desc: "Corporate banking and copper sector financing."
   },
-  { 
-    id: "ug", 
-    city: "Kampala", 
-    country: "Uganda", 
-    coords: { top: 59, left: 59 }, 
-    type: "Subsidiary", 
-    desc: "Retail banking and microfinance services." 
+  {
+    id: "ug",
+    city: "Kampala",
+    country: "Uganda",
+    coords: { top: 59, left: 59 },
+    type: "Subsidiary",
+    desc: "Retail banking and microfinance services."
   },
-  { 
-    id: "tz", 
-    city: "Dar es Salaam", 
-    country: "Tanzania", 
-    coords: { top: 67, left: 61 }, 
-    type: "Subsidiary", 
-    desc: "Port infrastructure finance and logistics sector banking." 
+  {
+    id: "tz",
+    city: "Dar es Salaam",
+    country: "Tanzania",
+    coords: { top: 67, left: 61 },
+    type: "Subsidiary",
+    desc: "Port infrastructure finance and logistics sector banking."
   },
 ];
 
@@ -170,25 +170,25 @@ const FootprintSection = () => {
       y: 0,
       transition: {
         duration: prefersReducedMotion ? 0 : 0.8,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   };
 
   return (
-    <section 
-      className="relative bg-[#0F120F] py-24 sm:py-32 lg:py-40 xl:py-48 overflow-hidden font-poppins" 
+    <section
+      className="relative bg-[#0F120F] py-24 sm:py-32 lg:py-40 xl:py-48 overflow-hidden font-poppins"
       id="footprint"
       aria-labelledby="footprint-heading"
     >
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#52796F]/20 to-transparent" aria-hidden="true" />
-      
+
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 max-w-[1800px]">
-        
+
         {/* Header & Stats */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 sm:mb-20 gap-8 lg:gap-12">
-          <motion.div 
+          <motion.div
             className="max-w-xl"
             initial="hidden"
             whileInView="visible"
@@ -198,7 +198,7 @@ const FootprintSection = () => {
             <span className="text-[#52796F] tracking-[0.2em] text-[10px] sm:text-xs font-bold uppercase mb-4 block">
               Geographic Presence
             </span>
-            <h2 
+            <h2
               id="footprint-heading"
               className="font-sans text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] mb-5 sm:mb-6"
             >
@@ -211,7 +211,7 @@ const FootprintSection = () => {
           </motion.div>
 
           {/* Quick Stats */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-3 gap-6 sm:gap-8 lg:gap-12 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0 w-full lg:w-auto"
             initial="hidden"
             whileInView="visible"
@@ -221,7 +221,7 @@ const FootprintSection = () => {
             aria-label="Key metrics"
           >
             <div className="group cursor-default" role="listitem">
-              <div 
+              <div
                 className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#52796F] transition-colors tabular-nums"
                 aria-label={`${stats.markets} African markets`}
               >
@@ -232,7 +232,7 @@ const FootprintSection = () => {
               </div>
             </div>
             <div className="group cursor-default" role="listitem">
-              <div 
+              <div
                 className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#52796F] transition-colors tabular-nums"
                 aria-label={`${stats.totalAssets} total assets`}
               >
@@ -243,7 +243,7 @@ const FootprintSection = () => {
               </div>
             </div>
             <div className="group cursor-default" role="listitem">
-              <div 
+              <div
                 className="text-2xl sm:text-3xl font-sans text-white mb-1 group-hover:text-[#52796F] transition-colors tabular-nums"
                 aria-label={`${stats.employees} employees`}
               >
@@ -257,7 +257,7 @@ const FootprintSection = () => {
         </div>
 
         {/* Interactive Map Container */}
-        <motion.div 
+        <motion.div
           className="relative w-full aspect-[16/9] lg:aspect-[2/1] bg-[#151815] border border-white/5 rounded-sm overflow-hidden"
           initial="hidden"
           whileInView="visible"
@@ -274,13 +274,13 @@ const FootprintSection = () => {
           {/* Map SVG */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
             <svg viewBox="0 0 1000 500" className="w-full h-full scale-110 lg:scale-100">
-              <image 
-                href="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
-                width="100%" 
-                height="100%" 
+              <image
+                href="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+                width="100%"
+                height="100%"
                 className="opacity-40 filter drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]"
-                style={{ filter: 'invert(1) (1) brightness(1.2)' }} 
-                alt=""
+                style={{ filter: 'invert(1) (1) brightness(1.2)' }}
+                aria-hidden="true"
               />
             </svg>
           </div>
@@ -303,37 +303,37 @@ const FootprintSection = () => {
               >
                 {/* Marker Dot */}
                 <div className="relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 -translate-x-1/2 -translate-y-1/2">
-                  <motion.div 
+                  <motion.div
                     className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full z-10 transition-transform duration-300 ${
-                      market.type === 'Group HQ' 
-                        ? 'bg-[#52796F] shadow-[0_0_15px_#52796F]' 
+                      market.type === 'Group HQ'
+                        ? 'bg-[#52796F] shadow-[0_0_15px_#52796F]'
                         : 'bg-white shadow-[0_0_10px_white]'
                     } ${hoveredMarket === market.id ? 'scale-125' : 'scale-100'}`}
                     whileHover={{ scale: 1.3 }}
                     whileTap={{ scale: 0.9 }}
                   />
-                  
+
                   {/* Pulse Ring Animation */}
                   {!prefersReducedMotion && (
-                    <motion.div 
+                    <motion.div
                       className={`absolute inset-0 rounded-full border ${
                         market.type === 'Group HQ' ? 'border-[#52796F]' : 'border-white/40'
                       }`}
                       animate={{ scale: [1, 2.5], opacity: [0.8, 0] }}
-                      transition={{ 
-                        duration: 2, 
-                        repeat: Infinity, 
-                        ease: "easeOut", 
-                        delay: Math.random() * 2 
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeOut",
+                        delay: Math.random() * 2
                       }}
                     />
                   )}
-                  
+
                   {/* Focus ring for accessibility */}
-                  <div 
+                  <div
                     className={`absolute inset-0 rounded-full transition-all ${
-                      activeMarket === market.id 
-                        ? 'ring-2 ring-[#52796F] ring-offset-2 ring-offset-[#151815]' 
+                      activeMarket === market.id
+                        ? 'ring-2 ring-[#52796F] ring-offset-2 ring-offset-[#151815]'
                         : ''
                     }`}
                   />
@@ -349,7 +349,7 @@ const FootprintSection = () => {
                 initial={{ opacity: 0, y: 10, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.96 }}
-                transition={{ duration: prefersReducedMotion ? 0 : 0.25, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: prefersReducedMotion ? 0 : 0.25, ease: [0.22, 1, 0.36, 1] as const }}
                 className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 z-30 max-w-sm w-[calc(100%-3rem)] sm:w-full"
                 role="region"
                 aria-live="polite"
@@ -362,7 +362,7 @@ const FootprintSection = () => {
                     <div className="bg-[#0F120F]/95 backdrop-blur-xl border border-white/10 p-5 sm:p-6 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden">
                       {/* Gold Accent Line */}
                       <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#52796F] to-transparent" aria-hidden="true" />
-                      
+
                       <div className="flex items-start justify-between mb-3">
                         <div>
                           <h3 className="text-lg sm:text-xl font-sans text-white">
@@ -378,7 +378,7 @@ const FootprintSection = () => {
                           <FaGlobe className="text-white/20 w-5 h-5 flex-shrink-0" aria-label="Market location" />
                         )}
                       </div>
-                      
+
                       <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed mt-3 border-t border-white/10 pt-3">
                         {market.desc}
                       </p>
@@ -400,20 +400,20 @@ const FootprintSection = () => {
         </motion.div>
 
         {/* Footer Link */}
-        <motion.div 
+        <motion.div
           className="mt-10 sm:mt-12 flex justify-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: prefersReducedMotion ? 0 : 0.5 }}
         >
-          <a 
-            href="/locations" 
+          <a
+            href="/locations"
             className="btn-primary-dark"
           >
             View All Locations
-            <FaArrowRight 
-              className="w-4 h-4" 
+            <FaArrowRight
+              className="w-4 h-4"
               aria-hidden="true"
             />
           </a>
@@ -433,7 +433,7 @@ const FootprintSection = () => {
       </div>
 
       {/* Screen reader only styles */}
-      <style jsx>{`
+      <style>{`
         .sr-only {
           position: absolute;
           width: 1px;

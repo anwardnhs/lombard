@@ -1,215 +1,108 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaXmark, FaChevronDown, FaLock, FaMagnifyingGlass } from "react-icons/fa6";
-
-const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const isTransparentHero = typeof window !== 'undefined' ? (window.location.pathname === '/' || window.location.pathname === '/impact') : true;
-
+import { useEffect, useRef, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import BrandLogo from "./BrandLogo";
+const links = [
+  ["The group", "/about"],
+  ["Our businesses", "/businesses"],
+  ["Leadership", "/governance"],
+  ["Sustainability", "/impact"],
+  ["Newsroom", "/newsroom"],
+];
+export default function Header() {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const toggle = useRef<HTMLButtonElement>(null);
+  const panel = useRef<HTMLElement>(null);
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    setOpen(false);
+  }, [location.pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const keydown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggle.current?.focus();
+      }
+      if (event.key === "Tab") {
+        const items = [
+          toggle.current,
+          ...Array.from(
+            panel.current?.querySelectorAll<HTMLAnchorElement>("a") ?? [],
+          ),
+        ].filter(Boolean) as HTMLElement[];
+        const first = items[0],
+          last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    window.addEventListener("keydown", keydown);
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", keydown);
     };
-  }, [isMobileMenuOpen]);
-
-  const closeMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(false);
-  }, []);
-
-  const navItems = [
-    {
-      label: "The Firm",
-      id: "firm",
-      links: [
-        { label: "Corporate Profile", href: "/about" },
-        { label: "Leadership & Board", href: "/governance" },
-        { label: "Operating Subsidiaries", href: "/businesses" }
-      ]
-    },
-    {
-      label: "Sustainability",
-      id: "sustainability",
-      href: "/impact"
-    },
-    {
-      label: "Media",
-      id: "media",
-      href: "/newsroom"
-    }
-  ];
-
+  }, [open]);
   return (
     <>
-      <header
-        className={"fixed top-0 left-0 w-full z-50 transition-all duration-300 font-poppins " +
-          (isScrolled || activeDropdown || !isTransparentHero
-            ? "bg-[#111311]/90 backdrop-blur-md shadow-lg border-b border-white/5"
-            : "bg-transparent"
-        )}
-        onMouseLeave={() => setActiveDropdown(null)}
-      >
-        {/* Minimalist Utility Bar */}
-        <div className={"hidden sm:block transition-all duration-300 " + (isScrolled || activeDropdown || !isTransparentHero ? "border-b border-white/5 bg-[#0a0c0a]/40" : "border-b border-white/10")}>
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-[1400px] flex justify-end items-center h-9">
-            <nav className="flex items-center gap-6 text-[11px] font-medium tracking-wide text-white/50">
-              <a href="#" className="hover:text-white transition-colors">Personal</a>
-              <a href="#" className="hover:text-white transition-colors">Corporate</a>
-              <a href="/investors" className="hover:text-white transition-colors">Investors</a>
-            </nav>
-          </div>
-        </div>
-
-        {/* Main Navigation */}
-        <div className={"container mx-auto px-6 sm:px-8 lg:px-12 max-w-[1400px] flex items-center justify-between transition-all duration-300 " + (isScrolled || activeDropdown || !isTransparentHero ? "h-16" : "h-20")}>
-          
-          {/* Logo */}
-          <a href="/" className="relative z-50 group flex items-center focus:outline-none">
-            <h1 className="font-sans font-bold text-2xl sm:text-3xl tracking-tight text-white transition-colors duration-300">
-              Lombard HoldCo<span className="text-[#52796F]">.</span>
-            </h1>
-          </a>
-
-          {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-8 h-full">
-            {navItems.map((item) => (
-              <div 
-                key={item.id} 
-                className="relative h-full flex items-center"
-                onMouseEnter={() => setActiveDropdown(item.id)}
-              >
-                {item.links ? (
-                  <button className={"text-[13px] font-medium flex items-center gap-1.5 transition-colors duration-200 " + (activeDropdown === item.id ? "text-white" : "text-white/60 hover:text-white")}>
-                    {item.label}
-                    <FaChevronDown className={"w-2.5 h-2.5 transition-transform duration-300 " + (activeDropdown === item.id ? "rotate-180" : "")} />
-                  </button>
-                ) : (
-                  <a href={item.href} className="text-[13px] font-medium text-white/60 hover:text-white transition-colors duration-200">
-                    {item.label}
-                  </a>
-                )}
-
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {item.links && activeDropdown === item.id && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 min-w-[220px] bg-[#0a0c0a] border border-white/5 rounded-xl shadow-2xl py-3 mt-2"
-                    >
-                      {item.links.map((link, idx) => (
-                        <a
-                          key={idx}
-                          href={link.href}
-                          className="block px-5 py-2.5 text-[13px] text-white/60 hover:text-white hover:bg-white/5 transition-colors"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+      <a className="skip-link" href="#page-content">
+        Skip to content
+      </a>
+      <header className="site-header">
+        <div className="site-container header-inner">
+          <Link className="wordmark" to="/" aria-label="Lombard HoldCo home">
+            <BrandLogo />
+          </Link>
+          <nav className="desktop-nav" aria-label="Main navigation">
+            {links.map(([label, href]) => (
+              <NavLink key={href} to={href}>
+                {label}
+              </NavLink>
             ))}
           </nav>
-
-          {/* Right Actions */}
-          <div className="hidden lg:flex items-center gap-6">
-            <a href="/careers" className="text-[13px] font-medium text-white/60 hover:text-white transition-colors">
-              Careers
-            </a>
-            <button className="text-white/60 hover:text-white transition-colors" aria-label="Search">
-              <FaMagnifyingGlass className="w-4 h-4" />
-            </button>
-            <a 
-              href="/portal" 
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#52796F] text-white text-[12px] font-semibold tracking-wide rounded-full hover:bg-[#3e5b53] transition-colors"
-            >
-              <FaLock className="w-3 h-3" />
-              Client Portal
-            </a>
-          </div>
-
-          {/* Mobile Hamburger */}
-          <button 
-            className="lg:hidden text-white w-10 h-10 flex items-center justify-end relative z-50"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          <Link className="header-investors" to="/investors">
+            Investor relations <ArrowUpRight size={15} />
+          </Link>
+          <button
+            ref={toggle}
+            className="menu-toggle"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
-            {isMobileMenuOpen ? <FaXmark className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+            {open ? <X /> : <Menu />}
           </button>
         </div>
       </header>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#0a0c0a]/95 backdrop-blur-xl pt-28 px-6 overflow-y-auto"
-          >
-            {/* Mobile Utility */}
-            <div className="flex gap-4 mb-8 pb-6 border-b border-white/10">
-              <a href="#" className="text-white/50 hover:text-white text-[11px] font-medium tracking-wide">Personal</a>
-              <a href="#" className="text-white/50 hover:text-white text-[11px] font-medium tracking-wide">Corporate</a>
-              <a href="/investors" className="text-white hover:text-[#52796F] text-[11px] font-medium tracking-wide">Investors</a>
-            </div>
-
-            <nav className="flex flex-col gap-6 pb-12">
-              {navItems.map((item) => (
-                <div key={item.id}>
-                  {item.links ? (
-                    <>
-                      <h4 className="text-white/30 text-[11px] font-semibold uppercase tracking-widest mb-3">
-                        {item.label}
-                      </h4>
-                      <div className="flex flex-col gap-2 pl-4 border-l border-white/10">
-                        {item.links.map((link, idx) => (
-                          <a key={idx} href={link.href} className="text-white/80 hover:text-white text-base py-1" onClick={closeMobileMenu}>
-                            {link.label}
-                          </a>
-                        ))}
-                      </div>
-                    </>
-                  ) : (
-                    <a href={item.href} className="text-white text-lg font-medium block" onClick={closeMobileMenu}>
-                      {item.label}
-                    </a>
-                  )}
-                </div>
-              ))}
-              
-              <div className="pt-6 mt-2 border-t border-white/10 flex flex-col gap-5">
-                <a href="/careers" className="text-white text-lg font-medium" onClick={closeMobileMenu}>Careers</a>
-                <a href="/portal" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#52796F] text-white text-sm font-semibold rounded-full w-full" onClick={closeMobileMenu}>
-                  <FaLock className="w-4 h-4" /> Client Portal
-                </a>
-              </div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {open && (
+        <nav
+          ref={panel}
+          id="mobile-navigation"
+          className="mobile-navigation"
+          aria-label="Mobile navigation"
+        >
+          {[
+            ...links,
+            ["Investor relations", "/investors"],
+            ["Careers", "/careers"],
+            ["Contact", "/contact"],
+          ].map(([label, href], i) => (
+            <NavLink key={href} to={href}>
+              <span className="eyebrow">0{i + 1}</span>
+              {label}
+              <ArrowUpRight size={20} />
+            </NavLink>
+          ))}
+        </nav>
+      )}
     </>
   );
-};
-
-export default Header;
+}

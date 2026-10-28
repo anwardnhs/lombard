@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-const AnimatedNumber = ({ 
-  value, 
-  prefix = "", 
-  suffix = "", 
-  decimals = 0 
+const AnimatedNumber = ({
+  value,
+  prefix = "",
+  suffix = "",
+  decimals = 0
 }: {
-  value: number; 
-  prefix?: string; 
-  suffix?: string; 
+  value: number;
+  prefix?: string;
+  suffix?: string;
   decimals?: number;
 }) => {
   const [display, setDisplay] = useState(0);
@@ -69,7 +69,7 @@ const StatsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {stats.map((stat, index) => (
@@ -78,21 +78,21 @@ const StatsSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.8, 
+                transition={{
+                  duration: 0.8,
                   delay: index * 0.1,
-                  ease: [0.22, 1, 0.36, 1] 
+                  ease: [0.22, 1, 0.36, 1] as const
                 }}
                 className="relative group"
               >
                 {/* Hover accent line */}
                 <div className="absolute -left-4 top-0 bottom-0 w-[1px] bg-[#52796F] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
-                
+
                 <div className="text-left">
                   <div className="text-[clamp(2.5rem,5vw,4rem)] leading-none mb-3">
                     <AnimatedNumber {...stat} />
                   </div>
-                  
+
                   <div className="space-y-1">
                     <p className="text-[11px] tracking-[0.2em] uppercase text-[#52796F]/60 font-medium">
                       {stat.label}
@@ -108,7 +108,7 @@ const StatsSection = () => {
         </motion.div>
 
         {/* Bottom accent */}
-        <motion.div 
+        <motion.div
           className="mt-16 pt-8 border-t border-[#52796F]/10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

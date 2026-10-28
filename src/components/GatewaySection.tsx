@@ -58,7 +58,7 @@ const GatewaySection = () => {
       y: 0,
       transition: {
         duration: prefersReducedMotion ? 0 : 0.8,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   };
@@ -72,13 +72,13 @@ const GatewaySection = () => {
       transition: {
         duration: prefersReducedMotion ? 0 : 0.7,
         delay: prefersReducedMotion ? 0 : 0.2 + (index * 0.15),
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     })
   };
 
   return (
-    <section 
+    <section
       className="relative bg-[#0F120F] py-24 sm:py-28 lg:py-32 border-t border-white/5 font-poppins overflow-hidden"
       aria-labelledby="gateway-heading"
     >
@@ -112,16 +112,16 @@ const GatewaySection = () => {
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1800px] relative z-10">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="mb-16 sm:mb-20 lg:mb-24 max-w-4xl mx-auto text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={headerVariants}
         >
-          <h2 
+          <h2
             id="gateway-heading"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans text-white leading-[0.95] tracking-tight mb-6 sm:mb-8"
           >
@@ -136,7 +136,7 @@ const GatewaySection = () => {
         </motion.div>
 
         {/* Dynamic Cards with Enhanced Interactions */}
-        <div 
+        <div
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-4"
           role="list"
           aria-label="Gateway options"
@@ -144,7 +144,7 @@ const GatewaySection = () => {
           {gateways.map((item, idx) => {
             const isHovered = hoveredCard === item.id;
             const isOtherHovered = hoveredCard && hoveredCard !== item.id;
-            
+
             return (
               <motion.div
                 key={item.id}
@@ -157,16 +157,16 @@ const GatewaySection = () => {
                 onMouseEnter={() => setHoveredCard(item.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <a 
+                <a
                   href={item.link}
                   onClick={(e) => handleCardClick(e, item.link)}
                   className={`group relative block h-[420px] sm:h-[470px] lg:h-[520px] w-full bg-[#151815] overflow-hidden border transition-all duration-500 focus:outline-none focus:ring-4 focus:ring-[#52796F] focus:ring-offset-4 focus:ring-offset-[#0F120F] ${
-                    isOtherHovered 
-                      ? 'border-white/5 opacity-60 scale-[0.98]' 
+                    isOtherHovered
+                      ? 'border-white/5 opacity-60 scale-[0.98]'
                       : 'border-white/10 hover:border-[#52796F]/20 opacity-100 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] hover:-translate-y-2 scale-100'
                   }`}
                   aria-label={item.ariaLabel}
-                  style={{ 
+                  style={{
                     transformOrigin: 'center',
                     transition: 'all 0.5s cubic-bezier(0.22, 1, 0.36, 1)'
                   }}
@@ -184,8 +184,8 @@ const GatewaySection = () => {
                       aria-hidden="true"
                       onLoad={() => handleImageLoad(item.id)}
                       className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
-                        imageLoaded[item.id] 
-                          ? 'opacity-50 group-hover:opacity-70 group-hover:scale-105' 
+                        imageLoaded[item.id]
+                          ? 'opacity-50 group-hover:opacity-70 group-hover:scale-105'
                           : 'opacity-0'
                       }`}
                       loading="lazy"
@@ -197,23 +197,23 @@ const GatewaySection = () => {
                     className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80 group-hover:from-black/40 group-hover:to-black/75 transition-all duration-700"
                     aria-hidden="true"
                   />
-                  
+
                   {/* Hover glow effect */}
-                  <div 
+                  <div
                     className="absolute inset-0 bg-gradient-to-br from-[#52796F]/0 via-[#52796F]/0 to-[#52796F]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                     aria-hidden="true"
                   />
 
                   {/* Content */}
                   <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-between z-10">
-                    
+
                     {/* Top: Number Badge & Arrow */}
                     <div className="flex justify-between items-start">
                       {/* Animated number badge */}
                       <motion.div
                         className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#52796F]/20 flex items-center justify-center backdrop-blur-sm bg-black/10 group-hover:border-[#52796F]/60 group-hover:bg-[#52796F]/10 transition-all duration-500"
                         whileHover={!prefersReducedMotion ? { scale: 1.1, rotate: 360 } : {}}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
                         aria-hidden="true"
                       >
                         <span className="text-[#52796F] font-bold text-base sm:text-lg tabular-nums">
@@ -222,12 +222,12 @@ const GatewaySection = () => {
                       </motion.div>
 
                       {/* Arrow with rotation */}
-                      <motion.div 
+                      <motion.div
                         className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white/5 group-hover:bg-[#52796F] rounded-full transition-all duration-500 backdrop-blur-sm"
                         whileHover={!prefersReducedMotion ? { scale: 1.1 } : {}}
                         aria-hidden="true"
                       >
-                        <FaArrowRight 
+                        <FaArrowRight
                           className={`w-4 h-4 text-white group-hover:text-[#0F120F] transition-all duration-500 ${
                             prefersReducedMotion ? "" : "-rotate-45 group-hover:rotate-0"
                           }`}
@@ -254,7 +254,7 @@ const GatewaySection = () => {
                   </div>
 
                   {/* Bottom accent line with animation */}
-                  <div 
+                  <div
                     className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#52796F] via-[#52796F]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
                     aria-hidden="true"
                   />

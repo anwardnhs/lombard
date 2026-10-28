@@ -107,7 +107,7 @@ const CapabilitiesSection = () => {
       transition: {
         duration: prefersReducedMotion ? 0 : 0.6,
         delay: prefersReducedMotion ? 0 : delay,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     })
   };
@@ -119,37 +119,37 @@ const CapabilitiesSection = () => {
       y: 0,
       transition: {
         duration: prefersReducedMotion ? 0 : 0.8,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as const
       }
     }
   };
 
   return (
-    <section 
+    <section
       className="relative min-h-screen bg-[#0F120F] text-white overflow-hidden font-poppins py-20 sm:py-28 lg:py-32 px-6"
       aria-labelledby="capabilities-heading"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-[#0F120F]/95 z-10" /> 
+        <div className="absolute inset-0 bg-[#0F120F]/95 z-10" />
         <div className="absolute inset-0 z-0 opacity-20">
           <ImagePlaceholder color="#ffffff" />
         </div>
-        
+
         {/* Grain Texture */}
-        <div 
-          className="absolute inset-0 z-10 opacity-[0.04] pointer-events-none mix-blend-overlay" 
-          style={{ 
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
-          }} 
+        <div
+          className="absolute inset-0 z-10 opacity-[0.04] pointer-events-none mix-blend-overlay"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+          }}
         />
       </div>
 
       <div className="container mx-auto relative z-20 max-w-7xl">
-        
+
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 sm:mb-20 lg:mb-24 gap-8">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -158,7 +158,7 @@ const CapabilitiesSection = () => {
             <span className="block text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#52796F] mb-4 font-semibold">
               Core Capabilities
             </span>
-            <h2 
+            <h2
               id="capabilities-heading"
               className="text-[clamp(2.5rem,5vw,4rem)] font-medium leading-[1.1] tracking-tight"
             >
@@ -166,7 +166,7 @@ const CapabilitiesSection = () => {
             </h2>
           </motion.div>
 
-          <motion.p 
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -179,7 +179,7 @@ const CapabilitiesSection = () => {
         </div>
 
         {/* 3-Column Grid */}
-        <div 
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           role="list"
           aria-label="Business capabilities"
@@ -198,10 +198,10 @@ const CapabilitiesSection = () => {
               {/* Image Area */}
               <div className="relative h-56 sm:h-64 w-full overflow-hidden border-b border-white/5 bg-[#1a1f1a]">
                 <div className="absolute inset-0 bg-[#0F120F]/20 z-10 group-hover:bg-transparent transition-colors duration-500" aria-hidden="true" />
-                
+
                 {item.image ? (
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt=""
                     role="presentation"
                     loading="lazy"
@@ -246,20 +246,20 @@ const CapabilitiesSection = () => {
                   <h3 className="text-xl sm:text-2xl font-light text-white mb-3 sm:mb-4 group-hover:text-[#52796F] transition-colors">
                     {item.title}
                   </h3>
-                  
+
                   <p className="text-sm text-white/50 leading-relaxed font-light mb-5 sm:mb-6">
                     {item.description}
                   </p>
 
                   {/* Focus Tags */}
-                  <div 
+                  <div
                     className="flex flex-wrap gap-2 mb-5 sm:mb-6"
                     role="list"
                     aria-label="Service focus areas"
                   >
                     {item.focus.map(tag => (
-                      <span 
-                        key={tag} 
+                      <span
+                        key={tag}
                         role="listitem"
                         className="text-[9px] sm:text-[10px] text-white/30 border border-white/10 px-2 py-1 rounded-sm uppercase tracking-wider hover:border-white/20 hover:text-white/40 transition-colors"
                       >
@@ -279,10 +279,10 @@ const CapabilitiesSection = () => {
                     Learn More
                   </span>
                   <div className="w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-white/30 group-hover/link:border-[#52796F] group-hover/link:text-[#52796F] transition-all flex-shrink-0">
-                    <svg 
-                      className="w-3 h-3 -rotate-45 group-hover/link:rotate-0 transition-transform duration-300" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
+                    <svg
+                      className="w-3 h-3 -rotate-45 group-hover/link:rotate-0 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
                       stroke="currentColor"
                       aria-hidden="true"
                     >
@@ -322,13 +322,13 @@ const CapabilitiesSection = () => {
         </motion.div>
 
         {/* Performance Indicators Footer */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ 
-            duration: prefersReducedMotion ? 0 : 1, 
-            delay: prefersReducedMotion ? 0 : 0.5 
+          transition={{
+            duration: prefersReducedMotion ? 0 : 1,
+            delay: prefersReducedMotion ? 0 : 0.5
           }}
           className="mt-16 sm:mt-20 lg:mt-24 pt-8 border-t border-white/5"
           role="complementary"
@@ -338,8 +338,8 @@ const CapabilitiesSection = () => {
             <div className="text-[10px] sm:text-xs text-white/30 font-light tracking-wide uppercase">
               Group Performance Indicators (FY 2025)
             </div>
-            
-            <div 
+
+            <div
               className="grid grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full sm:w-auto"
               role="list"
               aria-label="Key financial metrics"
@@ -349,12 +349,12 @@ const CapabilitiesSection = () => {
                 { label: "Capital Adequacy", val: "22.4%", ariaLabel: "22.4 percent capital adequacy ratio" },
                 { label: "NPL Ratio", val: "3.1%", ariaLabel: "3.1 percent non-performing loan ratio" }
               ].map((stat) => (
-                <div 
-                  key={stat.label} 
+                <div
+                  key={stat.label}
                   className="flex flex-col group cursor-default"
                   role="listitem"
                 >
-                  <span 
+                  <span
                     className="text-white font-medium text-base sm:text-lg mb-1 tabular-nums group-hover:text-[#52796F] transition-colors"
                     aria-label={stat.ariaLabel}
                   >
