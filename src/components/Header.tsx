@@ -11,9 +11,16 @@ const links = [
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const toggle = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const updateScroll = () => setScrolled(window.scrollY > 32);
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+    return () => window.removeEventListener("scroll", updateScroll);
+  }, [location.pathname]);
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
@@ -55,7 +62,7 @@ export default function Header() {
       <a className="skip-link" href="#page-content">
         Skip to content
       </a>
-      <header className="site-header">
+      <header className={`site-header${location.pathname === "/" && !scrolled && !open ? " site-header-overlay" : ""}`}>
         <div className="site-container header-inner">
           <Link className="wordmark" to="/" aria-label="Lombard HoldCo home">
             <BrandLogo />
