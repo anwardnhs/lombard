@@ -19,8 +19,11 @@ export default function HeroSection() {
             financial <em>group.</em>
           </h1>
           <div className="hero-bottom">
-            <Link className="design-button light" to="/about">
-              Corporate profile <ArrowUpRight size={18} />
+            <Link className="design-button light" to="/businesses">
+              Our businesses <ArrowUpRight size={18} />
+            </Link>
+            <Link className="design-button hero-button-outline" to="/investors">
+              Investor relations <ArrowUpRight size={18} />
             </Link>
           </div>
         </div>
