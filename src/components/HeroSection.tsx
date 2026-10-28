@@ -18,6 +18,9 @@ export default function HeroSection() {
             <br />
             Africa’s <em>growth.</em>
           </h1>
+          <p className="hero-tagline">
+            Banking, capital markets, asset management and insurance across 14 African markets.
+          </p>
           <div className="hero-bottom">
             <Link className="design-button light" to="/businesses">
               Our businesses <ArrowUpRight size={18} />

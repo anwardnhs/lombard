@@ -253,6 +253,25 @@ em {
   letter-spacing: -0.05em;
   color: #dce4d9;
 }
+.home-hero h1:has(+ .hero-tagline) {
+  margin-bottom: 24px;
+}
+.hero-tagline {
+  max-width: 650px;
+  margin: 0 0 36px;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  text-wrap: balance;
+}
+@media (max-width: 600px) {
+  .hero-tagline {
+    margin-bottom: 28px;
+    max-width: 340px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
 .hero-bottom {
   display: flex;
   align-items: center;
