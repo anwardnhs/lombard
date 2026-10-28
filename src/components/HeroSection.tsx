@@ -14,9 +14,9 @@ export default function HeroSection() {
       <div className="site-container hero-composition">
         <div className="hero-main">
           <h1 id="hero-title">
-            A diversified
+            Lombard
             <br />
-            financial <em>group.</em>
+            <em>HoldCo Plc.</em>
           </h1>
           <div className="hero-bottom">
             <Link className="design-button light" to="/businesses">
