@@ -457,9 +457,52 @@
   padding: 20px 0;
   white-space: nowrap;
   color: #536357;
+  border-bottom: 2px solid transparent;
 }
 .section-navigation a:hover {
   color: var(--ink);
+}
+.section-navigation a[aria-current="location"] {
+  border-bottom-color: var(--green);
+  color: var(--ink);
+  font-weight: 600;
+}
+.section-picker {
+  display: none;
+}
+.filter-results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 56px;
+  margin-bottom: 12px;
+}
+.filter-results .text-link {
+  padding-block: 8px;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .section-navigation > .site-container > a {
+    display: none;
+  }
+  .section-picker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding-block: 8px;
+    font-size: 13px;
+  }
+  .section-picker select {
+    min-width: 0;
+    flex: 1;
+    min-height: 44px;
+    padding: 8px;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    font-size: 16px;
+  }
 }
 .institutional-page section[id] {
   scroll-margin-top: 56px;

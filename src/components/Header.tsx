@@ -26,8 +26,17 @@ export default function Header() {
   }, [location.pathname]);
   useEffect(() => {
     if (!open) return;
+    const desktop = window.matchMedia("(min-width: 1001px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setOpen(false);
+    };
+    if (desktop.matches) {
+      setOpen(false);
+      return;
+    }
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    panel.current?.querySelector("a")?.focus({ preventScroll: true });
     const keydown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
@@ -52,9 +61,11 @@ export default function Header() {
       }
     };
     window.addEventListener("keydown", keydown);
+    desktop.addEventListener("change", closeOnDesktop);
     return () => {
       document.body.style.overflow = previous;
       window.removeEventListener("keydown", keydown);
+      desktop.removeEventListener("change", closeOnDesktop);
     };
   }, [open]);
   return (
@@ -80,7 +91,7 @@ export default function Header() {
           <button
             ref={toggle}
             className="menu-toggle"
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((current) => !current)}
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
             aria-controls="mobile-navigation"
@@ -102,8 +113,11 @@ export default function Header() {
             ["Careers", "/careers"],
             ["Contact", "/contact"],
           ].map(([label, href], i) => (
-            <NavLink key={href} to={href}>
-              <span className="eyebrow">0{i + 1}</span>
+            <NavLink key={href} to={href} onClick={() => {
+              setOpen(false);
+              if (location.pathname === href) toggle.current?.focus();
+            }}>
+              <span className="eyebrow" aria-hidden="true">0{i + 1}</span>
               {label}
               <ArrowUpRight size={20} />
             </NavLink>

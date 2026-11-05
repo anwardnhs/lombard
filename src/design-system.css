@@ -187,6 +187,9 @@ em {
 .mobile-navigation a.active {
   color: #a6bcb2;
 }
+body:has(.mobile-navigation) .cookie-notice {
+  visibility: hidden;
+}
 .home-hero {
   position: relative;
   color: var(--paper);

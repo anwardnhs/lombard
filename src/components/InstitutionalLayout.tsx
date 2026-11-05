@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Header from "./Header";
@@ -18,6 +18,10 @@ export default function InstitutionalLayout({
   children,
   aside,
 }: LayoutProps) {
+  useEffect(() => {
+    document.title = `${title} | Lombard HoldCo Plc`;
+    return () => { document.title = "Lombard HoldCo Plc"; };
+  }, [title]);
   return (
     <div className="institutional-page">
       <Header />

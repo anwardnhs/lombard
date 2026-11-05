@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Search } from "lucide-react";
+import FilterResults from "@/components/FilterResults";
 import InstitutionalLayout, {
   SectionHeading,
 } from "@/components/InstitutionalLayout";
@@ -18,7 +19,7 @@ export default function Careers() {
           [role.title, role.dept, role.company, role.loc]
             .join(" ")
             .toLowerCase()
-            .includes(query.toLowerCase()),
+            .includes(query.trim().toLowerCase()),
       ),
     [query, team],
   );
@@ -69,9 +70,10 @@ export default function Careers() {
             </select>
           </label>
         </div>
-        <p className="subtle-copy roles-count" aria-live="polite">
-          {filtered.length} opportunities
-        </p>
+        <FilterResults count={filtered.length} item="opportunity" plural="opportunities" onClear={query || team !== "All teams" ? () => {
+          setQuery("");
+          setTeam("All teams");
+        } : undefined} />
         <div className="role-register">
           {filtered.map((role) => (
             <article key={role.id}>
@@ -86,6 +88,7 @@ export default function Careers() {
               </div>
               <a
                 className="text-link"
+                aria-label={`Enquire about ${role.title}`}
                 href={`mailto:info@lombardholdco.com?subject=${encodeURIComponent("Career enquiry: " + role.title)}`}
               >
                 Enquire <ArrowUpRight size={18} />
@@ -96,15 +99,6 @@ export default function Careers() {
         {!filtered.length && (
           <div className="empty-state">
             <p>No opportunities match your search.</p>
-            <button
-              className="text-link"
-              onClick={() => {
-                setQuery("");
-                setTeam("All teams");
-              }}
-            >
-              Clear filters
-            </button>
           </div>
         )}
       </section>

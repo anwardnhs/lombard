@@ -11,10 +11,10 @@ export default function Contact() {
     (item) => item.id === params.get("business"),
   );
   const [prepared, setPrepared] = useState(false);
-  const [topic, setTopic] = useState(business?.name ?? "General enquiries");
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    const topic = String(data.get("topic") ?? "General enquiries");
     const recipient =
       topic === "Investor relations"
         ? "investor.relations@lombardholdco.com"
@@ -26,7 +26,11 @@ export default function Contact() {
     setPrepared(true);
   }
   return (
-    <InstitutionalLayout title="Contact" label="Contact">
+    <InstitutionalLayout title="Contact" label="Contact" aside={
+      <a className="text-link" href="#enquiry-form">
+        Prepare an enquiry <ArrowUpRight size={18} />
+      </a>
+    }>
       <section className="site-container contact-layout">
         <div>
           <span className="eyebrow section-label">Group contacts</span>
@@ -60,14 +64,13 @@ export default function Contact() {
             </figcaption>
           </figure>
         </div>
-        <div className="contact-form-panel">
+        <div className="contact-form-panel" id="enquiry-form">
           <span className="eyebrow section-label">Correspondence</span>
           <h2>Enquiry details</h2>
           <p className="text-sm leading-relaxed text-[#586059] mt-5 mb-8">
-            Complete the details below to prepare an email to our team. Your
-            email application will open so you can review and send it.
+            Prepare a draft to review and send in your email app.
           </p>
-          <form onSubmit={submit} className="contact-form">
+          <form onSubmit={submit} onChange={() => setPrepared(false)} className="contact-form">
             <label>
               Full name
               <input name="name" autoComplete="name" required maxLength={150} />
@@ -94,8 +97,8 @@ export default function Contact() {
               Enquiry about
               <select
                 name="topic"
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
+                key={business?.id}
+                defaultValue={business?.name ?? "General enquiries"}
               >
                 {[
                   "General enquiries",
@@ -126,9 +129,8 @@ export default function Contact() {
                 role="status"
                 className="text-sm leading-relaxed text-[#52796f]"
               >
-                Your email draft is ready in your email application. Send it
-                there to complete your enquiry. If it did not open, use one of
-                the email links on this page.
+                Review and send your draft in your email app. If it did not
+                open, use one of the email links on this page.
               </p>
             )}
           </form>

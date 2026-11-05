@@ -1,6 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+function findAnchor(hash: string) {
+  if (!hash) return null;
+  try {
+    return document.getElementById(decodeURIComponent(hash.slice(1)));
+  } catch {
+    return null;
+  }
+}
+
 const RouteProgress = () => {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -17,9 +26,7 @@ const RouteProgress = () => {
         document.getElementById("page-content") ??
         document.querySelector("main");
       if (content && !content.id) content.id = "page-content";
-      const anchor = location.hash
-        ? document.getElementById(decodeURIComponent(location.hash.slice(1)))
-        : null;
+      const anchor = findAnchor(location.hash);
       if (anchor) anchor.scrollIntoView({ behavior: "instant" });
       return location.hash ? Boolean(anchor) : Boolean(content);
     };

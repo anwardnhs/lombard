@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionNavigation from "@/components/SectionNavigation";
 import { ArrowUpRight, ArrowUp, ArrowDown } from "lucide-react";
 import {
   AreaChart,
@@ -28,8 +29,9 @@ const sections = [
   ["results", "Results & reports"],
   ["share-price", "Share price"],
   ["dividends", "Dividends"],
+  ["analysts", "Analyst coverage"],
   ["shareholders", "Shareholder services"],
-];
+] as const;
 export default function Investors() {
   const [period, setPeriod] = useState<"1Y" | "5Y">("1Y");
   const prices =
@@ -48,15 +50,7 @@ export default function Investors() {
         </a>
       }
     >
-      <nav className="section-navigation" aria-label="Investor sections">
-        <div className="site-container">
-          {sections.map(([id, label]) => (
-            <a key={id} href={`#${id}`}>
-              {label}
-            </a>
-          ))}
-        </div>
-      </nav>
+      <SectionNavigation label="Investor sections" sections={sections} />
       <section id="overview" className="institutional-section site-container">
         <SectionHeading
           label="Group overview"
@@ -259,7 +253,7 @@ export default function Investors() {
           </div>
         </div>
       </section>
-      <section className="institutional-section site-container">
+      <section id="analysts" className="institutional-section site-container">
         <SectionHeading label="Research coverage" title="Analyst coverage" />
         <div className="data-table-wrap">
           <table className="institutional-table">

@@ -1,22 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import InstitutionalLayout from "@/components/InstitutionalLayout";
+import SectionNavigation from "@/components/SectionNavigation";
 import { businesses } from "@/data/editorial";
+const sections = businesses.map(({ id, name }) => [id, name] as const);
 export default function Businesses() {
   return (
     <InstitutionalLayout title="Our businesses" label="Our businesses">
-      <nav
-        className="section-navigation business-directory-nav"
-        aria-label="Operating businesses"
-      >
-        <div className="site-container">
-          {businesses.map((item) => (
-            <a key={item.id} href={`#${item.id}`}>
-              {item.name}
-            </a>
-          ))}
-        </div>
-      </nav>
+      <SectionNavigation className="business-directory-nav" label="Operating businesses" sections={sections} />
       <div className="site-container business-list">
         {businesses.map((business, i) => (
           <article id={business.id} className="business-row" key={business.id}>
